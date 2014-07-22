@@ -1,0 +1,16 @@
+body {
+	padding-top: 60px;
+}
+
+span.fa {
+	padding-right: 10px;
+}
+
+.communication-icon {
+	list-style: none;
+	padding-top: 1em;
+}
+
+.communication-icon li {
+	display: inline-block;
+}
