@@ -2,15 +2,29 @@ body {
 	padding-top: 60px;
 }
 
-span.fa {
-	padding-right: 10px;
+footer {
+	background-color: #222;
+	color: #777;
 }
 
 .communication-icon {
-	list-style: none;
-	padding-top: 1em;
+		list-style: none;
+		padding-top: 1em;
 }
 
 .communication-icon li {
-	display: inline-block;
+			display: inline-block;
+}
+
+.communication-icon li a {
+				color: #777;
+}
+
+header span.fa {
+	padding-right: 10px;
+}
+
+section span.fa {
+	padding-top: 20px;
+	padding-bottom: 10px;
 }
