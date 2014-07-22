@@ -1,0 +1,20 @@
+{
+  "name": "LyonTechHub",
+  "version": "0.1.0",
+  "description": "Lyon Tech Hub Web Site",
+  "authors": [
+    "Lyon Tech Hub community"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular": "~1.2.20"
+  }
+}
