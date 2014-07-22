@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" ng-app="lyontechhub">
 	<head>
 		<meta charset="UTF-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,11 @@
 		<title>Lyon Tech Hub</title>
 		
 		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		
+		<script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+		<script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
+		<script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+		<script src="js/app.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default" role="navigation">
@@ -23,14 +28,14 @@
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="bs-navbar-collapse-1" bs-navbar>
 			  <ul class="nav navbar-nav">
-				<li class="active"><a href="#/">Accueil</a></li>
-				<li><a href="#/calendrier">Calendrier</a></li>
-				<li><a href="#/communautes">Communautés</a></li>
+				<li data-match-route="^/$"><a href="#/">Accueil</a></li>
+				<li data-match-route="/calendrier"><a href="#/calendrier">Calendrier</a></li>
+				<li data-match-route="/communautes"><a href="#/communautes">Communautés</a></li>
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right">
-				<li><a href="#/a-propos">A propos</a></li>
+				<li data-match-route="/a-propos"><a href="#/a-propos">A propos</a></li>
 			  </ul>
 			</div>
 		  </div>
