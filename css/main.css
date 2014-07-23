@@ -2,6 +2,20 @@ body {
 	padding-top: 60px;
 }
 
+span.fa.fa-lg {
+	padding-top: 0px;
+	padding-right: 10px;
+}
+
+section span.fa {
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+section .container-fluid {
+	padding: 20px;
+}
+
 footer {
 	background-color: #222;
 	color: #777;
@@ -18,13 +32,4 @@ footer {
 
 .communication-icon li a {
 				color: #777;
-}
-
-header span.fa {
-	padding-right: 10px;
-}
-
-section span.fa {
-	padding-top: 20px;
-	padding-bottom: 10px;
 }
