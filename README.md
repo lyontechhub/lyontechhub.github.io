@@ -12,7 +12,11 @@ It consists of the following sections :
 Join Us
 -------
 Send us a mail to lyonytechhub@googlegroups.com or even request to join the group, it is totally free.
-If you have a tech/IT community in Lyon area, request to add it to Lyon Tech Hub. Access to Google Calendar and a simple pull request to update web site is enough to promote your exciting activity to the community.
+
+If you have a tech/IT community in Lyon area, request to join Lyon Tech Hub to promote your exciting activity to the community, it is simple as :
+
+* Request access to Google Calendar
+* And a pull request to update web site (logo & JSON).
 
 Contribute
 ----------
@@ -32,3 +36,17 @@ Index.html file is the main entry point that define AngularJS application. Each 
 
 * communities.json
 * communities/[one per community].json
+
+Packages are managed through NPM and Bower. So you need NodeJS but just for NPM.
+
+*TODO* Gulp is used to build assets (CSS & JS) used by the site.
+
+After cloning, just type the following commands to have a  :
+
+```
+npm install
+node_modules\.bin\bower install
+npm start
+```
+
+Nb : npm start is configured to start a local Node web server

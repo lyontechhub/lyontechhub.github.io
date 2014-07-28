@@ -1,9 +1,10 @@
 body {
 	padding-top: 60px;
+    position: relative;
 }
 
 span.fa.fa-lg {
-	padding-top: 0px;
+	padding-top: 0;
 	padding-right: 10px;
 }
 
@@ -14,6 +15,29 @@ section span.fa {
 
 section .container-fluid {
 	padding: 20px;
+}
+
+.communitiesNav {
+    position: fixed;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+.communitiesNav li.current {
+    font-weight: bold;
+}
+
+.communitiesList {
+    text-align: justify;
+}
+
+.communitiesList li {
+    list-style: none;
+}
+
+.communitiesList img {
+    max-width: 100px;
+    padding-right: 20px;
 }
 
 footer {

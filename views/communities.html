@@ -1,1 +1,20 @@
-communautés
+<h1>{{communitiesViewModel.communities.length}} communautés diverses et variées regroupées dans Lyon Tech Hub</h1>
+<div class="container-fluid">
+    <div class="col-lg-8">
+        <ul class="communitiesList">
+            <li ng-repeat="community in communitiesViewModel.communities | orderBy : 'name'" id="{{ community.key }}">
+                <h2><a href="#/community/{{ community.key }}"><img src="/imgs/{{ community.key }}.png">{{ community.name }}</a></h2>
+                <p>{{ community.shortDescription }}</p>
+                <hr/>
+            </li>
+        </ul>
+    </div>
+    <div class="col-lg-4">
+        <div class="communitiesNav">
+            <ul class="nav">
+                <li ng-repeat="community in communitiesViewModel.communities | orderBy : 'name'"><a
+                        href="#/communautes#{{community.key}}">{{ community.name }}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

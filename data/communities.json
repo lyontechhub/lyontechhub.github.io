@@ -1,0 +1,14 @@
+[
+    {
+        "key": "MUGLyon",
+        "name": "MUG Lyon",
+        "shortDescription": "Le MUG (Microsoft User Group) Lyon regroupe les passionnés des technologies Microsoft et affiliées. Un événement par mois est organisé le dernier jeudi de chaque mois soit sur des technos de la plateforme Microsoft (de l'éditeur ou de la communauté) ou sur des pratiques ou des outils.",
+        "tags": [ "Microsoft", "pratiques", "outils" ]
+    },
+    {
+        "key": "CARA",
+        "name": "CARA Lyon",
+        "shortDescription": "Le CARA (Club Agile Rhône Alpes) propose des événements mensuels le premier mardi du mois sur des sujets très variés autour des démarches Agiles, du Lean, de l'entrepreunariat....",
+        "tags" : ["Agile", "Lean", "entreprenariat", "jeux"]
+    }
+]

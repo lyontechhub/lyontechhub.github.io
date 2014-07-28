@@ -1,4 +1,4 @@
-var app = angular.module("lyontechhub", ["mgcrea.ngStrap.navbar", "ngRoute"]);
+var app = angular.module("lyontechhub", ["mgcrea.ngStrap.navbar", "ngRoute", "lyontechhub.communities"]);
 
 app.config(["$routeProvider", function($routeProvider) {
 	$routeProvider
@@ -9,7 +9,9 @@ app.config(["$routeProvider", function($routeProvider) {
 			templateUrl: "views/calendar.html"
 		})
 		.when("/communautes", {
-			templateUrl: "views/communities.html"
+			templateUrl: "views/communities.html",
+            controller: "CommunitiesViewModel",
+            controllerAs: "communitiesViewModel"
 		})
 		.when("/a-propos", {
 			templateUrl: "views/about.html"
