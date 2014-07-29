@@ -1,14 +1,116 @@
 [
     {
         "key": "MUGLyon",
-        "name": "MUG Lyon",
-        "shortDescription": "Le MUG (Microsoft User Group) Lyon regroupe les passionnés des technologies Microsoft et affiliées. Un événement par mois est organisé le dernier jeudi de chaque mois soit sur des technos de la plateforme Microsoft (de l'éditeur ou de la communauté) ou sur des pratiques ou des outils.",
-        "tags": [ "Microsoft", "pratiques", "outils" ]
+        "name": "MUG (Microsoft User Group) Lyon",
+        "shortDescription": "Le MUG Lyon regroupe les passionnés des technologies Microsoft et affiliées. Un événement par mois est organisé le dernier jeudi de chaque mois soit sur des technos de la plateforme Microsoft (de l'éditeur ou de la communauté) ou sur des pratiques ou des outils.",
+        "tags": [ "Microsoft", "pratiques", "outils", ".NET", "C#", "JavaScript" ]
     },
     {
         "key": "CARA",
-        "name": "CARA Lyon",
-        "shortDescription": "Le CARA (Club Agile Rhône Alpes) propose des événements mensuels le premier mardi du mois sur des sujets très variés autour des démarches Agiles, du Lean, de l'entrepreunariat....",
+        "name": "CARA (Club Agile Rhône Alpes) Lyon",
+        "shortDescription": "Le CARA propose des événements mensuels le premier mardi du mois sur des sujets très variés autour des démarches Agiles, du Lean, de l'entrepreunariat....",
         "tags" : ["Agile", "Lean", "entreprenariat", "jeux"]
+    },
+    {
+        "key": "CARACodingDojo",
+        "name": "Coding Dojo CARA (Club Agile Rhône Alpes) Lyon",
+        "shortDescription": "Le CARA propose des coding dojos tous les mois. Quelquesoit votre technologie de prédiclection, venez vous exercer à de nouvelles pratiques de développement dans votre environnement de travail ou découvrez d'autres environnements avec quelqu'un d'autre.",
+        "tags" : ["Agile", "Coding Dojo"]
+    },
+    {
+        "key": "HumanTalks",
+        "name": "Human Talks Lyon",
+        "shortDescription": "A venir...",
+        "tags" : [""]
+    },
+    {
+        "key": "LyonJS",
+        "name": "LyonJS",
+        "shortDescription": "A venir...",
+        "tags" : ["JavaScript"]
+    },
+    {
+        "key": "Lyon.rb",
+        "name": "Lyon.rb (Ruby)",
+        "shortDescription": "A venir...",
+        "tags" : ["Ruby"]
+    },
+    {
+        "key": "AFUPLyon",
+        "name": "AFUP Lyon/Apéros PHP",
+        "shortDescription": "A venir...",
+        "tags" : ["PHP"]
+    },
+    {
+        "key": "SFpot",
+        "name": "SF pots",
+        "shortDescription": "A venir...",
+        "tags" : ["PHP", "Symfony"]
+    },
+    {
+        "key": "JUG",
+        "name": "Lyon JUG (Java User Group)",
+        "shortDescription": "A venir...",
+        "tags" : ["Java"]
+    },
+    {
+        "key": "SLUG",
+        "name": "Scala Lyon User Group",
+        "shortDescription": "A venir...",
+        "tags" : ["Java"]
+    },
+    {
+        "key": "CodeRetreat",
+        "name": "Code Retreat Lyon",
+        "shortDescription": "A venir...",
+        "tags" : ["Coding Dojo"]
+    },
+    {
+        "key": "CocoaHeads",
+        "name": "CocoaHeads Lyon",
+        "shortDescription": "A venir...",
+        "tags" : ["Apple"]
+    },
+    {
+        "key": "AperoPython",
+        "name": "Apéros Python",
+        "shortDescription": "A venir...",
+        "tags" : ["Python"]
+    },
+    {
+        "key": "LYAUG",
+        "name": "Lyon Android User Group",
+        "shortDescription": "A venir...",
+        "tags" : ["Android"]
+    },
+    {
+        "key": "LyonCpp",
+        "name": "Lyon C++",
+        "shortDescription": "A venir...",
+        "tags" : ["C++"]
+    },
+    {
+        "key": "OpenStack",
+        "name": "OpenStack",
+        "shortDescription": "A venir...",
+        "tags" : ["OpenStack"]
+    },
+    {
+        "key": "Hadoop",
+        "name": "Lyon Hadoop",
+        "shortDescription": "A venir...",
+        "tags" : ["Hadoop"]
+    },
+    {
+        "key": "GameDevParty",
+        "name": "Game Dev Party",
+        "shortDescription": "A venir...",
+        "tags" : ["jeux"]
+    },
+    {
+        "key": "Cassandra",
+        "name": "Cassandra Lyon User Group",
+        "shortDescription": "A venir...",
+        "tags" : ["Cassandra"]
     }
 ]
