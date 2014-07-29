@@ -35,9 +35,19 @@ section .container-fluid {
     list-style: none;
 }
 
-.communitiesList img {
+.communitiesList img, h1 img {
     max-width: 100px;
     padding-right: 20px;
+}
+
+.socialLinks {
+    padding: 10px;
+}
+
+.socialLinks li {
+    list-style: none;
+    display: inline;
+    padding: 10px;
 }
 
 footer {

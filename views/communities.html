@@ -3,7 +3,7 @@
     <div class="col-lg-8">
         <ul class="communitiesList">
             <li ng-repeat="community in communitiesViewModel.communities | orderBy : 'name'" id="{{ community.key }}">
-                <h2><a href="#/community/{{ community.key }}"><img src="/imgs/{{ community.key }}.png" onerror="this.onerror=null;this.src='/imgs/noLogo.png';">{{ community.name }}</a></h2>
+                <h2><a href="#/communaute/{{ community.key }}"><img src="/imgs/{{ community.key }}.png" onerror="this.onerror=null;this.src='/imgs/noLogo.png';" />{{ community.name }}</a></h2>
                 <p>{{ community.shortDescription }}</p>
                 <hr/>
             </li>
