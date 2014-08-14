@@ -1,17 +1,23 @@
 {
-  "name": "LyonTechHub",
-  "version": "0.1.0",
-  "description": "Lyon Tech Hub Web Site",
-  "main": "index.js",
-  "scripts": {
-	"start": "node_modules/.bin/http-server.cmd",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Lyon Tech Hub community",
-  "license": "MIT",
-  "dependencies": {
-    "bower": "^1.3.8",
-    "http-server": "^0.6.1",
-    "recess": "^1.1.9"
-  }
+    "name": "LyonTechHub",
+    "version": "0.1.0",
+    "description": "Lyon Tech Hub Web Site",
+    "main": "index.js",
+    "scripts": {
+        "prestart": "node_modules/.bin/gulp dev",
+        "start": "node_modules/.bin/http-server dist/",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Lyon Tech Hub community",
+    "license": "MIT",
+    "dependencies": {
+        "bower": "^1.3.8",
+        "http-server": "^0.6.1"
+    },
+    "devDependencies": {
+        "del": "^0.1.1",
+        "gulp": "^3.8.7",
+        "gulp-gh-pages": "^0.3.3",
+        "gulp-less": "^1.3.3"
+    }
 }
