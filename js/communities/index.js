@@ -1,0 +1,4 @@
+define([
+    './CommunitiesViewModel',
+    './CommunityViewModel'
+], function() {});

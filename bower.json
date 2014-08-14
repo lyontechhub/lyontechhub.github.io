@@ -18,8 +18,5 @@
     "angular": "~1.2.20",
     "angular-strap": "~2.0.3",
     "angular-route": "~1.2.20"
-  },
-  "resolutions": {
-    "bootstrap": "~3.2.0"
   }
 }
