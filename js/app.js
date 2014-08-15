@@ -1,7 +1,7 @@
 define([
     'angular',
     'angularRoute',
-    'angularStrap',
+    'angularStrapNavBar',
     './communities/index'
 ], function(angular) {
     'use strict';

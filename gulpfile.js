@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var del = require('del')
 var deploy = require("gulp-gh-pages");
 var less = require("gulp-less");
+var amdOptimize = require('amd-optimize');
+var concat = require('gulp-concat');
 
 /* Configuration */
 var lessSource = 'css/**/*.less';
@@ -34,6 +36,30 @@ gulp.task('build-css', function () {
 
 gulp.task('build-js', function () {
     return gulp.src(jsSource)
+        .pipe(amdOptimize('main', {
+            baseUrl: 'js',
+
+            paths: {
+                'jquery': 'empty:',
+                'domReady': 'empty:',
+                'angular': 'empty:',
+                'angularRoute': '../bower_components/angular-route/angular-route.min',
+                'angularStrapNavBar': '../bower_components/angular-strap/dist/modules/navbar.min'
+            },
+
+            shim: {
+                'angular': {
+                    deps: ['jquery'],
+                    exports: 'angular'
+                },
+                'angularRoute': {
+                    deps: ['angular']
+                },
+                'angularStrapNavBar': {
+                    deps: ['angular']
+                }
+            }}))
+        .pipe(concat('build.min.js'))
         .pipe(gulp.dest(destDir + 'js'));
 });
 

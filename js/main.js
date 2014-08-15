@@ -1,10 +1,12 @@
 require.config({
+    baseUrl: '',
+
     paths: {
         'jquery': '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min',
         'domReady': '//cdnjs.cloudflare.com/ajax/libs/require-domReady/2.0.1/domReady.min',
-        'angular': '../bower_components/angular/angular.min',
+        'angular': '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min',
         'angularRoute': '../bower_components/angular-route/angular-route.min',
-        'angularStrap': '../bower_components/angular-strap/dist/angular-strap.min'
+        'angularStrapNavBar': '../bower_components/angular-strap/dist/modules/navbar.min'
     },
 
     shim: {
@@ -15,10 +17,21 @@ require.config({
         'angularRoute': {
             deps: ['angular']
         },
-        'angularStrap': {
+        'angularStrapNavBar': {
             deps: ['angular']
         }
-    },
-
-    deps: ['./bootstrap']
+    }
 });
+
+define([
+    'require',
+    'angular',
+    'app'
+], function(require, angular) {
+        'use strict';
+
+        require(['domReady'], function(document) {
+            angular.bootstrap(document, ['lyontechhub']);
+        });
+    }
+);
