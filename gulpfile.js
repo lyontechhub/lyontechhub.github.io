@@ -6,7 +6,7 @@ var amdOptimize = require('amd-optimize');
 var concat = require('gulp-concat');
 
 /* Configuration */
-var lessSource = 'css/**/*.less';
+var lessSource = 'css/main.less';
 var jsSource = 'js/**/*.js';
 var htmlSource = '**/*.html';
 var data = 'data/**/*';
@@ -30,7 +30,7 @@ gulp.task('copy-images', function () {
 
 gulp.task('build-css', function () {
     return gulp.src(lessSource)
-        .pipe(less())
+        .pipe(less({ paths: [ 'bower_components/bootstrap/less/' ] }))
         .pipe(gulp.dest(destDir + 'css'));
 });
 
