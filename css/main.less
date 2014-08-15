@@ -31,6 +31,15 @@ section {
   }
 }
 
+.logo {
+  max-width: 100px;
+  padding-right: 20px;
+}
+
+h1 img {
+  .logo;
+}
+
 .communitiesList {
   text-align: justify;
 
@@ -38,11 +47,19 @@ section {
     list-style: none;
   }
 
-  img, h1 img {
-    max-width: 100px;
-    padding-right: 20px;
+  img {
+    .logo;
   }
 }
+
+.community {
+  text-align: justify;
+
+  h2 {
+    text-align: center;
+  }
+}
+
 
 .socialLinks {
   padding: 10px;
