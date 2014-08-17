@@ -18,6 +18,12 @@ If you have a tech/IT community in Lyon area, request to join Lyon Tech Hub to p
 * Request access to Google Calendar
 * And submit a pull request to update web site (logo & JSON data).
 
+Make sure you do a pull request on master branch including the following :
+
+* your community in community list data/communities.json
+* your community details in file data/[key used in list].json
+* your community logo in imgs in PNG format with a 100x100 minimum resolution
+
 Contribute
 ----------
 Contact us on the Google Group, make pull-request, this web site must be managed by Lyon communities themselves.
@@ -39,14 +45,16 @@ Index.html file is the main entry point that define AngularJS application. Each 
 
 ### JSON data & images
 
-The following JSON files are used to provide content to dynamic views in 'dist/data' directory:
+The following JSON files are used to provide content to dynamic views in 'data' directory:
 
 * communities.json
 * communities/[one per community].json
 
-Images like community icons are in 'dist/imgs' directory.
+Images like community icons are in 'imgs' directory.
 
-'dist/imgs' & 'dist/data' directories MUST be modified on 'master' branch ONLY to be put online.
+'imgs' & 'data' directories MUST be modified on 'master' branch ONLY to be put online. IT DOES NOT REQUIRE A BUILD to update.
+
+You can also use --includeDevAssets to copy some files from dev branch in dist directory. BECAREFUL it will overide content from master branch with content from dev branch.
 
 ### Dev & build environment
 
