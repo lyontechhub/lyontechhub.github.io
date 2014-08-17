@@ -1,16 +1,16 @@
-define(['./module', 'jquery'], function(app) {
+define(['./module', './communitiesRepository', 'jquery'], function(app) {
     'use strict';
 
-    app.controller("CommunityViewModel", ["$routeParams", "$http", function($routeParams, $http) {
+    app.controller("CommunityViewModel", ["$routeParams", "communitiesRepository", function($routeParams, communitiesRepository) {
         var self = this;
         self.key = $routeParams.key;
         self.community = {};
 
-        $http.get("/data/" + self.key + ".json").success(function(data) {
+        communitiesRepository.getOne(self.key).success(function(data) {
             self.community = data;
         });
 
-        $http.get("/data//communities.json").success(function(data) {
+        communitiesRepository.getAll().success(function(data) {
             var currentCommunity = $.grep(data, function(item) {
                 return item.key === self.key;
             });
