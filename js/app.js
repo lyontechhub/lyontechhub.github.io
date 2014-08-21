@@ -8,6 +8,10 @@ define([
 
     var app = angular.module("lyontechhub", ["mgcrea.ngStrap.navbar", "ngRoute", "lyontechhub.communities"]);
 
+    app.config(["$locationProvider", function($locationProvider) {
+        $locationProvider.hashPrefix('!');
+    }]);
+
     app.config(["$routeProvider", function($routeProvider) {
         $routeProvider
             .when("/", {

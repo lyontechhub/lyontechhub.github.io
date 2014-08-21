@@ -1,68 +1,78 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8"/>
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Lyon Tech Hub</title>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lyon Tech Hub</title>
 
-		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
-		<link href="css/main.css" rel="stylesheet"/>
-	</head>
-	<body>
-		<header>
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		  <div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="#">Lyon Tech Hub</a>
-			</div>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Lyon Tech Hub</a>
+            </div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-navbar-collapse-1" bs-navbar>
-			  <ul class="nav navbar-nav">
-				<li data-match-route="^/$"><a href="#/"><span class="fa fa-home fa-lg"></span>Accueil</a></li>
-				<li data-match-route="/calendrier"><a href="#/calendrier"><span class="fa fa-calendar fa-lg"></span>Calendrier</a></li>
-				<li data-match-route="/communautes"><a href="#/communautes"><span class="fa fa-comments fa-lg"></span>Communautés</a></li>
-			  </ul>
-			  <ul class="nav navbar-nav navbar-right">
-				<li data-match-route="/a-propos"><a href="#/a-propos"><span class="fa fa-info-circle fa-lg"></span>A propos</a></li>
-			  </ul>
-			</div>
-		  </div>
-		</nav>
-		</header>
-		<section class="text-center">
-		  <div ng-view></div>
-		</section>
-		<footer>
-		  <div class="container-fluid">
-			<div class="col-lg-2"><h3>Lyon Tech Hub</h3></div>
-            <div class="col-lg-5"><h3><small><a href="#/a-propos">Rejoignez-nous</a></small></h3></div>
-			<div class="col-lg-5">
-			  <ul class="communication-icon pull-right">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-navbar-collapse-1" bs-navbar>
+                <ul class="nav navbar-nav">
+                    <li data-match-route="^/$"><a href="#!/"><span class="fa fa-home fa-lg"></span>Accueil</a></li>
+                    <li data-match-route="/calendrier"><a href="#!/calendrier"><span class="fa fa-calendar fa-lg"></span>Calendrier</a>
+                    </li>
+                    <li data-match-route="/communautes"><a href="#!/communautes"><span
+                            class="fa fa-comments fa-lg"></span>Communautés</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li data-match-route="/a-propos"><a href="#!/a-propos"><span class="fa fa-info-circle fa-lg"></span>A
+                        propos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="text-center">
+    <div ng-view></div>
+</section>
+<footer>
+    <div class="container-fluid">
+        <div class="col-lg-2"><h3>Lyon Tech Hub</h3></div>
+        <div class="col-lg-5">
+            <h3>
+                <small><a href="#!/a-propos">Rejoignez-nous</a></small>
+            </h3>
+        </div>
+        <div class="col-lg-5">
+            <ul class="communication-icon pull-right">
                 <li>
-                  <a href="mailto:lyontechhub@googlegroups.com" class="fa fa-envelope fa-3x" title="Mail de contact"></a>
+                    <a href="mailto:lyontechhub@googlegroups.com" class="fa fa-envelope fa-3x"
+                       title="Mail de contact"></a>
                 </li>
                 <li>
-                  <a href="https://groups.google.com/forum/#!forum/lyontechhub" class="fa fa-comments fa-3x" title="Liste de discussion"></a>
+                    <a href="https://groups.google.com/forum/#!forum/lyontechhub" class="fa fa-comments fa-3x"
+                       title="Liste de discussion"></a>
                 </li>
-			    <li>
-				  <a href="http://www.twitter.com/lyontechhub" class="fa fa-twitter fa-3x" title="Twitter"></a>
-				</li>
-			    <li>
-				  <a href="http://www.github.com/lyontechhub" class="fa fa-github fa-3x" title="GitHub"></a>
-				</li>
-			  </ul>
-			</div>
-		  </div>
-		</footer>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js" type="text/javascript" data-main="js/build.min"></script>
-	</body>
+                <li>
+                    <a href="http://www.twitter.com/lyontechhub" class="fa fa-twitter fa-3x" title="Twitter"></a>
+                </li>
+                <li>
+                    <a href="http://www.github.com/lyontechhub" class="fa fa-github fa-3x" title="GitHub"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js" type="text/javascript"
+        data-main="js/build.min"></script>
+</body>
 </html>
