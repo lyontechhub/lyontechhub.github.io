@@ -4,8 +4,8 @@
   "description": "Lyon Tech Hub Web Site",
   "main": "index.js",
   "scripts": {
-    "prestart": "node_modules/.bin/bower install && gulp build",
-    "start": "node dist/server.js",
+    "prestart": "node_modules/.bin/bower install",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lyon Tech Hub community",
