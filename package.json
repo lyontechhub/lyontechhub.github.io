@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "description": "Lyon Tech Hub Web Site",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/lyontechhub/lyontechhub.github.io"
+  },
   "scripts": {
-    "prestart": "node_modules/.bin/bower install && gulp build",
+    "prestart": "bower install && gulp build",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,9 +18,8 @@
     "bower": "^1.3.8",
     "express": "^4.8.6",
     "http-server": "^0.6.1",
-    "prerender-node": "^1.0.5"
-  },
-  "devDependencies": {
+    "prerender-node": "^1.0.5",
+
     "amd-optimize": "^0.1.0",
     "del": "^0.1.1",
     "gulp": "^3.8.7",

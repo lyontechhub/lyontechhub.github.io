@@ -5,6 +5,10 @@
   "authors": [
     "Lyon Tech Hub community"
   ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/lyontechhub/lyontechhub.github.io"
+  },
   "license": "MIT",
   "ignore": [
     "**/.*",
