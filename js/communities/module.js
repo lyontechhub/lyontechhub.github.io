@@ -11,5 +11,6 @@ define(['angular', 'angularRoute'], function(angular) {
                 controllerAs: "communityViewModel"
             });
     }]);
+
     return app;
 });

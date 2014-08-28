@@ -51,8 +51,9 @@ gulp.task('build-js', function () {
                 'jquery': 'empty:',
                 'domReady': 'empty:',
                 'angular': 'empty:',
-                'angularRoute': '../bower_components/angular-route/angular-route.min',
-                'angularStrapNavBar': '../bower_components/angular-strap/dist/modules/navbar.min'
+                'angularRoute': '../bower_components/angular-route/angular-route',
+                'angularStrapNavBar': '../bower_components/angular-strap/dist/modules/navbar',
+                'angularScroll': '../bower_components/angular-scroll/angular-scroll'
             },
 
             shim: {
@@ -64,6 +65,9 @@ gulp.task('build-js', function () {
                     deps: ['angular']
                 },
                 'angularStrapNavBar': {
+                    deps: ['angular']
+                },
+                'angularScroll': {
                     deps: ['angular']
                 }
             }}))

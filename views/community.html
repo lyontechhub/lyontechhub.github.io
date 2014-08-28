@@ -1,6 +1,7 @@
 <h1><img src="/imgs/{{ communityViewModel.key }}.png" onerror="this.onerror=null;this.src='/imgs/noLogo.png';"/>{{communityViewModel.community.name}}</h1>
-<div class="container-fluid text-justify">
-    <div class="col-lg-8">
+<div class="container-fluid community">
+    <div class="col-lg-4">
+        <h2>En bref...</h2>
         <p>{{ communityViewModel.community.shortDescription }}</p>
         <ul class="socialLinks">
             <li ng-repeat="socialLink in communityViewModel.community.socialLinks">
@@ -9,5 +10,9 @@
         </ul>
     </div>
     <div class="col-lg-4">
+        <h2>A venir !</h2>
+    </div>
+    <div class="col-lg-4">
+        <h2>Ce que vous avez manqué...</h2>
     </div>
 </div>

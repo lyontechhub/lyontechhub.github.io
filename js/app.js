@@ -2,11 +2,12 @@ define([
     'angular',
     'angularRoute',
     'angularStrapNavBar',
+    'angularScroll',
     './communities/index'
 ], function(angular) {
     'use strict';
 
-    var app = angular.module("lyontechhub", ["mgcrea.ngStrap.navbar", "ngRoute", "lyontechhub.communities"]);
+    var app = angular.module("lyontechhub", ["ngRoute", "mgcrea.ngStrap.navbar", 'duScroll', "lyontechhub.communities"]);
 
     app.config(["$locationProvider", function($locationProvider) {
         $locationProvider.hashPrefix('!');
@@ -32,4 +33,21 @@ define([
                 redirectTo: "/"
             });
     }]);
+
+    app.directive('ngScrollTo', function ($location, $anchorScroll) {
+        return function(scope, element, attrs) {
+
+            element.bind('click', function(event) {
+                event.stopPropagation();
+                var off = scope.$on('$locationChangeStart', function(ev) {
+                    off();
+                    ev.preventDefault();
+                });
+                var location = attrs.ngScrollTo;
+                $location.hash(location);
+                $anchorScroll();
+            });
+
+        };
+    });
 });

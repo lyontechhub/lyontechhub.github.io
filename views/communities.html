@@ -1,20 +1,22 @@
-<h1>{{communitiesViewModel.communities.length}} communautés diverses et variées regroupées dans Lyon Tech Hub</h1>
-<div class="container-fluid">
-    <div class="col-lg-8">
-        <ul class="communitiesList">
-            <li ng-repeat="community in communitiesViewModel.communities | orderBy : 'name'" id="{{ community.key }}">
-                <h2><a href="#/communaute/{{ community.key }}"><img src="/imgs/{{ community.key }}.png" onerror="this.onerror=null;this.src='/imgs/noLogo.png';" />{{ community.name }}</a></h2>
-                <p>{{ community.shortDescription }}</p>
-                <hr/>
-            </li>
-        </ul>
-    </div>
-    <div class="col-lg-4">
-        <div class="communitiesNav">
-            <ul class="nav">
-                <li ng-repeat="community in communitiesViewModel.communities | orderBy : 'name'"><a
-                        href="#/communautes#{{community.key}}">{{ community.name }}</a></li>
-            </ul>
-        </div>
-    </div>
+<div class="communitiesNav">
+    <h1>{{communitiesViewModel.communities.length}} communautés diverses et variées regroupées dans Lyon Tech Hub<br/>
+        <small><a href="#!/a-propos">Par ici pour voir comment rajoutez la votre !</a></small>
+    </h1>
+    <ul>
+        <li ng-repeat="community in communitiesViewModel.communities | orderBy : 'name'"
+             offset="210"><a
+                ng-scroll-to="{{community.key}}">{{ community.name }}</a></li>
+    </ul>
+</div>
+<div class="container-fluid communitiesList">
+    <ul>
+        <li ng-repeat="community in communitiesViewModel.communities | orderBy : 'name'" id="{{ community.key }}ScrollSpy" >
+            <span id="{{ community.key }}" class="anchor"></span>
+            <h2><a href="#!/communaute/{{ community.key }}"><img src="/imgs/{{ community.key }}.png"
+                                                                onerror="this.onerror=null;this.src='/imgs/noLogo.png';"/>{{ community.name }}</a></h2>
+
+            <p>{{ community.shortDescription }}</p>
+            <hr/>
+        </li>
+    </ul>
 </div>
