@@ -16,4 +16,7 @@ app.use('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.listen(3000);
+var port = Number(process.env.PORT || 3000);
+app.listen(port, function() {
+    console.log("Listening on port " + port);
+});
