@@ -77,3 +77,12 @@ Gulp is used to build assets (CSS & JS) used by the site. JSON & images are to b
 * 'deploy' task is used to commit 'dist' directory content to 'master' branch (excluding 'data' & 'imgs' directories which are modified on 'master' branch directly), specify '--push' to effectively deploy on GitHub pages (i.e push on GitHub master branch)
 
 So, to be well prepared for dev, launch 2 terminals, first one with 'npm start', and second one with 'node_modules\.bin\gulp watch'.
+
+### SEO compliance
+
+To be SEO compliant, we embed web site in a Node.js application only to use prerender.io. The application load the Node.js module for prerender.io, called the middleware.
+It use Google AJAX crawling specification to make AngularJS application search engine compliant. See https://prerender.io/.
+
+We use a heroku application for the prerender service, which crawl the web site with PhantomJS to return full old HTML. Prerender service is at http://mighty-waters-2486.herokuapp.com/.
+It has been deployed with following instructions : https://github.com/prerender/prerender#deploying-your-own-on-heroku.
+It has whitelist enabled with Lyon Tech Hub url only (config var : heroku config to list & heroku config:set to set).

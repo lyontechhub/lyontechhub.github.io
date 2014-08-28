@@ -15,6 +15,7 @@ var path = require('path');
 var runSequence = require('run-sequence');
 
 /* Configuration */
+var nodeSource = ['server.js', 'package.json'];
 var lessSource = 'css/main.less';
 var jsSource = 'js/**/*.js';
 var htmlSource = ['views/*.html', 'index.html'];
@@ -84,7 +85,12 @@ gulp.task('watch-html', function() {
     gulp.watch(htmlSource, ['build-html']);
 });
 
-gulp.task('copy-dev-assets', ['build-css', 'build-js', 'build-html'], function() {
+gulp.task('build-node', function() {
+    return gulp.src(nodeSource)
+        .pipe(gulp.dest(destDir));
+});
+
+gulp.task('copy-dev-assets', ['build-css', 'build-js', 'build-html', 'build-node'], function() {
     if (argv.includeDevAssets && argv.includeDevAssets !== true) {
         var assets = argv.includeDevAssets.split(',');
         var i, assetsArray = [];
