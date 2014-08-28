@@ -85,12 +85,7 @@ gulp.task('watch-html', function() {
     gulp.watch(htmlSource, ['build-html']);
 });
 
-gulp.task('build-node', function() {
-    return gulp.src(nodeSource)
-        .pipe(gulp.dest(destDir));
-});
-
-gulp.task('copy-dev-assets', ['build-css', 'build-js', 'build-html', 'build-node'], function() {
+gulp.task('copy-dev-assets', ['build-css', 'build-js', 'build-html'], function() {
     if (argv.includeDevAssets && argv.includeDevAssets !== true) {
         var assets = argv.includeDevAssets.split(',');
         var i, assetsArray = [];

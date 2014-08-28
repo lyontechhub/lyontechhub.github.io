@@ -12,6 +12,7 @@ app.use('/js', express.static(__dirname + '/js'));
 app.use('/views', express.static(__dirname + '/views'));
 app.use('/data', express.static(__dirname + '/data'));
 app.use('/imgs', express.static(__dirname + '/imgs'));**/
+app.use(express.static(__dirname + '/dist'));
 app.use('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
