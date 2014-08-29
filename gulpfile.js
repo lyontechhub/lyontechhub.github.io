@@ -53,7 +53,9 @@ gulp.task('build-js', function () {
                 'domReady': 'empty:',
                 'angular': 'empty:',
                 'angularRoute': '../bower_components/angular-route/angular-route',
-                'angularStrapNavBar': '../bower_components/angular-strap/dist/modules/navbar'
+                'angularStrapNavBar': '../bower_components/angular-strap/dist/modules/navbar',
+                'angulartics': '../bower_components/angulartics/dist/angulartics.min',
+                'angulartics.google.analytics': '../bower_components/angulartics/dist/angulartics-ga.min'
             },
 
             shim: {
@@ -69,6 +71,12 @@ gulp.task('build-js', function () {
                 },
                 'angularStrapNavBar': {
                     deps: ['angular']
+                },
+                'angulartics': {
+                    deps: ['angular']
+                },
+                'angulartics.google.analytics': {
+                    deps: ['angulartics']
                 }
             }}))
         .pipe(concat('js/build.min.js'))

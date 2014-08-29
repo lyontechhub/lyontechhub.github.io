@@ -2,11 +2,13 @@ define([
     'angular',
     'angularRoute',
     'angularStrapNavBar',
+    'angulartics',
+    'angulartics.google.analytics',
     './communities/index'
 ], function(angular) {
     'use strict';
 
-    var app = angular.module("lyontechhub", ["ngRoute", "mgcrea.ngStrap.navbar", "lyontechhub.communities"]);
+    var app = angular.module("lyontechhub", ["ngRoute", "mgcrea.ngStrap.navbar", "angulartics.google.analytics", "lyontechhub.communities"]);
 
     app.config(["$locationProvider", function($locationProvider) {
         $locationProvider.hashPrefix('!');
