@@ -49,6 +49,7 @@ gulp.task('build-js', function () {
 
             paths: {
                 'jquery': 'empty:',
+                'bootstrap': 'empty:',
                 'domReady': 'empty:',
                 'angular': 'empty:',
                 'angularRoute': '../bower_components/angular-route/angular-route',
@@ -56,6 +57,9 @@ gulp.task('build-js', function () {
             },
 
             shim: {
+                'bootstrap': {
+                    deps: ['jquery']
+                },
                 'angular': {
                     deps: ['jquery'],
                     exports: 'angular'
