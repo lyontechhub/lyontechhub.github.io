@@ -3,11 +3,11 @@ define(['./module', './communitiesRepository'], function(app) {
 
     app.controller("CommunitiesViewModel", ["communitiesRepository", function(communitiesRepository){
         var self = this;
+        self.query;
         self.communities = [];
 
         communitiesRepository.getAll().success(function(data) {
             self.communities = data;
-            // Does not work...$('body').scrollspy({ target: '.communitiesNav', offset: 50 })
         });
     }]);
 });
