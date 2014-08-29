@@ -15,10 +15,10 @@ var path = require('path');
 var runSequence = require('run-sequence');
 
 /* Configuration */
-var nodeSource = ['server.js', 'package.json'];
 var lessSource = 'css/main.less';
 var jsSource = 'js/**/*.js';
 var htmlSource = ['views/*.html', 'index.html'];
+var assetsSource = ['imgs/**/*', 'data/**/*'];
 var destDir = 'dist/';
 var deployOptions = {
     "origin": 'origin',
@@ -85,66 +85,22 @@ gulp.task('watch-html', function() {
     gulp.watch(htmlSource, ['build-html']);
 });
 
-gulp.task('copy-dev-assets', ['build-css', 'build-js', 'build-html'], function() {
-    if (argv.includeDevAssets && argv.includeDevAssets !== true) {
-        var assets = argv.includeDevAssets.split(',');
-        var i, assetsArray = [];
-        for (i = 0; i < assets.length; i++) {
-            assetsArray.push(assets[i]);
-        }
-        gutil.log('Copying ' + argv.includeDevAssets);
-        return gulp.src(assetsArray, { base: './'})
-            .pipe(gulp.dest(destDir))
-    } else {
-        gutil.log('Nothing copied from dev assets.');
-    }
+gulp.task('copy-assets', function() {
+    return gulp.src(assetsSource, { base: './'})
+        .pipe(gulp.dest(destDir));
 });
 
-gulp.task('build', ['copy-dev-assets']);
-
-gulp.task('watch', ['watch-css', 'watch-js', 'watch-html']);
-
-// Clone repo, checkout deployment branch to copy data & imgs files from there
-gulp.task('prepare-deploy', ['clean'], function() {
-    var TAG = '[gulp-' + deployOptions.branch + ']: ';
-    return git.prepareRepo(null, deployOptions.origin, null)
-        .then(function (repo) {
-            tmpRepoPath = repo._repo.path;
-            gutil.log(TAG + 'Repo cloned in ' + tmpRepoPath);
-            if ( repo._localBranches.indexOf(deployOptions.branch) > -1 ) {
-                gutil.log(TAG + 'Checkout branch `' + deployOptions.branch + '`');
-                return repo.checkoutBranch(deployOptions.branch);
-            }
-            else if ( repo._remoteBranches.indexOf(deployOptions.origin + '/' + deployOptions.branch) > -1 ) {
-                gutil.log(TAG + 'Checkout remote branch `' + deployOptions.branch + '`');
-                return repo.checkoutBranch(deployOptions.branch);
-            } else {
-                gutil.log(TAG + 'Create branch `' + deployOptions.branch + '` and checkout');
-                return repo.createAndCheckoutBranch(deployOptions.branch);
-            }
-        })
-        .then(function(repo) {
-            gutil.log(TAG + 'Updating repository');
-            var deferred = when.defer();
-            repo._repo.pull(deployOptions.origin, deployOptions.branch, function (err) {
-                if ( err ) {
-                    deferred.reject(err);
-                } else {
-                    this._currentBranch = deployOptions.branch;
-                    deferred.resolve(repo.status());
-                }
-            });
-            return deferred.promise;
-        });
+gulp.task('watch-assets', function() {
+    gulp.watch(assetsSource, ['copy-assets']);
 });
 
-gulp.task('copy-master-assets', ['prepare-deploy'], function() {
-    return gulp.src([ path.join(tmpRepoPath, 'data/**/*'), path.join(tmpRepoPath, 'imgs/**/*') ])
-        pipe(gulp.dest(destDir));
-});
+gulp.task('build', ['build-css', 'build-js', 'build-html', 'copy-assets']);
 
+gulp.task('watch', ['watch-css', 'watch-js', 'watch-html', 'watch-assets']);
+
+// Deploy target to use to deploy to github pages (not used -> no SEO solution, heroku is used instead)
 gulp.task('deploy', function () {
-    runSequence('copy-master-assets', 'build', function() {
+    runSequence('build', function() {
         deployOptions.push = argv.push ? true : false;
         return gulp.src(['./dist/**/*'])
             .pipe(deploy(deployOptions));

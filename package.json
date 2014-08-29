@@ -8,7 +8,8 @@
     "url": "http://github.com/lyontechhub/lyontechhub.github.io"
   },
   "scripts": {
-    "prestart": "bower install && gulp build",
+    "postinstall": "bower install",
+    "prestart": "gulp build",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
