@@ -32,13 +32,13 @@
     {
         "key": "Lyon.rb",
         "name": "Lyon.rb (Ruby)",
-        "shortDescription": "A venir...",
+        "shortDescription": "Communauté centrée autour de Ruby et de ses outils. Organise un meetup le second mercredi de chaque mois.",
         "tags" : ["Ruby"]
     },
     {
         "key": "AFUPLyon",
         "name": "AFUP Lyon/Apéros PHP",
-        "shortDescription": "A venir...",
+        "shortDescription": "Communauté centrée autour de PHP et de ses outils. Organise un apéro la dernière semaine de chaque mois et une mini-conférence un mois sur deux.",
         "tags" : ["PHP"]
     },
     {
@@ -62,7 +62,7 @@
     {
         "key": "CodeRetreat",
         "name": "Code Retreat Lyon",
-        "shortDescription": "A venir...",
+        "shortDescription": "Les Code Retreat sont des événements d'une journée réalisé une à deux fois par an. Le but est d'explorer un sujet donné selon différentes approche en pair programming.",
         "tags" : ["Coding Dojo"]
     },
     {
@@ -86,7 +86,7 @@
     {
         "key": "LyonCpp",
         "name": "Lyon C++",
-        "shortDescription": "A venir...",
+        "shortDescription": "Communauté axée autour de C++.",
         "tags" : ["C++"]
     },
     {
