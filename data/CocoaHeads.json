@@ -1,0 +1,7 @@
+{
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://cocoaheads.fr/lyon/"},
+        { "icon": "twitter", "tooltip": "Twitter", "url": "http://www.twitter.com/cocoaheadslyon"},
+        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://github.com/cocoaheadslyon"}
+    ]
+}
