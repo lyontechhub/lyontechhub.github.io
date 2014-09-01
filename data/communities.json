@@ -30,10 +30,10 @@
         "tags" : ["JavaScript"]
     },
     {
-        "key": "Lyon.rb",
+        "key": "LyonRB",
         "name": "Lyon.rb (Ruby)",
-        "shortDescription": "A venir...",
-        "tags" : ["Ruby"]
+        "shortDescription": "Communauté de développeurs Ruby qui organisent un meetup chaque deuxième mercredi du mois avec quelques talks, suivis de discussions autour de burgers et de bières <3 Également organisateurs de la conférence Ruby Lugdunum (RuLu) et des RailsGirls Lyon.",
+        "tags" : ["Ruby", "Rails", "Sinatra", "RailsGirls", "RuLu"]
     },
     {
         "key": "AFUPLyon",

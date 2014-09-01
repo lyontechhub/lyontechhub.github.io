@@ -1,0 +1,10 @@
+{
+    "patternsGoogleCalendar": ["Lyon.rb"],
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://lyonrb.fr"},
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/lyonrb"},
+        { "icon": "linkedin", "tooltip": "Linked In", "url": "https://www.linkedin.com/company/lyon-rb---lyon-ruby-brigade"},
+        { "icon": "facebook", "tooltip": "Facebook", "url": "https://www.facebook.com/lyonrb"},
+        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://www.github.com/lyonrb"}
+    ]
+}
