@@ -1,18 +1,25 @@
-<h1><img src="/imgs/{{ communityViewModel.key }}.png" onerror="this.onerror=null;this.src='/imgs/noLogo.png';"/>{{communityViewModel.community.name}}</h1>
-<div class="container-fluid community">
-    <div class="col-lg-4">
-        <h2>En bref...</h2>
-        <p>{{ communityViewModel.community.shortDescription }}</p>
-        <ul class="socialLinks">
-            <li ng-repeat="socialLink in communityViewModel.community.socialLinks">
-                <a href="{{ socialLink.url }}" class="fa fa-2x fa-{{ socialLink.icon }}" title="{{ socialLink.tooltip }}"></a>
-            </li>
-        </ul>
-    </div>
-    <div class="col-lg-4">
-        <h2>A venir !</h2>
-    </div>
-    <div class="col-lg-4">
-        <h2>Ce que vous avez manqué...</h2>
+<div class="container-fluid">
+    <div class="container">
+        <img src="/imgs/{{ communityViewModel.key }}.png" onerror="this.onerror=null;this.src='/imgs/noLogo.png';" />
+
+        <h1>{{communityViewModel.community.name}}</h1>
+
+        <div class="row community">
+            <div class="col-lg-4">
+                <h2>En bref...</h2>
+                <p>{{ communityViewModel.community.shortDescription }}</p>
+                <ul class="socialLinks">
+                    <li ng-repeat="socialLink in communityViewModel.community.socialLinks">
+                        <a href="{{ socialLink.url }}" class="fa fa-2x fa-{{ socialLink.icon }}" title="{{ socialLink.tooltip }}"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h2>A venir !</h2>
+            </div>
+            <div class="col-lg-4">
+                <h2>Ce que vous avez manqué...</h2>
+            </div>
+        </div>
     </div>
 </div>
