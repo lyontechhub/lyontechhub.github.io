@@ -7,7 +7,8 @@ define(['./module'], function(app) {
             description: googleEvent.description,
             location: googleEvent.location,
             startDate: Date.parse(googleEvent.start.dateTime),
-            endDate: Date.parse(googleEvent.end.dateTime)
+            endDate: Date.parse(googleEvent.end.dateTime),
+            url: googleEvent.htmlLink
         }
     };
 

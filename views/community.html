@@ -19,11 +19,11 @@
                         <div>{{ event.startDate | date : 'MMM' }}</div>
                     </div>
                     <div>
-                        <div>{{ event.title }} <a href="{{ event.url }}" class="fa fa-external-link" title="Lien vers l'événement dans Google Calendar"/></div>
+                        <div>{{ event.title }} <a href="{{ event.url }}" target="_blank" class="fa fa-external-link" title="Lien vers l'événement dans Google Calendar"/></div>
                         <div>De {{ event.startDate | date : "H'h'mm" }} à {{ event.endDate | date : "H'h'mm" }} {{ '- ' + event.location }}</div>
                     </div>
                 </div>
-                <div>{{ event.description }}</div>
+                <div ng-bind-html="event.description | linky:_blank"></div>
             </li>
         </ul>
     </div>
@@ -37,11 +37,11 @@
                         <div>{{ event.startDate | date : 'MMM' }}</div>
                     </div>
                     <div>
-                        <div>{{ event.title }} <a href="{{ event.url }}" class="fa fa-external-link" title="Lien vers l'événement dans Google Calendar"/></div>
+                        <div>{{ event.title }} <a href="{{ event.url }}" target="_blank" class="fa fa-external-link" title="Lien vers l'événement dans Google Calendar"/></div>
                         <div>De {{ event.startDate | date : "H'h'mm" }} à {{ event.endDate | date : "H'h'mm" }} {{ '- ' + event.location }}</div>
                     </div>
                 </div>
-                <div>{{ event.description }}</div>
+                <div ng-bind-html="event.description | linky:_blank"></div>
             </li>
         </ul>
     </div>

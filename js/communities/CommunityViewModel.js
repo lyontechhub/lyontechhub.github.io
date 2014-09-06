@@ -1,4 +1,7 @@
-define(['./module', './communitiesRepository', './eventsRepository', 'jquery'], function(app) {
+define(['./module',
+    './communitiesRepository',
+    './eventsRepository',
+    'jquery'], function(app) {
     'use strict';
 
     app.controller("CommunityViewModel", ["$routeParams", "communitiesRepository", "eventsRepository", function($routeParams, communitiesRepository, eventsRepository) {

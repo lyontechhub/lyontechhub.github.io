@@ -52,7 +52,8 @@ gulp.task('build-js', function () {
                 'bootstrap': 'empty:',
                 'domReady': 'empty:',
                 'angular': 'empty:',
-                'angularRoute': '../bower_components/angular-route/angular-route',
+                'angularRoute': 'empty:',
+                'angularSanitize': 'empty:',
                 'angularStrapNavBar': '../bower_components/angular-strap/dist/modules/navbar',
                 'angulartics': '../bower_components/angulartics/dist/angulartics.min',
                 'angulartics.google.analytics': '../bower_components/angulartics/dist/angulartics-ga.min'
@@ -67,6 +68,9 @@ gulp.task('build-js', function () {
                     exports: 'angular'
                 },
                 'angularRoute': {
+                    deps: ['angular']
+                },
+                'angularSanitize': {
                     deps: ['angular']
                 },
                 'angularStrapNavBar': {
