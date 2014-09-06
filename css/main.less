@@ -102,6 +102,60 @@ footer {
   }
 }
 
+.events {
+  padding: 0;
+  li {
+    list-style: none;
+    padding-bottom: 10px;
+
+    > div {
+      font-size: 90%;
+      overflow: auto;
+
+      > div {
+        float: left;
+      }
+
+      > :first-child {
+        border-top: solid black 1px;
+        border-bottom: solid black 1px;
+        padding: 2px 10px 2px 10px;
+        text-align: center;
+        font-weight: bold;
+
+        :first-child {
+          font-size: 150%;
+        }
+
+        :nth-child(2) {
+          text-transform: uppercase;
+          font-weight: normal;
+          font-family: monospace;
+        }
+      }
+
+      > :nth-child(2) {
+        width: 80%;
+        margin-left: 10px;
+        font-size: 100%;
+
+        :first-child {
+          font-size: 120%;
+          font-weight: bold;
+
+          a {
+            font-size: 50%;
+          }
+        }
+      }
+    }
+
+    > :nth-child(2) {
+      padding: 5px 10px 5px 10px;
+    }
+  }
+}
+
 .communication-icon {
   list-style: none;
   padding-top: 1em;
