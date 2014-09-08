@@ -1,0 +1,8 @@
+{
+    "patternsGoogleCalendar": ["Lyaug"],
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://lyaug.fr"},
+        { "icon": "google-plus", "tooltip": "Google+Web site", "url": "https://plus.google.com/+LyaugFrGDG"},
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/LyonAndroidUG"}
+    ]
+}

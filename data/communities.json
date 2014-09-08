@@ -80,8 +80,8 @@
     {
         "key": "LYAUG",
         "name": "Lyon Android User Group",
-        "shortDescription": "A venir...",
-        "tags" : ["Android"]
+        "shortDescription": "Le Google Developer Group (GDG) Lyon Android, alias #LYAUG est une association visant à regrouper les professionnels et les développeurs Android/Google de Lyon et de la région Rhône-Alpes lors de différents évènements.",
+        "tags": ["Android", "Google"]
     },
     {
         "key": "LyonCpp",
