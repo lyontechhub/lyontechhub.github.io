@@ -74,8 +74,8 @@
     {
         "key": "AperoPython",
         "name": "Apéros Python",
-        "shortDescription": "A venir...",
-        "tags" : ["Python"]
+        "shortDescription": "L'apéro Python est un moment où les développeurs se retrouvent autour d'un verre et d'une présentation pour échanger autour de ce language. L'accès est gratuit et ouvert à tous. Cet  apéro est organisé par l'Association Francophone Python (AFPY).",
+        "tags" : ["Python", "DevOps", "Scientific", "Web"]
     },
     {
         "key": "LYAUG",
