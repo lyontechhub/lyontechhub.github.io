@@ -31,7 +31,7 @@
     <div class="col-lg-4">
         <h2>Ce que vous avez manqué...</h2>
         <ul class="events">
-            <li ng-hide="communityViewModel.community.nextEvents.length">Pas d'événements durant les 4 derniers mois.</li>
+            <li ng-hide="communityViewModel.community.pastEvents.length">Pas d'événements durant les 4 derniers mois.</li>
             <li ng-repeat="event in communityViewModel.community.pastEvents | orderBy:'-startDate'">
                 <div>
                     <div>
