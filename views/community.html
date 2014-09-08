@@ -5,7 +5,7 @@
         <p>{{ communityViewModel.community.shortDescription }}</p>
         <ul class="socialLinks">
             <li ng-repeat="socialLink in communityViewModel.community.socialLinks">
-                <a href="{{ socialLink.url }}" class="fa fa-2x fa-{{ socialLink.icon }}" title="{{ socialLink.tooltip }}"></a>
+                <a href="{{ socialLink.url }}" target="_blank" class="fa fa-2x fa-{{ socialLink.icon }}" title="{{ socialLink.tooltip }}"></a>
             </li>
         </ul>
     </div>
