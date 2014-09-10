@@ -62,7 +62,7 @@
     {
         "key": "CodeRetreat",
         "name": "Code Retreat Lyon",
-        "shortDescription": "Les Code Retreat sont des événements d'une journée réalisé une à deux fois par an. Le but est d'explorer un sujet donné selon différentes approche en pair programming.",
+        "shortDescription": "Les Code Retreat sont des événements d'une journée réalisés une à deux fois par an. Le but est d'explorer un sujet donné selon différentes approche en pair programming.",
         "tags" : ["Coding Dojo"]
     },
     {
