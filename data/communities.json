@@ -26,31 +26,31 @@
     {
         "key": "LyonJS",
         "name": "LyonJS",
-        "shortDescription": "A venir...",
-        "tags" : ["JavaScript"]
+        "shortDescription": "LyonJS ce sont des talks long format sur un sujet hype du moment, des lightenings talks pour vous faire découvrir autre chose, le tout suivi d'un apéro pour se rencontrer et discuter tous ensemble.",
+        "tags" : ["JavaScript", "JS", "Angular","Node.JS"]
     },
     {
-        "key": "Lyon.rb",
+        "key": "LyonRB",
         "name": "Lyon.rb (Ruby)",
-        "shortDescription": "Communauté centrée autour de Ruby et de ses outils. Organise un meetup le second mercredi de chaque mois.",
-        "tags" : ["Ruby"]
+        "shortDescription": "Communauté de développeurs Ruby qui organisent un meetup chaque deuxième mercredi du mois avec quelques talks, suivis de discussions autour de burgers et de bières <3 Également organisateurs de la conférence Ruby Lugdunum (RuLu) et des RailsGirls Lyon.",
+        "tags" : ["Ruby", "Rails", "Sinatra", "RailsGirls", "RuLu"]
     },
     {
         "key": "AFUPLyon",
-        "name": "AFUP Lyon/Apéros PHP",
-        "shortDescription": "Communauté centrée autour de PHP et de ses outils. Organise un apéro la dernière semaine de chaque mois et une mini-conférence un mois sur deux.",
-        "tags" : ["PHP"]
+        "name": "AFUP Lyon / Apéros PHP",
+        "shortDescription": "L'AFUP Lyon organise des apéro, ateliers, rendez-vous autour des dernières avancées du langage PHP.",
+        "tags" : ["PHP", "Afup"]
     },
     {
-        "key": "SFpot",
-        "name": "SF pots",
-        "shortDescription": "A venir...",
+        "key": "AFSYSfPots",
+        "name": "AFSY SfPots",
+        "shortDescription": "L'AFSY organise les SfPots, des apéros décontractés autour du framework PHP Symfony",
         "tags" : ["PHP", "Symfony"]
     },
     {
-        "key": "JUG",
+        "key": "LyonJUG",
         "name": "Lyon JUG (Java User Group)",
-        "shortDescription": "A venir...",
+        "shortDescription": "Le LyonJUG organise des événements le 3ème mardi de chaque mois, gratuit et ouvert à tous. On parle Java bien sûr mais pas que, avec des talks sur les pratiques, les technos branchées du moment, etc... Le LyonJUG organise aussi la conférence Mix-IT.",
         "tags" : ["Java"]
     },
     {
@@ -68,20 +68,20 @@
     {
         "key": "CocoaHeads",
         "name": "CocoaHeads Lyon",
-        "shortDescription": "A venir...",
-        "tags" : ["Apple"]
+        "shortDescription": "CocoaHeads est un groupe de développeurs passionnés par les technologies Apple (iPhone, iPad et Mac). L’accès y est ouvert à tous et gratuit.",
+        "tags" : ["Apple", "iOS", "OS X", "Objective-C", "Swift"]
     },
     {
         "key": "AperoPython",
         "name": "Apéros Python",
-        "shortDescription": "A venir...",
-        "tags" : ["Python"]
+        "shortDescription": "L'apéro Python est un moment où les développeurs se retrouvent autour d'un verre et d'une présentation pour échanger autour de ce language. L'accès est gratuit et ouvert à tous. Cet  apéro est organisé par l'Association Francophone Python (AFPY).",
+        "tags" : ["Python", "DevOps", "Scientific", "Web"]
     },
     {
         "key": "LYAUG",
         "name": "Lyon Android User Group",
-        "shortDescription": "A venir...",
-        "tags" : ["Android"]
+        "shortDescription": "Le Google Developer Group (GDG) Lyon Android, alias #LYAUG est une association visant à regrouper les professionnels et les développeurs Android/Google de Lyon et de la région Rhône-Alpes lors de différents évènements.",
+        "tags": ["Android", "Google"]
     },
     {
         "key": "LyonCpp",
@@ -104,13 +104,19 @@
     {
         "key": "GameDevParty",
         "name": "Game Dev Party",
-        "shortDescription": "A venir...",
-        "tags" : ["jeux"]
+        "shortDescription": "Game Dev Party est une association lyonnaise ayant pour but la création et la promotion des jeux vidéo indépendants en Rhône Alpes. ",
+        "tags" : ["Jeu vidéo", "jeux", "developpement"]
     },
     {
         "key": "Cassandra",
         "name": "Cassandra Lyon User Group",
         "shortDescription": "A venir...",
         "tags" : ["Cassandra"]
+    },
+    {
+        "key": "DockerLyon",
+        "name": "Docker Lyon",
+        "shortDescription": "Les meetups Docker Lyon sont l'occasion de se retrouver et d'echanger autour de Docker, la technologie de containerisation",
+        "tags": ["Docker"]
     }
 ]

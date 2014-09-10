@@ -1,0 +1,8 @@
+{
+    "patternsGoogleCalendar": ["Apéro PHP"],
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://lyon.afup.org/" },
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/AFUP_lyon" },
+        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://www.github.com/afup"}
+    ]
+}
