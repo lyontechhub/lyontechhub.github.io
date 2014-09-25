@@ -3,6 +3,7 @@ define(['./module'], function(app) {
 
     var mapEvents = function(googleEvent) {
         return {
+            id: googleEvent.id,
             title: googleEvent.summary,
             description: googleEvent.description,
             location: googleEvent.location,
@@ -10,6 +11,19 @@ define(['./module'], function(app) {
             endDate: Date.parse(googleEvent.end.dateTime),
             url: googleEvent.htmlLink
         }
+    };
+
+    var removeDuplicates = function(events) {
+      var tmpEvents = {};
+      for (var i = 0, n = events.length; i < n; i++) {
+        tmpEvents[events[i].id] = events[i];
+      }
+      var i = 0;
+      events = [];
+      for(var id in tmpEvents) {
+        events[i++] = tmpEvents[id];
+      }
+      return events;
     };
 
     var eventsRepository = function($http, $q) {
@@ -32,7 +46,7 @@ define(['./module'], function(app) {
                 for(var index = 0; index < result.length; index++) {
                     events = events.concat(result[index].data.items.map(mapEvents));
                 }
-                deferred.resolve(events);
+                deferred.resolve(removeDuplicates(events));
             });
 
             return deferred.promise;
