@@ -1,0 +1,7 @@
+{
+    "patternsGoogleCalendar": ["Game Dev Party"],
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://gamedevparty.fr/" },
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/gamedevparty" }
+    ]
+}
