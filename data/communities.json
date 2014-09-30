@@ -56,8 +56,8 @@
     {
         "key": "SLUG",
         "name": "Scala Lyon User Group",
-        "shortDescription": "A venir...",
-        "tags" : ["Java"]
+        "shortDescription": "Le Scala Lyon User Group, #slug, se réunit régulièrement depuis janvier 2014 pour échanger autour de Scala et de son écosystème. Que tu sois juste curieux ou que tu fasses du Scala depuis 10 ans, tu es le bienvenu. Tout le monde est invité à proposer des sujets et à venir donner son avis. Quelques sujets abordés depuis janvier : REX playframework/akka, Implémentation des collections scala, Typeclasses, SBT.",
+        "tags" : ["Java","Scala", "JVM"]
     },
     {
         "key": "CodeRetreat",
