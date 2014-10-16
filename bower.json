@@ -23,5 +23,8 @@
     "angular-strap": "~2.0.3",
     "angular-route": "~1.2.20",
     "angulartics": "~0.16.5"
+  },
+  "resolutions": {
+    "angular": "~1.2.20"
   }
 }
