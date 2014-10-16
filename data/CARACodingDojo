@@ -1,0 +1,8 @@
+{
+    "patternsGoogleCalendar": ["Coding Dojo"],
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://lyon.clubagilerhonealpes.org/activites/coding-dojo"},
+        { "icon": "calendar", "tooltip": "EventBrite - commun avec le CARA Lyon", "url": "http://www.eventbrite.fr/o/cara-lyon-1285611725"},
+        { "icon": "twitter", "tooltip": "Twitter", "url": "http://www.twitter.com/cara_lyon"}
+    ]
+}
