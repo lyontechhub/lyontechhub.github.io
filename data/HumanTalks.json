@@ -1,0 +1,8 @@
+{
+    "patternsGoogleCalendar": ["Human Talks"],
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://humantalks.com/cities/lyon"},
+        { "icon": "calendar", "tooltip": "Meetup", "url": "http://www.meetup.com/HumanTalks-Lyon/"},
+        { "icon": "twitter", "tooltip": "Twitter", "url": "http://www.twitter.com/HumanTalksLyon"}
+    ]
+}
