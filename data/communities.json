@@ -118,5 +118,11 @@
         "name": "Docker Lyon",
         "shortDescription": "Les meetups Docker Lyon sont l'occasion de se retrouver et d'echanger autour de Docker, la technologie de containerisation",
         "tags": ["Docker"]
+    },
+    {
+        "key": "PuzzleIT", 
+        "name": "Puzzle IT ",
+        "shortDescription": "Les meetups PUZZLE IT sont l'occasion de se retrouver pour apprendre et echanger autour de sujets agiles et techniques. L'accès est gratuit et ouvert à tous.",
+        "tags": ["Puzzle IT"]
     }
 ]

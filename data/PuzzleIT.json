@@ -1,0 +1,6 @@
+{
+    "patternsGoogleCalendar": ["Puzzle IT"],
+    "socialLinks": [
+        { "icon": "calendar", "tooltip": "Meetup", "url": "http://www.meetup.com/PUZZLE-IT/"}
+    ]
+}
