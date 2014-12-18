@@ -1,0 +1,6 @@
+{
+    "patternsGoogleCalendar": ["Hadoop"],
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://www.meetup.com/Lyon-Hadoop-Meetups/"}
+    ]
+}
