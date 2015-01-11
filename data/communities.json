@@ -129,5 +129,11 @@
         "name": "Puzzle IT ",
         "shortDescription": "Les meetups PUZZLE IT sont l'occasion de se retrouver pour apprendre et echanger autour de sujets agiles et techniques. L'accès est gratuit et ouvert à tous.",
         "tags": ["Puzzle IT"]
+    },
+    {
+        "key": "hckrs", 
+        "name": "hckrs.io",
+        "shortDescription": "Communauté locale de bidouilleurs.",
+        "tags": ["Developpement", "Design", "Hardware", "Growth hacking", "Life Hacking"]
     }
 ]
