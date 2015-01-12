@@ -135,5 +135,11 @@
         "name": "hckrs.io",
         "shortDescription": "Communauté locale de bidouilleurs.",
         "tags": ["Developpement", "Design", "Hardware", "Growth hacking", "Life Hacking"]
+    },
+    {
+        "key": "GolangLyon",
+        "name": "Golang Lyon",
+        "shortDescription": "Ce groupe s'adresse à toute personne s'intéressant de près ou de loin au langage Go : curieux, débutants ou personnes expérimentées !",
+        "tags": ["Go", "Golang"]
     }
 ]
