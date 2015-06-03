@@ -141,5 +141,11 @@
         "name": "Golang Lyon",
         "shortDescription": "Ce groupe s'adresse à toute personne s'intéressant de près ou de loin au langage Go : curieux, débutants ou personnes expérimentées !",
         "tags": ["Go", "Golang"]
+    },
+    {
+        "key": "SoftwareCraftsmanshipLyon",
+        "name": "Software Craftsmanship Lyon",
+        "shortDescription": "La communauté Software Craftsmanship Lyon réunit les développeurs, sans sexisme, élitisme ni langage ou techno obligatoire.",
+        "tags": ["Craftsmanship", "artisan", "Coding Dojo"]
     }
 ]
