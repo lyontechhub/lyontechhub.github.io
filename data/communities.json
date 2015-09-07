@@ -159,5 +159,11 @@
         "name": "Elasticsearch Lyon",
         "shortDescription": "Meetups Elasticsearch Lyon",
         "tags": ["Elasticsearch"]
+    },
+    {
+        "key": "LyonDataScience",
+        "name": "Lyon Data Science",
+        "shortDescription": "Communauté d'échange et apprentissage autour des Data Science et machine learning à Lyon",
+        "tags": ["Elasticsearch"]
     }
 ]
