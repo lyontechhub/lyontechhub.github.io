@@ -77,9 +77,9 @@
         "tags" : ["Apple", "iOS", "OS X", "Objective-C", "Swift"]
     },
     {
-        "key": "AperoPython",
-        "name": "Apéros Python",
-        "shortDescription": "L'apéro Python est un moment où les développeurs se retrouvent autour d'un verre et d'une présentation pour échanger autour de ce language. L'accès est gratuit et ouvert à tous. Cet  apéro est organisé par l'Association Francophone Python (AFPY).",
+        "key": "AFPy",
+        "name": "Rencontres Python",
+        "shortDescription": "Une rencontre Python est un moment où les développeurs se retrouvent autour d'un verre et d'une présentation pour échanger autour de ce language. L'accès est gratuit et ouvert à tous. Cet  apéro est organisé par l'Association Francophone Python (AFPY).",
         "tags" : ["Python", "DevOps", "Scientific", "Web"]
     },
     {
