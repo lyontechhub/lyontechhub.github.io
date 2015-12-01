@@ -1,0 +1,7 @@
+{
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://www.ansible.com" },
+        { "icon": "link", "tooltip": "Groupe Meetup", "url": "http://www.meetup.com/Ansible-Lyon/" },
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/ansible_lyon" }
+    ]
+}

@@ -165,5 +165,11 @@
         "name": "Lyon Data Science",
         "shortDescription": "Communauté d'échange et apprentissage autour des Data Science et machine learning à Lyon",
         "tags": ["Elasticsearch"]
+    },
+    {
+        "key": "Ansible",
+        "name": "Ansible Lyon",
+        "shortDescription": "Groupe Ansible officiel d'échange et apprentissage à Lyon. Organisation de talks autour d'apéros communautaires.",
+        "tags": ["Ansible"]
     }
 ]
