@@ -91,4 +91,4 @@ heroku git:remote -a lyontechhub #only the first time to add the heroku remote
 git push heroku dev:master 
 ```
 
-Continuous deployment is setup through Heroku GitHub integration now (was using heroku-deployer...no more now).
+Continuous deployment use Heroku GitHub integration (was using heroku-deployer...no more now).
