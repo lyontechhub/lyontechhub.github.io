@@ -17,12 +17,6 @@
         "tags" : ["Agile", "Lean", "entreprenariat", "jeux"]
     },
     {
-        "key": "CARACodingDojo",
-        "name": "Coding Dojo CARA (Club Agile Rhône Alpes) Lyon",
-        "shortDescription": "Le CARA propose des coding dojos tous les mois. Quelquesoit votre technologie de prédiclection, venez vous exercer à de nouvelles pratiques de développement dans votre environnement de travail ou découvrez d'autres environnements avec quelqu'un d'autre.",
-        "tags" : ["Agile", "Coding Dojo"]
-    },
-    {
         "key": "HumanTalks",
         "name": "Human Talks Lyon",
         "shortDescription": "Des talks de 10 minutes accessibles à tous, pour découvrir des sujets techs variés et partager ses passions. Tous les 2nd mardi du mois partout en France et à Lyon en particulier !",
