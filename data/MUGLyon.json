@@ -2,7 +2,7 @@
     "patternsGoogleCalendar": ["MUG"],
     "socialLinks": [
         { "icon": "link", "tooltip": "Web site", "url": "http://muglyon.github.io/"},
-        { "icon": "calendar", "tooltip": "EventBrite", "url": "http://muglyon.eventbrite.com"},
+        { "icon": "calendar", "tooltip": "Meetup", "url": "http://www.meetup.com/fr-FR/MUGLyon/"},
         { "icon": "twitter", "tooltip": "Twitter", "url": "http://www.twitter.com/muglyon"},
         { "icon": "linkedin", "tooltip": "Linked In", "url": "http://www.linkedin.com/groups/MUG-Lyon-4302523"},
         { "icon": "github", "tooltip": "Git Hub Organization", "url": "http://www.github.com/muglyon"}
