@@ -1,0 +1,9 @@
+[
+  {
+      "key": "mixit",
+      "name": "Mix-IT",
+      "url": "http://www.mix-it.fr/",
+      "shortDescription": "La conférence lyonnaise à ne pas manquer ! Deux jours de découvertes et de rencontres dans une ambiance conviviale, dédiée à la mixité des sujets, des technologies mais aussi des participants.",
+      "tags": [ "Neo4j", "NoSQL", "Java", "SGBD", "Base de données", "Agilité","Lean", "PHP", "Scala", "SoftwareCraftsmanship" ]
+  }
+]
