@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="container">
+        <h1>
+            {{conferencesViewModel.conferences.length}} conférences organisées par les communautés du LyonTechHub<br />
+            <small><a href="#!/a-propos">Par ici pour référencer la votre !</a></small>
+        </h1>
+        Rechercher : <input type="text" ng-model="query">
+        <div class="row communitiesList">
+            <div class="col-sm-12 col-md-12" ng-repeat="conference in conferencesViewModel.conferences">
+                <div class="thumbnail">
+                      <a href="{{ conference.url }}" target="_blank">
+                        <img src="/imgs/{{ conference.key }}.png" onerror="this.onerror=null;this.src='/imgs/noLogo.png';" />
+                      </a>
+                    <div class="caption">
+                        <h3>{{ conference.name }}</h3>
+                        <p>{{ conference.shortDescription }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
