@@ -1,5 +1,7 @@
 @import "./bootstrap.less";
 
+@LTHlogo-color:  #eb0f0f;
+
 html,
 body {
   height: 100%;
@@ -59,15 +61,23 @@ section {
 .navbar-brand{
   padding-top: 0px;
   padding-bottom: 0px;
+
   .LTHlogo{
-    g{
-      fill: #FFFFFF;
-    }
     vertical-align:middle;
     height: 48px;
     width: 48px;
     margin-right: 5px;
     display: inline-block;
+    g{
+      fill: @navbar-inverse-brand-color;
+    }
+  }
+  &:hover,
+  &:focus {
+  .LTHlogo g{
+      fill: @navbar-inverse-brand-hover-color;
+      background: @navbar-inverse-brand-hover-bg;
+    }
   }
 }
 .logo {
