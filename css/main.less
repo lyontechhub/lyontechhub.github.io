@@ -1,5 +1,7 @@
 @import "./bootstrap.less";
 
+@LTHlogo-color:  #eb0f0f;
+
 html,
 body {
   height: 100%;
@@ -56,7 +58,28 @@ section {
     }
   }
 }
+.navbar-brand{
+  padding-top: 0px;
+  padding-bottom: 0px;
 
+  .LTHlogo{
+    vertical-align:middle;
+    height: 48px;
+    width: 48px;
+    margin-right: 5px;
+    display: inline-block;
+    g{
+      fill: @navbar-inverse-brand-color;
+    }
+  }
+  &:hover,
+  &:focus {
+  .LTHlogo g{
+      fill: @navbar-inverse-brand-hover-color;
+      background: @navbar-inverse-brand-hover-bg;
+    }
+  }
+}
 .logo {
   max-width: 100px;
   padding-right: 20px;
@@ -112,7 +135,7 @@ h1 img {
   a {
     text-decoration: none;
   }
-	
+
   a:hover {
     color: #7aadd9;
     text-decoration: none;
@@ -127,7 +150,7 @@ footer {
     color: #777;
     text-decoration: none;
   }
-	
+
   a:hover {
     color: #aaa;
     text-decoration: none;
