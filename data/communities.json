@@ -1,7 +1,7 @@
 [    {
         "key": "graphdb-lyon",
         "name": "Neo4j Gaph Database Lyon",
-        "shortDescription": "Cher Graphista, Ce groupe à pour objectif de réunir les personnes intéressées par les bases de données NoSql de graphe. Tous les utilisateurs sont les bienvenus, depuis le développeur jusqu'à l'utilisateur final en passant par le simple curieux. A bientôt dans le graphe !",
+        "shortDescription": "Cher Graphista, Ce groupe a pour objectif de réunir les personnes intéressées par les bases de données NoSql de graphe. Tous les utilisateurs sont les bienvenus, depuis le développeur jusqu'à l'utilisateur final en passant par le simple curieux. A bientôt dans le graphe !",
         "tags": [ "Neo4j", "NoSQL", "Java", "SGBD", "Base de données", "Cypher" ]
     },
     {
@@ -19,13 +19,13 @@
     {
         "key": "HumanTalks",
         "name": "Human Talks Lyon",
-        "shortDescription": "Des talks de 10 minutes accessibles à tous, pour découvrir des sujets techs variés et partager ses passions. Tous les 2nd mardi du mois partout en France et à Lyon en particulier !",
+        "shortDescription": "Des talks de 10 minutes accessibles à tous, pour découvrir des sujets techs variés et partager ses passions. Tous les 2nds mardi du mois partout en France et à Lyon en particulier !",
         "tags" : [""]
     },
     {
         "key": "LyonJS",
         "name": "LyonJS",
-        "shortDescription": "LyonJS ce sont des talks long format sur un sujet hype du moment, des lightenings talks pour vous faire découvrir autre chose, le tout suivi d'un apéro pour se rencontrer et discuter tous ensemble.",
+        "shortDescription": "LyonJS ce sont des talks long format sur un sujet hype du moment, des lightnings talks pour vous faire découvrir autre chose, le tout suivi d'un apéro pour se rencontrer et discuter tous ensemble.",
         "tags" : ["JavaScript", "JS", "Angular","Node.JS"]
     },
     {
@@ -61,7 +61,7 @@
     {
         "key": "CodeRetreat",
         "name": "Code Retreat Lyon",
-        "shortDescription": "Les Code Retreat sont des événements d'une journée réalisés une à deux fois par an. Le but est d'explorer un sujet donné selon différentes approche en pair programming.",
+        "shortDescription": "Les Code Retreat sont des événements d'une journée réalisés une à deux fois par an. Le but est d'explorer un sujet donné selon différentes approches en pair programming.",
         "tags" : ["Coding Dojo"]
     },
     {
