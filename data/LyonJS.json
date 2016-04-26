@@ -4,6 +4,6 @@
         { "icon": "link", "tooltip": "Web site", "url": "http://lyonjs.org/"},
         { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/LyonJS"},
         { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://github.com/lyonjs"},
-         { "icon": "youtube-play", "tooltip": "Youtube channel", "url": "https://www.youtube.com/channel/UCGTVc5PnIgAUoA2D2_6nJLg"},
+        { "icon": "youtube-play", "tooltip": "Youtube channel", "url": "https://www.youtube.com/channel/UCGTVc5PnIgAUoA2D2_6nJLg"}
     ]
 }
