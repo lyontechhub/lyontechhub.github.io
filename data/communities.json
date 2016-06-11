@@ -171,5 +171,11 @@
         "name": "LAWS - Lyon Amazon Web Services UG",
         "shortDescription": "Groupe officiel Amazon Web Services de la région Lyonnaise. Organisation de Meetup autour des services AWS, retours d'expériences, live coding, ...",
         "tags": ["AWS", "EC2", "Cloud Computing", "Information Technology", "Big Data", "High Scalability Computing", "Data Analytics", "IaaS (Infrastructure as a Service)", "S3", "RDS", "Redshift"]
+    },
+    {
+        "key": "KotlinLyon",
+        "name": "Lyon Kotlin User Group",
+        "shortDescription": "Ce groupe s'adresse aux personnes intéressées par Kotlin, un langage de la JVM créé par JetBrains.",
+        "tags": [ "Kotlin", "pratiques", "JVM", "Java" ]
     }
 ]
