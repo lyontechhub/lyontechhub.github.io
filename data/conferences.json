@@ -5,5 +5,12 @@
       "url": "http://www.mix-it.fr/",
       "shortDescription": "La conférence lyonnaise à ne pas manquer ! Deux jours de découvertes et de rencontres dans une ambiance conviviale, dédiée à la mixité des sujets, des technologies mais aussi des participants.",
       "tags": [ "Neo4j", "NoSQL", "Java", "SGBD", "Base de données", "Agilité","Lean", "PHP", "Scala", "SoftwareCraftsmanship" ]
+  },
+  {
+      "key": "scalaio",
+      "name": "ScalaIO",
+      "url": "http://www.scala.io/",
+      "shortDescription": "La conférence dédiée au langage Scala et à son écosystème se déroule à Lyon les 27-28 octobre 2016. Au menu de la programmation fonctionnel des retours d'expérience et surtout des rencontres !",
+      "tags": [ "Scala", "Functionnal", "Java", "JVM" ]
   }
 ]
