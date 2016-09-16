@@ -177,5 +177,11 @@
         "name": "Lyon Kotlin User Group",
         "shortDescription": "Ce groupe s'adresse aux personnes intéressées par Kotlin, un langage de la JVM créé par JetBrains.",
         "tags": [ "Kotlin", "pratiques", "JVM", "Java" ]
+    },
+    {
+        "key": "LyonTesting",
+        "name": "Lyon Testing User Group",
+        "shortDescription": "Ce groupe s'adresse aux personnes intéressées par le test logiciel.",
+        "tags": [ "Testing", "Test", "QA" ]
     }
 ]
