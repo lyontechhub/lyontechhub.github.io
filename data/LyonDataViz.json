@@ -2,7 +2,7 @@
     "patternsGoogleCalendar": ["Lyon DataViz"],
     "socialLinks": [
         { "icon": "link", "tooltip": "Web site", "url": "http://www.meetup.com/Lyon-Dataviz/"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/LyonDataViz"}
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/LyonDataViz"},
         { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://github.com/LyonDataViz/"}
     ]
 }
