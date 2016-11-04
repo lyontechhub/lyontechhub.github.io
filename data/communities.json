@@ -183,5 +183,11 @@
         "name": "Lyon Testing User Group",
         "shortDescription": "Ce groupe s'adresse aux personnes intéressées par le test logiciel.",
         "tags": [ "Testing", "Test", "QA" ]
+    },
+    {
+        "key": "LyonDataViz",
+        "name": "Lyon DataViz",
+        "shortDescription": "Echange de pratiques, idées et outils autour de la Data Visualization",
+        "tags": ["Dataviz", "D3.js", "JavaScript", "Visualisation", "Visual Analytics", "Design"]
     }
 ]
