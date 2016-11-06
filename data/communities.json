@@ -189,5 +189,11 @@
         "name": "Lyon DataViz",
         "shortDescription": "Echange de pratiques, idées et outils autour de la Data Visualization",
         "tags": ["Dataviz", "D3.js", "JavaScript", "Visualisation", "Visual Analytics", "Design"]
+    },
+    {
+        "key": "ApprendreACoderEnsemble",
+        "name": "Apprendre à coder ensemble",
+        "shortDescription": "Marre d'apprendre à coder dans votre coin ? Intéressés pour monter un site Internet, porteurs de projets ou simplement intéressés par le dev ? Vous ne savez pas coder, vous êtes débutants, mais aimeriez apprendre, sauf que vous n'avez pas assez de budget pour prendre des cours ! Nous vous proposons de nous retrouver régulièrement pour pratiquer ensemble.",
+        "tags": []
     }
 ]
