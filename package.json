@@ -11,6 +11,7 @@
     "postinstall": "bower install",
     "prestart": "gulp build",
     "start": "node server.js",
+    "dev": "gulp dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lyon Tech Hub community",
@@ -20,7 +21,6 @@
     "express": "^4.8.6",
     "http-server": "^0.6.1",
     "prerender-node": "^1.0.5",
-
     "amd-optimize": "^0.1.0",
     "del": "^0.1.1",
     "gulp": "^3.8.7",

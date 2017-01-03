@@ -13,6 +13,8 @@ var gutil = require('gulp-util');
 var when = require('when');
 var path = require('path');
 var runSequence = require('run-sequence');
+var child = require('child_process');
+var fs = require('fs');
 
 /* Configuration */
 var lessSource = 'css/main.less';
@@ -110,9 +112,15 @@ gulp.task('watch-assets', function() {
     gulp.watch(assetsSource, ['copy-assets']);
 });
 
+gulp.task('server', function() {
+  var server = child.spawn('node', ['server.js'], { stdio: 'inherit' });
+});
+
 gulp.task('build', ['build-css', 'build-js', 'build-html', 'copy-assets']);
 
 gulp.task('watch', ['watch-css', 'watch-js', 'watch-html', 'watch-assets']);
+
+gulp.task('dev', ['build', 'server', 'watch']);
 
 // Deploy target to use to deploy to github pages (not used -> no SEO solution, heroku is used instead)
 gulp.task('deploy', function () {
