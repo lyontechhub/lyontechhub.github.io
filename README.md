@@ -71,7 +71,11 @@ Gulp is used to build assets (CSS & JS) and copy other assets (data & images) us
 * 'watch' task is used to watch changes on source JS, LESS, HTML & assets files to trigger a build dynamically (never ending task)
 * _NO MORE USED_ 'deploy' task is used to commit 'dist' directory content to 'master' branch (excluding 'data' & 'imgs' directories which are modified on 'master' branch directly), specify '--push' to effectively deploy on GitHub pages (i.e push on GitHub master branch)
 
-So, to be well prepared for dev, launch 2 terminals, first one with 'npm start', and second one with 'node_modules\.bin\gulp watch'.
+If you want to be able to run the server and watch the files simultaneously you need to use :
+
+```
+npm run dev
+```
 
 ### SEO compliance
 

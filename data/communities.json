@@ -1,4 +1,5 @@
-[    {
+[   
+    {
         "key": "graphdb-lyon",
         "name": "Neo4j Graph Database Lyon",
         "shortDescription": "Cher Graphista, ce groupe a pour objectif de réunir les personnes intéressées par les bases de données NoSql de graphe. Tous les utilisateurs sont les bienvenus, depuis le développeur jusqu'à l'utilisateur final en passant par le simple curieux. A bientôt dans le graphe !",
@@ -195,5 +196,11 @@
         "name": "Apprendre à coder ensemble",
         "shortDescription": "Marre d'apprendre à coder dans votre coin ? Intéressés pour monter un site Internet, porteurs de projets ou simplement intéressés par le dev ? Vous ne savez pas coder, vous êtes débutants, mais aimeriez apprendre, sauf que vous n'avez pas assez de budget pour prendre des cours ! Nous vous proposons de nous retrouver régulièrement pour pratiquer ensemble.",
         "tags": []
+    },
+    {
+        "key": "WordpressLyon",
+        "name": "WordPress Lyon",
+        "shortDescription": "L'objectif de ce groupe est de créer un évènement mensuel regroupant les amoureux de WordPress sur la région Rhône-Alpes, pour échanger nos bonnes pratiques, nouveautés, obtenir de l'aide et tout ce qui peut-être utile à propos de notre CMS préféré. Ce groupe est à destination de tout public, ayant des connaissances en développement ou non. L'idée est d'échanger nos expériences à l'occasion d'un moment convivial !",
+        "tags": ["WordPress", "themes", "plugins", "Meetup"]
     }
 ]
