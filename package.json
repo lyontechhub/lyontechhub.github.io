@@ -7,6 +7,9 @@
     "type": "git",
     "url": "http://github.com/lyontechhub/lyontechhub.github.io"
   },
+  "engines": {
+   "node": "4.7.2"
+  },
   "scripts": {
     "postinstall": "bower install",
     "prestart": "gulp build",
