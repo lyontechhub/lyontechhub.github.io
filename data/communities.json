@@ -181,7 +181,7 @@
     },
     {
         "key": "LyonTesting",
-        "name": "Lyon Testing User Group",
+        "name": "Lyon Testing Group",
         "shortDescription": "Ce groupe s'adresse aux personnes intéressées par le test logiciel.",
         "tags": [ "Testing", "Test", "QA" ]
     },
