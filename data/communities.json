@@ -145,6 +145,7 @@
     },
     {
         "key": "TupperVim",
+        "image": "TupperVim.svg",
         "name": "TupperVim",
         "shortDescription": "Les Tuppervim sont des évènements où l’on partage des connaissances et des astuces à propos de Vim.",
         "tags": ["TupperVim", "vim", "vi"]
