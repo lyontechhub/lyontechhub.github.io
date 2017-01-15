@@ -9,7 +9,7 @@
             <div class="col-sm-12 col-md-12" ng-repeat="conference in conferencesViewModel.conferences">
                 <div class="thumbnail">
                       <a href="{{ conference.url }}" target="_blank">
-                        <img src="/imgs/conferences/{{ conference.key }}.png" onerror="this.onerror=null;this.src='/imgs/noLogo.png';" />
+                        <img src="/imgs/conferences/{{ conference.image }}" onerror="this.onerror=null;this.src='/imgs/noLogo.png';" />
                       </a>
                     <div class="caption">
                         <h3>{{ conference.name }}</h3>
