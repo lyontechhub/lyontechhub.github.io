@@ -1,4 +1,4 @@
-[   
+[
     {
         "key": "graphdb-lyon",
         "name": "Neo4j Graph Database Lyon",
@@ -120,13 +120,13 @@
         "tags": ["Docker"]
     },
     {
-        "key": "PuzzleIT", 
+        "key": "PuzzleIT",
         "name": "Puzzle IT ",
         "shortDescription": "Les meetups PUZZLE IT sont l'occasion de se retrouver pour apprendre et echanger autour de sujets agiles et techniques. L'accès est gratuit et ouvert à tous.",
         "tags": ["Puzzle IT"]
     },
     {
-        "key": "hckrs", 
+        "key": "hckrs",
         "name": "hckrs.io",
         "shortDescription": "Communauté locale de bidouilleurs.",
         "tags": ["Developpement", "Design", "Hardware", "Growth hacking", "Life Hacking"]
@@ -144,6 +144,12 @@
         "tags": ["Craftsmanship", "artisan", "Coding Dojo"]
     },
     {
+        "key": "TupperRust",
+        "image": "TupperRust.svg",
+        "name": "TupperRust",
+        "shortDescription": "Les TupperRust sont des évènements autour du langage Rust, comprenant une présentation et des revues de code. Que vous soyez débutant ou expert vous êtes les bienvenus.",
+        "tags": ["TupperRust", "rust", "servo"]
+    }, {
         "key": "TupperVim",
         "name": "TupperVim",
         "shortDescription": "Les Tuppervim sont des évènements où l’on partage des connaissances et des astuces à propos de Vim.",
