@@ -24,7 +24,7 @@
                         <div>De {{ event.startDate | date : "H'h'mm" }} à {{ event.endDate | date : "H'h'mm" }} {{ '- ' + event.location }}</div>
                     </div>
                 </div>
-                <div ng-bind-html="event.description | linky:_blank"></div>
+                <div ng-bind-html="event.description | linky:_blank" class="description"></div>
             </li>
         </ul>
     </div>
@@ -43,7 +43,7 @@
                         <div>De {{ event.startDate | date : "H'h'mm" }} à {{ event.endDate | date : "H'h'mm" }} {{ '- ' + event.location }}</div>
                     </div>
                 </div>
-                <div ng-bind-html="event.description | linky:_blank"></div>
+                <div ng-bind-html="event.description | linky:_blank" class="description"></div>
             </li>
         </ul>
     </div>
