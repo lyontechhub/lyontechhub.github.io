@@ -215,5 +215,11 @@
         "name": "Clojure Lyon",
         "shortDescription": "Clojure est un langage fonctionnel inspiré de LISP fonctionnant sur la JVM/Javascript/CLR. REPL Driven Development, programmation fonctionnelle, immutabilité, concurrence/parallélisme... sont autant de sujets où Clojure montre son efficacité. Débutant sur le sujet ou ayant déjà une expérience en Clojure, vous êtes les bienvenus ;)",
         "tags": ["Clojure", "Java", "JVM", "Lisp"]
+    },
+    {
+        "key": "MeteorLyon",
+        "name": "Meteor Lyon",
+        "shortDescription": "MeteorJS est une plateforme web sortie en v1 fin 2014. L'îdée de base est de fournir une solution fullstack pour en finir avec le 'Javascript Fatigue' de ces dernières années. Très bonne solution pour se former sur ES6, NodeJS et les problématiques d'Isomorphisme, vous êtes les bienvenues pour découvrir cette techno ou bien approfondir vos connaissances à son sujet.",
+        "tags": ["MeteorJS", "Javascript", "NodeJS", "Lisp"]
     }
 ]
