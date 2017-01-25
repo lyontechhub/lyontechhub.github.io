@@ -96,3 +96,5 @@ git push heroku dev:master
 ```
 
 Continuous deployment use Heroku GitHub integration (was using heroku-deployer...no more now).
+
+
