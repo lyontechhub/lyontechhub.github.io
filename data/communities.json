@@ -222,10 +222,16 @@
         "shortDescription": "MeteorJS est une plateforme web sortie en v1 fin 2014. L'îdée de base est de fournir une solution fullstack pour en finir avec le 'Javascript Fatigue' de ces dernières années. Très bonne solution pour se former sur ES6, NodeJS et les problématiques d'Isomorphisme, vous êtes les bienvenues pour découvrir cette techno ou bien approfondir vos connaissances à son sujet.",
         "tags": ["MeteorJS", "Javascript", "NodeJS", "Lisp"]
     },
-        {
+    {
         "key": "RencardsduWebLyon",
         "name": "Rencards du Web Lyon",
         "shortDescription": "Le principe d'un rencard est de réunir les professionnels ou les passionnés d'un secteur d'activité pour que chacun améliore et profite de son réseau. Dans de nombreux métiers, le réseau professionnel permet de résoudre beaucoup de problèmes. C'est pourquoi il est important d'aller à la rencontre des gens qui font le même métier ou un métier complémentaire près de chez soi.",
         "tags": ["rencontre", "netowrking", "réseau", "dev", "Meetup", "Design", "pratiques", "Developpement", "Growth Hacking", "Agile", "Lean", "entreprenariat"]
+    },
+    {
+        "key": "MeetupIALyon",
+        "name": "Meetup Intelligence Artificielle Lyon",
+        "shortDescription": "Le but est de rassembler un réseau de passionnés, de mettre en commun les compétences afin de développer des projets (par exemple dans le traitement des datas, ou dans la robotique) et de produire une réflexion sur ce sujet complexe qu'est l'Intelligence Artificielle",
+        "tags": ["meetup", "intelligence artificielle", "networking", "informatique", "Usages", "Design", "innovation", "Big Data", "Philosophie", "entrepreneuriat", "maker"]
     }
 ]
