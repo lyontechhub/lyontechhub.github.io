@@ -3,7 +3,7 @@
     "socialLinks": [
         { "icon": "link", "tooltip": "Web site", "url": "http://www.afpy.org" },
         { "icon": "link", "tooltip": "Groupe Meetup", "url": "http://www.meetup.com/fr/Python-AFPY-Lyon/" },
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/afpy_lyon" },
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/python_lyon" },
         { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://www.github.com/AFPy"}
     ]
 }
