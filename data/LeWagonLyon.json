@@ -1,0 +1,8 @@
+{
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Website", "url": "https://www.lewagon.com/lyon"},
+        { "icon": "calendar", "tooltip": "Meetup", "url": "https://www.meetup.com/le-wagon-lyon/"},
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/lewagonlyon"},
+        { "icon": "facebook", "tooltip": "Facebook", "url": "https://www.facebook.com/lewagonlyon/"}
+    ]
+}
