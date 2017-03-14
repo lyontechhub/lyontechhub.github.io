@@ -1,6 +1,6 @@
 {
     "patternsGoogleCalendar": ["Meetup Intelligence Artificielle Lyon"],
     "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "https://www.meetup.com/fr-FR/Intelligence-artificielle-formes-enjeux-usages/"},
+        { "icon": "link", "tooltip": "Web site", "url": "https://www.meetup.com/fr-FR/Intelligence-artificielle-formes-enjeux-usages/"}
     ]
 }
