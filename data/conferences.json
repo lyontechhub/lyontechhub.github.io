@@ -10,7 +10,7 @@
       "key": "scalaio",
       "name": "ScalaIO",
       "url": "http://www.scala.io/",
-      "shortDescription": "La conférence dédiée au langage Scala et à son écosystème se déroule à Lyon les 27-28 octobre 2016. Au menu de la programmation fonctionnel des retours d'expérience et surtout des rencontres !",
-      "tags": [ "Scala", "Functionnal", "Java", "JVM" ]
+      "shortDescription": "La conférence dédiée au langage Scala et à son écosystème se déroule à Lyon les 2-3 Novembre 2017. Au menu de la programmation fonctionnelle, des retours d'expérience et surtout des rencontres !",
+      "tags": [ "Scala", "Functionnal", "Java", "JVM", "ELM","TypeScript","Haskell","Akka", "Playframework","cats", "scalajs", "scala-native" ]
   }
 ]
