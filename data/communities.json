@@ -233,5 +233,12 @@
         "name": "Meetup Intelligence Artificielle Lyon",
         "shortDescription": "Le but est de rassembler un réseau de passionnés, de mettre en commun les compétences afin de développer des projets (par exemple dans le traitement des datas, ou dans la robotique) et de produire une réflexion sur ce sujet complexe qu'est l'Intelligence Artificielle",
         "tags": ["meetup", "intelligence artificielle", "networking", "informatique", "Usages", "Design", "innovation", "Big Data", "Philosophie", "entrepreneuriat", "maker"]
+    },
+    {
+        "key": "fHACKtory",
+        "name": "fHACKtory",
+        "shortDescription": "Organisateur d'un hackathon indépendant sur Lyon, 100% Hack, 0% bullshit, on réunit des passionés du developpement logiciel, d'électronique, de makers, de designers et de porteurs d'idées",
+        "tags": ["hackathon","hack", "Usages", "Design", "innovation", "raspberry", "drones", "entrepreneuriat", "maker"]
     }
+
 ]
