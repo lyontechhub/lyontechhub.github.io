@@ -233,5 +233,11 @@
         "name": "Meetup Intelligence Artificielle Lyon",
         "shortDescription": "Le but est de rassembler un réseau de passionnés, de mettre en commun les compétences afin de développer des projets (par exemple dans le traitement des datas, ou dans la robotique) et de produire une réflexion sur ce sujet complexe qu'est l'Intelligence Artificielle",
         "tags": ["meetup", "intelligence artificielle", "networking", "informatique", "Usages", "Design", "innovation", "Big Data", "Philosophie", "entrepreneuriat", "maker"]
+    },
+    {
+        "key": "ElixirLyon",
+        "name": "Elixir Lyon",
+        "shortDescription": "Ce groupe s'adresse aux personnes intéressées par Elixir, un langage fonctionnel basée sur la VM d'erlang et de la syntaxe inspirée de Ruby. Vous êtes bienvenue pour découvrir cette nouvelle technologie ou pour appronfondir vos connaissances.",
+        "tags": ["Elixir", "Phoenix Framework", "Erlang"]
     }
 ]
