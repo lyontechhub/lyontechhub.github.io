@@ -239,5 +239,11 @@
         "name": "Elixir Lyon",
         "shortDescription": "Ce groupe s'adresse aux personnes intéressées par Elixir, un langage fonctionnel basée sur la VM d'erlang et de la syntaxe inspirée de Ruby. Vous êtes bienvenue pour découvrir cette nouvelle technologie ou pour appronfondir vos connaissances.",
         "tags": ["Elixir", "Phoenix Framework", "Erlang"]
+    },
+    {
+        "key": "LeSequenceur",
+        "name": "Le Séquenceur",
+        "shortDescription": "Le Séquenceur est une communauté créative explorant les liens entre musique et technologie, motivés par l'expérimentation, le partage et la création artistique.",
+        "tags": ["musique", "electronique", "meetup"]
     }
 ]
