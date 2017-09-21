@@ -1,5 +1,5 @@
 {
-    "patternsGoogleCalendar": ["Lyon Testing"],
+    "patternsGoogleCalendar": ["Lyon Testing Meetup"],
     "socialLinks": [
         { "icon": "link", "tooltip": "Web Site", "url": "https://www.lyontesting.fr/"},
         { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/TestingLyon"}
