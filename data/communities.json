@@ -245,5 +245,12 @@
         "name": "Le Séquenceur",
         "shortDescription": "Le Séquenceur est une communauté créative explorant les liens entre musique et technologie, motivés par l'expérimentation, le partage et la création artistique.",
         "tags": ["musique", "electronique", "meetup"]
+    },
+    {
+        "key": "LaboratoireOuvertLyonnais",
+        "image": "LaboratoireOuvertLyonnais.svg",
+        "name": "Laboratoire Ouvert Lyonnais",
+        "shortDescription": "Le Laboratoire Ouvert Lyonnais est un hackerspace proposant un espace pour sa communauté afin de réaliser et accompagner des projets, apprendre et partager des connaissances ou des technologies (peu importe le domaine), le tous dans la joie et la bonne humeur",
+        "tags": ["Open source", "Électronique", "Informatique", "Hacking", "Ethical Hacker", "DIY", "Projets", "Hackerspace", "Bidouilles", "Apprendre", "Échange", "Partage", "Rencontre"]
     }
 ]
