@@ -4,7 +4,7 @@
         { "icon": "link", "tooltip": "Web site", "url": "https://labolyon.fr" },
         { "icon": "meetup", "tooltip": "Groupe Meetup", "url": "http://www.meetup.com/fr/Laboratoire-Ouvert-Lyonnais/" },
         { "icon": "code-fork", "tooltip": "Git Forge", "url": "https://git.labolyon.fr/" },
-        { "icon": "weechat", "tooltip": "IRC", "url": "irc://irc.geeknode.org/labolyon" },
+        { "icon": "weixin", "tooltip": "IRC", "url": "irc://irc.geeknode.org/labolyon" },
         { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/LaboLyon" }
     ]
 }
