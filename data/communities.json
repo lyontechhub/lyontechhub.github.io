@@ -147,14 +147,14 @@
         "key": "TupperRust",
         "image": "TupperRust.svg",
         "name": "TupperRust",
-        "shortDescription": "Les TupperRust sont des évènements autour du langage Rust, comprenant une présentation et des revues de code. Que vous soyez débutant ou expert vous êtes les bienvenus.",
-        "tags": ["TupperRust", "rust", "servo"]
+        "shortDescription": "Les TupperRust sont des évènements autour du langage Rust, comprenant une présentation et des revues de code. Que vous soyez débutant ou expert vous êtes les bienvenus. Ces activités vous sont proposées par l'ALDIL.",
+        "tags": ["TupperRust", "rust", "servo", "ALDIL"]
     }, {
         "key": "TupperVim",
         "image": "TupperVim.svg",
         "name": "TupperVim",
-        "shortDescription": "Les Tuppervim sont des évènements où l’on partage des connaissances et des astuces à propos de Vim.",
-        "tags": ["TupperVim", "vim", "vi"]
+        "shortDescription": "Les Tuppervim sont des évènements où l’on partage des connaissances et des astuces à propos de Vim. Ces activités vous sont proposées par l'ALDIL.",
+        "tags": ["TupperVim", "vim", "vi", "neovim", "ALDIL"]
     },
     {
         "key": "Elasticsearch",
@@ -252,5 +252,12 @@
         "name": "Laboratoire Ouvert Lyonnais",
         "shortDescription": "Le Laboratoire Ouvert Lyonnais est un hackerspace proposant un espace pour sa communauté afin de réaliser et accompagner des projets, apprendre et partager des connaissances ou des technologies (peu importe le domaine), le tous dans la joie et la bonne humeur",
         "tags": ["Open source", "Électronique", "Informatique", "Hacking", "Ethical Hacker", "DIY", "Projets", "Hackerspace", "Bidouilles", "Apprendre", "Échange", "Partage", "Rencontre"]
+    },
+    {
+        "key": "BlenderLyon",
+        "image": "Blender.svg",
+        "name": "Blender",
+        "shortDescription": "Blender est un logiciel de modélisation et d'animation 3D. Ce groupe s'adresse tant aux personnes souhaitant s'initier à Blender qu'aux personnes expérimentées. Ces activités vous sont proposées par l'ALDIL.",
+        "tags": ["Blender", "ALDIL"]
     }
 ]
