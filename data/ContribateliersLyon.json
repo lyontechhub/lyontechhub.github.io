@@ -1,0 +1,25 @@
+{
+    "patternsGoogleCalendar": ["Contrib'atelier"],
+    "socialLinks": [
+        {
+            "icon": "link",
+            "tooltip": "Site web",
+            "url": "https://contribateliers.frama.site"
+        },
+        {
+            "icon": "group",
+            "tooltip": "Compte Mastodon",
+            "url": "https://framapiaf.org/@contribateliers_lyon"
+        },
+        {
+            "icon": "twitter",
+            "tooltip": "Compte Twitter de Framasoft",
+            "url": "https://twitter.com/@framasoft"
+        },
+        {
+            "icon": "envelope",
+            "tooltip": "Liste de diffusion",
+            "url": "https://framalistes.org/sympa/info/contribateliers-lyon"
+        }
+    ]
+}
