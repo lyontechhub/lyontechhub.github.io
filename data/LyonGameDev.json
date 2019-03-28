@@ -1,0 +1,9 @@
+{
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://lyongamedev.pro"},
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/lyon_dev"},
+        { "icon": "linkedin", "tooltip": "Linked In", "url": "https://www.linkedin.com/company/lyongamedev/?viewAsMember=true"},
+        { "icon": "facebook", "tooltip": "Facebook", "url": "https://www.facebook.com/LyonGameDevPage/"},
+        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://github.com/lyongamedev"}
+    ]
+}

@@ -12,5 +12,12 @@
       "url": "http://www.scala.io/",
       "shortDescription": "La conférence dédiée au langage Scala et à son écosystème se déroule à Lyon les 2-3 Novembre 2017. Au menu de la programmation fonctionnelle, des retours d'expérience et surtout des rencontres !",
       "tags": [ "Scala", "Functionnal", "Java", "JVM", "ELM","TypeScript","Haskell","Akka", "Playframework","cats", "scalajs", "scala-native" ]
+  },
+  {
+      "key": "startupweekendlyonvideogames",
+      "name": "Startup Weekend Lyon Video Games",
+      "url": "http://communities.techstars.com/france/lyon/startup-weekend/14142",
+      "shortDescription": "Lyon Game Dev organise son premier Startup Weekend Lyon Video Games le 5-6-7 avril 2019 et vous propose un weekend d'idéation pour réfléchir à la viabilité des projets de création de jeu-vidéo !",
+      "tags": [ "GameDev", "Jeu Vidéo", "Video Games", "Startup", "Studio" ]
   }
 ]

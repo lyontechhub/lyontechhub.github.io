@@ -266,5 +266,12 @@
         "name": "Contrib'ateliers Lyon",
         "shortDescription": "Les Contrib'ateliers sont des événements conviviaux pour pouvoir contribuer ensemble aux logiciels libres et à la culture libre, notamment aux services proposés par Framasoft. Tout le monde est bienvenu, membres ou non de Framasoft, que l'on s'y connaisse déjà ou que l'on veuille découvrir ensemble comment contribuer au libre.",
         "tags": ["Contrib'ateliers", "Contribution", "Open source", "Libre", "Framasoft"]
+    },
+    {
+        "key": "LyonGameDev",
+        "image": "lyongamedev.png",
+        "name": "LyonGameDev",
+        "shortDescription": "Les brasseurs du jeu-vidéo lyonnais. Bières, pitchs et gros pixels... Pour l'instant c'est avant tout une rencontre mensuelle, mais cela peut devenir bien plus encore !",
+        "tags": ["GameDev", "Jeu vidéo", "Game", "Video Game"]
     }
 ]
