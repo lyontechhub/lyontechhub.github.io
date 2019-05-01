@@ -273,5 +273,11 @@
         "name": "LyonGameDev",
         "shortDescription": "Les brasseurs du jeu-vidéo lyonnais. Bières, pitchs et gros pixels... Pour l'instant c'est avant tout une rencontre mensuelle, mais cela peut devenir bien plus encore !",
         "tags": ["GameDev", "Jeu vidéo", "Game", "Video Game"]
+    },
+    {
+        "key": "XPSocialClub",
+        "name": "eXtreme Programming Social Club",
+        "shortDescription": "L'eXtreme Programming Social Club organise des ateliers techniques et pragmatiques autour d'une bière.",
+        "tags": ["Agile", "eXtreme Programming", "JavaScript", "Angular", "Python", "Workshops"]
     }
 ]
