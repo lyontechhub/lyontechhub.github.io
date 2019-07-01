@@ -1,0 +1,9 @@
+{
+    "patternsGoogleCalendar": ["La Cuisine du Web"],
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://www.lacusineduweb.com/"},
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/lacuisineduweb"}
+        { "icon": "facebook", "tooltip": "Facebook", "url": "https://www.facebook.com/LaCuisineDuWeb/"}
+        { "icon": "linkedin", "tooltip": "LinkedIN", "url": "https://www.linkedin.com/company/la-cuisine-du-web"}
+    ]
+}

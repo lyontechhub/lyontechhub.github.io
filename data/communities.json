@@ -280,4 +280,10 @@
         "shortDescription": "L'eXtreme Programming Social Club organise des ateliers techniques et pragmatiques autour d'une bière.",
         "tags": ["Agile", "eXtreme Programming", "JavaScript", "Angular", "Python", "Workshops"]
     }
+    {
+        "key": "LaCuisineDuWeb",
+        "name": "La Cuisine Du Web",
+        "shortDescription": "La Cuisine Du Web est une association indépendante dont le but est de favoriser l'entreprenariat web et numérique à Lyon. Elle se définit comme un action-tank pour aider concrètement les entreprises et les professionnels du secteur. La Cuisine du Web s'appuie sur un écosystème actif et complet : start-ups, investisseurs, freelances, PME et grands comptes de Lyon et sa couronne, représentant environ 9000 salariés du secteur.",
+        "tags": ["Ecosysteme", "Action-Tank", "Réseau", "networking", "business", "meetup"]
+    }
 ]
