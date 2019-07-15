@@ -279,5 +279,12 @@
         "name": "eXtreme Programming Social Club",
         "shortDescription": "L'eXtreme Programming Social Club organise des ateliers techniques et pragmatiques autour d'une bière.",
         "tags": ["Agile", "eXtreme Programming", "JavaScript", "Angular", "Python", "Workshops"]
+    },
+    {
+        "key": "CafeDevOpsLyon",
+        "name": "Café DevOps Lyon",
+        "shortDescription": "Echanges visant à progresser sur les aspects opérationnels cloud, déploiement continu et scalabilité des infrastructures.",
+        "tags": ["Cloud", "Operation", "Infrastructure", "Déploiement continu", "Resilience"]
     }
+
 ]
