@@ -1,0 +1,7 @@
+{
+    "patternsGoogleCalendar": ["Café DevOps Lyon"],
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "https://cafedevops.org"},
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/CafeDevOpsLyon"}
+    ]
+}
