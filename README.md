@@ -1,6 +1,8 @@
 Lyon Tech Hub Web Site
 ======================
 
+Public url: http://www.lyontechhub.org/
+
 This is the public web site that aggregates communication of group's communities.
 It consists of the following sections :
 
