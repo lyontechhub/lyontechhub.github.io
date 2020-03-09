@@ -1,0 +1,7 @@
+{
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "https://www.fhacktory.com/"},
+        { "icon": "twitter", "tooltip": "Twitter", "url": "https://www.twitter.com/fhacktory"},
+        { "icon": "github", "tooltip": "GitHub Organization", "url": "https://github.com/fhacktory"}
+    ]
+}
