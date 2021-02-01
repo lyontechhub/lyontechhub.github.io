@@ -1,0 +1,8 @@
+{
+    "patternsGoogleCalendar": ["TheNEO"],
+    "socialLinks": [
+      
+        { "icon": "calendar", "tooltip": "Meetup", "url": "http://www.meetup.com/fr-FR/theneo/"}
+   
+    ]
+}
