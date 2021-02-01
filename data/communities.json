@@ -297,6 +297,12 @@
         "name": "fHACKtory Lyon",
         "shortDescription": "Les hackathons lyonnais 100% Hack, 0% Bullshit.",
         "tags": ["Hackathon", "Hacking", "Électronique", "Open source", "Hardware"]
+    },
+    {
+        "key": "The NEO",
+        "name": "The Next Entreprise Organisation",
+        "shortDescription": "Les nouvelles formes d'organisations",
+        "tags": ["Agile", "Lean", "Organisations liberées"]
     }
 
 ]
