@@ -260,12 +260,6 @@
         "tags": ["Open source", "Électronique", "Informatique", "Hacking", "Ethical Hacker", "DIY", "Projets", "Hackerspace", "Bidouilles", "Apprendre", "Échange", "Partage", "Rencontre"]
     },
     {
-        "key": "BlenderLyon",
-        "image": "Blender.svg",
-        "name": "Blender",
-        "shortDescription": "Blender est un logiciel de modélisation et d'animation 3D. Ce groupe s'adresse tant aux personnes souhaitant s'initier à Blender qu'aux personnes expérimentées. Ces activités vous sont proposées par l'ALDIL.",
-        "tags": ["Blender", "ALDIL"]
-    },
     {
         "key": "ContribateliersLyon",
         "image": "ContribateliersLyon.png",

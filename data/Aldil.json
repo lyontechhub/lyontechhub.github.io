@@ -1,0 +1,17 @@
+{
+  "patternsGoogleCalendar": [
+    "Aldil"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://aldil.org"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "https://twitter.com/aldil_lyon"
+    }
+  ]
+}
