@@ -1,8 +1,28 @@
 {
-    "patternsGoogleCalendar": ["Apéro PHP", "AFUP"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://lyon.afup.org/" },
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/AFUP_lyon" },
-        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://www.github.com/afup"}
-    ]
+  "patternsGoogleCalendar": [
+    "Apéro PHP",
+    "AFUP"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://lyon.afup.org/"
+    },
+    {
+      "icon": "link",
+      "tooltip": "Groupe Meetup",
+      "url": "https://www.meetup.com/fr-FR/afup-lyon-php/"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "https://twitter.com/AFUP_lyon"
+    },
+    {
+      "icon": "github",
+      "tooltip": "Git Hub Organization",
+      "url": "https://www.github.com/afup"
+    }
+  ]
 }

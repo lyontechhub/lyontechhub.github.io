@@ -1,8 +1,0 @@
-{
-    "socialLinks": [
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/angular_lyon"},
-        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://github.com/angular-lyon"},
-        { "icon": "slack", "tooltip": "Slack", "url": "https://angular-lyon.slack.com"},
-        { "icon": "calendar", "tooltip": "Meetup", "url": "https://www.meetup.com/Angular-Lyon"}
-    ]
-}
