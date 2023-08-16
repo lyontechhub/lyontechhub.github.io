@@ -102,12 +102,6 @@
         "tags" : ["OpenStack"]
     },
     {
-        "key": "Hadoop",
-        "name": "Lyon Hadoop",
-        "shortDescription": "Il s'agit d'un groupe réunissant les utilisateurs et/ou les personnes désirant en savoir plus sur Hadoop dans la région Rhône-Alpes.",
-        "tags" : ["Hadoop"]
-    },
-    {
         "key": "GameDevParty",
         "name": "Game Dev Party",
         "shortDescription": "Game Dev Party est une association lyonnaise ayant pour but la création et la promotion des jeux vidéo indépendants en Rhône Alpes. ",
@@ -187,18 +181,6 @@
         "tags": ["AWS", "EC2", "Cloud Computing", "Information Technology", "Big Data", "High Scalability Computing", "Data Analytics", "IaaS (Infrastructure as a Service)", "S3", "RDS", "Redshift"]
     },
     {
-        "key": "KotlinLyon",
-        "name": "Lyon Kotlin User Group",
-        "shortDescription": "Ce groupe s'adresse aux personnes intéressées par Kotlin, un langage de la JVM créé par JetBrains.",
-        "tags": [ "Kotlin", "pratiques", "JVM", "Java" ]
-    },
-    {
-        "key": "LyonTesting",
-        "name": "Lyon Testing Group",
-        "shortDescription": "Ce groupe s'adresse aux personnes intéressées par le test logiciel.",
-        "tags": [ "Testing", "Test", "QA" ]
-    },
-    {
         "key": "LyonDataViz",
         "name": "Lyon DataViz",
         "shortDescription": "Echange de pratiques, idées et outils autour de la Data Visualization",
@@ -245,12 +227,6 @@
         "name": "Elixir Lyon",
         "shortDescription": "Ce groupe s'adresse aux personnes intéressées par Elixir, un langage fonctionnel basée sur la VM d'erlang et de la syntaxe inspirée de Ruby. Vous êtes bienvenue pour découvrir cette nouvelle technologie ou pour appronfondir vos connaissances.",
         "tags": ["Elixir", "Phoenix Framework", "Erlang"]
-    },
-    {
-        "key": "LeSequenceur",
-        "name": "Le Séquenceur",
-        "shortDescription": "Le Séquenceur est une communauté créative explorant les liens entre musique et technologie, motivés par l'expérimentation, le partage et la création artistique.",
-        "tags": ["musique", "electronique", "meetup"]
     },
     {
         "key": "LaboratoireOuvertLyonnais",
