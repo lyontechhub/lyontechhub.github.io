@@ -1,0 +1,25 @@
+<h2>{{ paneTitle }}</h2>
+<ul class="events">
+    {{#if noEvent}}
+    <li>{{ noEventCaption }}</li>
+    {{/if}}
+    {{#if hasEvents}}
+    {{#each events}}
+    <li>
+        <div>
+            <div>
+                <div>{{ startDateDay }}</div>
+                <div>{{ startDateMonth }}</div>
+            </div>
+            <div>
+                <div>{{ title }} <a href="{{ url }}" target="_blank" class="fa fa-external-link" title="Lien vers l'événement dans Google Calendar"></a></div>
+                <div>De {{ startDateHour }} à {{ endDateHour }} - {{ location }}</div>
+            </div>
+        </div>
+        {{#if hasDescription}}
+        <div class="description">{{ description }}</div>
+        {{/if}}
+    </li>
+    {{/each}}
+    {{/if}}
+</ul>
