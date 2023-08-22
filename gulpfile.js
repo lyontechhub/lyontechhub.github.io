@@ -140,5 +140,5 @@ exports.publish =
     () =>
       gulp
         .src(destDir + '/**/*')
-        .pipe(deploy({ remoteUrl: "https://www.lyontechhub.org/"}))
+        .pipe(deploy({ remoteUrl: 'https://github.com/lyontechhub/lyontechhub.github.io' }))
   );
