@@ -1,7 +1,5 @@
 node_modules
-bower_components
-
-dist/
+public
 
 # Ignore OSX' garbage
 .DS_Store
@@ -35,3 +33,4 @@ obj/
 _ReSharper*/
 [Tt]est[Rr]esult*
 .idea/
+.direnv

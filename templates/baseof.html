@@ -7,7 +7,9 @@
     <title>Lyon Tech Hub</title>
     <link rel="icon" type="image/png" href="/imgs/logo/LyonTechHub-32-red.png" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <link href="css/main.css" rel="stylesheet"/>
+    <link href="/css/main.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js" type="module"></script>
 </head>
 <body>
 <div id="wrap">
@@ -23,7 +25,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#!/">
+					<a class="navbar-brand" href="/">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 761.81103 761.81102" class="LTHlogo" role="img" aria-label="Lyon tech hub logo">
               <g fill="#eb0f0f">
                 <path d="M228.292 296.06L91.76 305.873v-19.627zm253.113 154.467l59.414 80.39 59.41 80.39-14.06 7.53-14.06 7.53-45.36-87.92zm-6.117 24.773l48.72 80.1 48.723 80.098-13.88 6.006-13.882 6.005-34.835-86.11zm-11.073 22.367l39.147 79.93 39.147 79.93-13.75 4.638-13.747 4.64-25.403-84.57zm-16.665 14.8l32.874 86.435 32.874 86.435-14.75 3.665-14.748 3.666-18.125-90.1zm-19.61 9.64l25.227 90.926 25.228 90.927-15.404 2.52-15.4 2.52-9.82-93.448zm-20.562 12.213l17.28 96.495 17.282 96.494-16.234 1.31-16.234 1.315-1.047-97.81zm-22.536-.962l9.983 97.458 9.984 97.458h-39.94l9.98-97.458zm-22.537.962l-1.047 97.812-1.047 97.812-16.23-1.317-16.23-1.318 17.28-96.5zm-20.562-12.214l-10.168 96.726-10.168 96.725-15.944-2.608-15.945-2.61 26.113-94.12zm-19.61-9.638l-18.125 90.1-18.125 90.1-14.75-3.666-14.747-3.665 32.873-86.435zm-16.663-14.8l-26.672 88.784-26.67 88.785-14.428-4.87-14.43-4.87 41.1-83.916zM294.396 475.3l-35.76 88.387-35.758 88.385-14.254-6.165-14.253-6.164 50.02-82.22zm-6.116-24.773l-45.274 87.766-45.273 87.765-14.037-7.517-14.037-7.51 59.31-80.25z"/>
@@ -39,22 +41,22 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-navbar-collapse-1" bs-navbar>
 					<ul class="nav navbar-nav">
-						<li data-match-route="^/$">
-							<a href="#!/"><span class="fa fa-home fa-lg"></span>Accueil</a>
+						<li>
+							<a href="/"><span class="fa fa-home fa-lg"></span>Accueil</a>
 						</li>
-						<li data-match-route="/calendrier">
-							<a href="#!/calendrier"><span class="fa fa-calendar fa-lg"></span>Calendrier</a>
+						<li>
+							<a href="/calendar"><span class="fa fa-calendar fa-lg"></span>Calendrier</a>
 						</li>
-						<li data-match-route="/communautes">
-							<a href="#!/communautes"><span class="fa fa-comments fa-lg"></span>Communautés</a>
+						<li>
+							<a href="/communities"><span class="fa fa-comments fa-lg"></span>Communautés</a>
 						</li>
-            <li data-match-route="/conferences">
-							<a href="#!/conferences"><span class="fa fa-comments fa-lg"></span>Conférences</a>
+                        <li>
+							<a href="/conferences"><span class="fa fa-comments fa-lg"></span>Conférences</a>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li data-match-route="/a-propos">
-							<a href="#!/a-propos"><span class="fa fa-info-circle fa-lg"></span>A propos</a>
+						<li>
+							<a href="/about"><span class="fa fa-info-circle fa-lg"></span>A propos</a>
 						</li>
 					</ul>
 				</div>
@@ -63,7 +65,7 @@
     </nav>
 </header>
 <section class="text-center mainContent">
-    <div ng-view></div>
+    {{{ content }}}
 </section>
 <div id="push">
 </div>
@@ -75,7 +77,7 @@
 				<div class="col-xs-3"><h3>Lyon Tech Hub</h3></div>
 				<div class="col-xs-3">
 					<h3>
-						<small><a href="#!/a-propos">Rejoignez-nous</a></small>
+						<small><a href="/about">Rejoignez-nous</a></small>
 					</h3>
 				</div>
 				<div class="col-xs-6">
@@ -112,7 +114,5 @@
 
     ga('create', 'UA-54313346-1', 'auto');
 </script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js" type="text/javascript"
-        data-main="js/build.min"></script>
 </body>
 </html>

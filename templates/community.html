@@ -1,0 +1,26 @@
+<h1><img src="/imgs/communities/{{ image }}" onerror="this.onerror=null;this.src='/imgs/noLogo.png';"/>{{ name }}</h1>
+<div class="container-fluid community"
+     id="communityDetails"
+     data-patterns-google-calendar="{{ patternsGoogleCalendar }}">
+    <div class="col-lg-4">
+        <h2>En bref...</h2>
+        <p>{{ shortDescription }}</p>
+        <ul class="socialLinks">
+            {{#each socialLinks}}
+            <li>
+                <a href="{{ url }}" target="_blank" class="fa fa-2x fa-{{ icon }}" title="{{ tooltip }}"></a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col-lg-4"
+         id="upcomingEvents"
+         data-pane-title="A venir !"
+         data-no-event-caption="Pas d'événements dans les 4 prochains mois.">
+    </div>
+    <div class="col-lg-4"
+         id="pastEvents"
+         data-pane-title="Ce que vous avez manqué..."
+         data-no-event-caption="Pas d'événements durant les 4 derniers mois.">
+    </div>
+</div>

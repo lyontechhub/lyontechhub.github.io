@@ -1,132 +1,144 @@
 var gulp = require('gulp');
-var del = require('del')
-var deploy = require("gulp-gh-pages");
+var fsExtra = require('fs-extra')
 var less = require("gulp-less");
-var amdOptimize = require('amd-optimize');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var argv = require('yargs').argv;
+var yargs = require('yargs/yargs');
+var {hideBin} = require('yargs/helpers');
 var gulpIf = require('gulp-if');
-var minifyCSS = require('gulp-minify-css');
-var git = require('gulp-gh-pages/lib/git');
-var gutil = require('gulp-util');
-var when = require('when');
+var minifyCSS = require('gulp-clean-css');
+var deploy = require('gulp-git-pages');
 var path = require('path');
-var runSequence = require('run-sequence');
-var child = require('child_process');
-var fs = require('fs');
+var handlebars = require('handlebars');
+
+var argv = yargs(hideBin(process.argv)).argv;
 
 /* Configuration */
-var lessSource = 'css/main.less';
-var jsSource = 'js/**/*.js';
-var htmlSource = ['views/*.html', 'index.html'];
-var assetsSource = ['imgs/**/*', 'data/**/*'];
-var destDir = 'dist/';
-var deployOptions = {
-    "origin": 'origin',
-    "branch": "master"
-}
-var tmpRepoPath = '';
+var sources = {
+  css: ['css/main.less']
+, js: ['js/**/*']
+, handlebarTemplates: ['templates/communityEvents.html']
+, imgs: ['imgs/**/*']
+, pages: ['data/*.json', 'templates/*.html']
+};
+var destDir = 'public/';
 
 /* Tasks */
-gulp.task('clean', function () {
-    del('dist', true);
-});
+exports.clean = async () =>
+  fsExtra.removeSync('public');
 
-gulp.task('build-css', function () {
-    return gulp.src(lessSource, { base: './' })
-        .pipe(less({ paths: [ 'bower_components/bootstrap/less/' ] }))
-        .pipe(gulpIf(argv.push, minifyCSS()))
-        .pipe(gulp.dest(destDir));
-});
+exports.buildCss = () =>
+  gulp.src(sources.css)
+    .pipe(less({ paths: ['node_modules/bootstrap/less/'] }))
+    .pipe(gulpIf(argv.push, minifyCSS()))
+    .pipe(gulp.dest(destDir + 'css/'));
 
-gulp.task('watch-css', function() {
-    gulp.watch(lessSource, ['build-css']);
-});
+exports.watchCss = () =>
+  gulp.watch(sources.css, exports.buildCss);
 
-gulp.task('build-js', function () {
-    return gulp.src(jsSource, { base: './' })
-        .pipe(amdOptimize('main', {
-            baseUrl: 'js',
+exports.buildImgs = () =>
+  gulp.src(sources.imgs)
+    .pipe(gulp.dest(destDir + 'imgs/'));
 
-            paths: {
-                'jquery': 'empty:',
-                'bootstrap': 'empty:',
-                'domReady': 'empty:',
-                'angular': 'empty:',
-                'angularRoute': 'empty:',
-                'angularSanitize': 'empty:',
-                'angularStrapNavBar': '../bower_components/angular-strap/dist/modules/navbar',
-                'angulartics': '../bower_components/angulartics/dist/angulartics.min',
-                'angulartics.google.analytics': '../bower_components/angulartics/dist/angulartics-ga.min'
-            },
+exports.watchImgs = () =>
+  gulp.watch(sources.imgs, exports.buildImgs);
 
-            shim: {
-                'bootstrap': {
-                    deps: ['jquery']
-                },
-                'angular': {
-                    deps: ['jquery'],
-                    exports: 'angular'
-                },
-                'angularRoute': {
-                    deps: ['angular']
-                },
-                'angularSanitize': {
-                    deps: ['angular']
-                },
-                'angularStrapNavBar': {
-                    deps: ['angular']
-                },
-                'angulartics': {
-                    deps: ['angular']
-                },
-                'angulartics.google.analytics': {
-                    deps: ['angulartics']
-                }
-            }}))
-        .pipe(concat('js/build.min.js'))
-        .pipe(gulpIf(argv.push, uglify()))
-        .pipe(gulp.dest(destDir));
-});
+exports.buildJs = () =>
+  gulp.src(sources.js)
+    .pipe(gulp.dest(destDir + 'js/'));
 
-gulp.task('watch-js', function() {
-    gulp.watch(jsSource, ['build-js']);
-});
+exports.watchJs = () =>
+  gulp.watch(sources.js, exports.buildJs);
 
-gulp.task('build-html', function () {
-    return gulp.src(htmlSource, { base: './' })
-        .pipe(gulp.dest(destDir));
-});
+exports.buildHandlebarTemplates = () => 
+  gulp.src('templates/communityEvents.html')
+    .pipe(gulp.dest(destDir + 'js/'));
 
-gulp.task('watch-html', function() {
-    gulp.watch(htmlSource, ['build-html']);
-});
+exports.watchHandlebarTemplates = () =>
+  gulp.watch(sources.handlebarTemplates, exports.buildHandlebarTemplates);
 
-gulp.task('copy-assets', function() {
-    return gulp.src(assetsSource, { base: './'})
-        .pipe(gulp.dest(destDir));
-});
+exports.buildPages = async () => {
+  const withTemplate = (src) => handlebars.compile(fsExtra.readFileSync('templates/' + src, 'utf8'));
+  const baseOf = withTemplate("baseof.html");
+  const withBody = (target, body) => {
+    const dest = 'public/' + target;
+    fsExtra.ensureDirSync(path.dirname(dest));
+    fsExtra.writeFileSync(dest, baseOf({content: body}));
+  };
+  const page = (src, target, args) => withBody(target, withTemplate(src)(args));
+  const defaultImage = (x) => {
+    if (!x.image) {
+        x.image = x.key + ".png";
+    }
+    return x;
+  };
+  const addDetailKey = (x) => {
+    x.detailKey = x.key.replaceAll(' ', '-');
+    return x;
+  };
+  const communities =
+    fsExtra
+      .readJsonSync('data/communities.json')
+      .map(defaultImage)
+      .map(addDetailKey)
+    ;
+  const keyedCommunities =
+    communities
+      .reduce((map, obj) => {
+        map[obj.key] = obj;
+        return map;
+    }, {})
+  const detailsData = (communityKey) => {
+    const detailsFilename = 'data/' + communityKey + '.json';
+    if (fsExtra.pathExistsSync(detailsFilename))
+      return defaultImage(fsExtra.readJsonSync(detailsFilename));
+    else {
+      console.warn('Community file is missing: ' + detailsFilename);
+      return {};
+    }
+  };
 
-gulp.task('watch-assets', function() {
-    gulp.watch(assetsSource, ['copy-assets']);
-});
+  page('index.html', 'index.html', {});
+  page('about.html', 'about/index.html', {});
+  page('calendar.html', 'calendar/index.html', {});
+  page('conferences.html', 'conferences/index.html', {
+    conferences:
+      fsExtra
+        .readJsonSync('data/conferences.json')
+        .map(defaultImage)
+  });
+  page('communities.html', 'communities/index.html', {
+    communities:
+      communities
+        .toSorted((x, y) => x.name.localeCompare(y.name))
+  });
+  communities.forEach((community) => {
+    const data = {
+      ...detailsData(community.key),
+      ...keyedCommunities[community.key]
+    };
+    data.patternsGoogleCalendar = JSON.stringify(data.patternsGoogleCalendar || [community.key]);
+    page('community.html', 'community/' + community.detailKey + '/index.html', data);
+  });
+  await Promise.resolve('ignored');
+};
 
-gulp.task('server', function() {
-  var server = child.spawn('node', ['server.js'], { stdio: 'inherit' });
-});
+exports.watchPages = () =>
+  gulp.watch(sources.pages, exports.buildPages);
 
-gulp.task('build', ['build-css', 'build-js', 'build-html', 'copy-assets']);
+exports.build =
+  gulp.parallel(exports.buildCss, exports.buildImgs, exports.buildJs, exports.buildHandlebarTemplates, exports.buildPages);
 
-gulp.task('watch', ['watch-css', 'watch-js', 'watch-html', 'watch-assets']);
+exports.watch =
+  gulp.parallel(exports.watchCss, exports.watchImgs, exports.watchJs, exports.watchHandlebarTemplates, exports.watchPages);
 
-gulp.task('dev', ['build', 'server', 'watch']);
+exports.dev =
+  gulp.series(exports.build, exports.watch);
 
-// Deploy target to use to deploy to github pages (not used -> no SEO solution, heroku is used instead)
-gulp.task('deploy', function () {
-    runSequence('build', function() {
-        deployOptions.push = argv.push ? true : false;
-        return gulp.src(['./dist/**/*'])
-            .pipe(deploy(deployOptions));
-    })
-});
+exports.publish =
+  gulp.series(
+    exports.clean,
+    exports.build,
+    () =>
+      gulp
+        .src(destDir + '/**/*')
+        .pipe(deploy({ remoteUrl: "https://www.lyontechhub.org/"}))
+  );
