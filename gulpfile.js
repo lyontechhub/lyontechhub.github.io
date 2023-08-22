@@ -5,7 +5,6 @@ var yargs = require('yargs/yargs');
 var {hideBin} = require('yargs/helpers');
 var gulpIf = require('gulp-if');
 var minifyCSS = require('gulp-clean-css');
-var deploy = require('gulp-git-pages');
 var path = require('path');
 var handlebars = require('handlebars');
 
@@ -132,13 +131,3 @@ exports.watch =
 
 exports.dev =
   gulp.series(exports.build, exports.watch);
-
-exports.publish =
-  gulp.series(
-    exports.clean,
-    exports.build,
-    () =>
-      gulp
-        .src(destDir + '/**/*')
-        .pipe(deploy({ remoteUrl: 'https://github.com/lyontechhub/lyontechhub.github.io' }))
-  );

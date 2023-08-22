@@ -25,7 +25,6 @@
     "gulp-if": "^3.0.0",
     "gulp-less": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
-    "gulp-git-pages": "^0.0.5",
     "handlebars": "^4.7.8",
     "path": "^0.12.7",
     "yargs": "^17.7.2"
