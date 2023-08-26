@@ -4,7 +4,7 @@ Lyon Tech Hub Web Site
 Public url: http://www.lyontechhub.org/
 
 This is the public web site that aggregates communication of group's communities.
-It consists of the following sections :
+It consists of the following sections:
 
 * Home page
 * Calendar page
@@ -13,22 +13,22 @@ It consists of the following sections :
 
 Join Us
 -------
-Send us a mail to lyonytechhub@googlegroups.com or even request to join the group, it is totally free.
+It is totally free. Send us an mail at contact@lyontechhub.org, or [request access to our Slack](https://slack.lyontechhub.org).
 
-If you have a tech/IT community in Lyon area, request to join Lyon Tech Hub to promote your exciting activity to the community, it is simple as :
+If you have a tech/IT community in the Lyon area, and want to join Lyon Tech Hub to promote your exciting activity to the community, it is simple as:
 
 * Request access to Google Calendar
 * And submit a pull request to update web site (logo & JSON data).
 
-Make sure you do a pull request on master branch including the following :
+Make sure you do a pull request on master branch including the following:
 
 * your community in community list data/communities.json
 * your community details in file data/[key used in list].json
-* your community logo in imgs in PNG format with a 100x100 minimum resolution
+* your community logo in PNG format with a 100x100 minimum resolution
 
 Contribute
 ----------
-Contact us on the Google Group, make pull-request, this web site must be managed by Lyon communities themselves.
+Contact us at contact@lyontechhub.org, [access to our Slack](https://slack.lyontechhub.org), or submit a pull-request: this web site must be managed by Lyon communities themselves.
 
 Developers
 ----------
@@ -58,14 +58,14 @@ Images like community icons are in 'imgs' directory.
 
 Packages are managed through NPM and Bower. So you need NodeJS but just for NPM.
 
-After cloning, just type the following commands to have a  :
+After cloning, just type the following commands to have a running web server:
 
 ```
 npm install
 npm start
 ```
 
-Nb : npm start is configured to start a local Node web server
+Nb: `npm start` is configured to start a local Node web server
 
 Gulp is used to build assets (CSS & JS) and copy other assets (data & images) used by the site.
 
@@ -73,7 +73,7 @@ Gulp is used to build assets (CSS & JS) and copy other assets (data & images) us
 * 'watch' task is used to watch changes on source JS, LESS, HTML & assets files to trigger a build dynamically (never ending task)
 * _NO MORE USED_ 'deploy' task is used to commit 'dist' directory content to 'master' branch (excluding 'data' & 'imgs' directories which are modified on 'master' branch directly), specify '--push' to effectively deploy on GitHub pages (i.e push on GitHub master branch)
 
-If you want to be able to run the server and watch the files simultaneously you need to use :
+If you want to be able to run the server and watch the files simultaneously you need to use:
 
 ```
 npm run dev
@@ -81,8 +81,8 @@ npm run dev
 
 ### SEO compliance
 
-To be SEO compliant, we embed web site in a Node.js application only to use prerender.io. The application load the Node.js module for prerender.io, called the middleware (see server.js file).
-It use Google AJAX crawling specification to make AngularJS application search engine compliant. See https://prerender.io/.
+To be SEO compliant, we embed the web site in a Node.js application only to use prerender.io. The application loads the Node.js module for prerender.io, called the middleware (see server.js file).
+It uses Google AJAX crawling specification to make AngularJS application search engine compliant. See https://prerender.io/.
 
 We use a heroku application for the prerender service, which crawl the web site with PhantomJS to return full old HTML. Prerender service is at http://mighty-waters-2486.herokuapp.com/.
 It has been deployed with following instructions : https://github.com/prerender/prerender#deploying-your-own-on-heroku.
