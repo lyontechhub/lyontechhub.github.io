@@ -1,6 +1,0 @@
-{
-    "patternsGoogleCalendar": ["eXtreme Programming Social Club"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Meetup", "url": "https://www.meetup.com/extreme-programming-social-club"}
-    ]
-}
