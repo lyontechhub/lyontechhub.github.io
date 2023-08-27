@@ -1,4 +1,10 @@
 {
+  "name": "AFUP Lyon / Apéros PHP",
+  "shortDescription": "L'AFUP Lyon organise des apéro, ateliers, rendez-vous autour des dernières avancées du langage PHP.",
+  "tags": [
+    "PHP",
+    "Afup"
+  ],
   "patternsGoogleCalendar": [
     "Apéro PHP",
     "AFUP"

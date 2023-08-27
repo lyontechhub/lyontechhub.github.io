@@ -1,4 +1,13 @@
 {
+    "image": "lyongamedev.png",
+    "name": "LyonGameDev",
+    "shortDescription": "Les brasseurs du jeu-vidéo lyonnais. Bières, pitchs et gros pixels... Pour l'instant c'est avant tout une rencontre mensuelle, mais cela peut devenir bien plus encore !",
+    "tags": [
+      "GameDev",
+      "Jeu vidéo",
+      "Game",
+      "Video Game"
+    ],
     "socialLinks": [
         { "icon": "link", "tooltip": "Web site", "url": "http://lyongamedev.pro"},
         { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/lyon_dev"},

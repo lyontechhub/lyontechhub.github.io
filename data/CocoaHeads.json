@@ -1,4 +1,13 @@
 {
+    "name": "CocoaHeads Lyon",
+    "shortDescription": "CocoaHeads est un groupe de développeurs passionnés par les technologies Apple (iPhone, iPad et Mac). L’accès y est ouvert à tous et gratuit.",
+    "tags": [
+      "Apple",
+      "iOS",
+      "OS X",
+      "Objective-C",
+      "Swift"
+    ],
     "socialLinks": [
         { "icon": "link", "tooltip": "Web site", "url": "http://cocoaheads.fr/lyon/"},
         { "icon": "twitter", "tooltip": "Twitter", "url": "http://www.twitter.com/cocoaheadslyon"},

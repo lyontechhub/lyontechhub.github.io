@@ -1,4 +1,11 @@
 {
+    "name": "Software Craftsmanship Lyon",
+    "shortDescription": "La communauté Software Craftsmanship Lyon réunit les développeurs, sans sexisme, élitisme ni langage ou techno obligatoire.",
+    "tags": [
+      "Craftsmanship",
+      "artisan",
+      "Coding Dojo"
+    ],
     "patternsGoogleCalendar": ["Software Craftsmanship Lyon"],
     "socialLinks": [
         { "icon": "link", "tooltip": "Web site", "url": "http://www.meetup.com/fr/Software-Craftsmanship-Lyon/"},

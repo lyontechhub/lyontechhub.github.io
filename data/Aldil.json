@@ -1,4 +1,10 @@
 {
+  "name": "Aldil",
+  "shortDescription": "Association Lyonnaise pour le Développement de l'Informatique Libre",
+  "tags": [
+    "Libre",
+    "Opensource"
+  ],
   "patternsGoogleCalendar": [
     "Aldil"
   ],

@@ -1,4 +1,12 @@
 {
+    "name": "LyonJS",
+    "shortDescription": "LyonJS ce sont des talks long format sur un sujet hype du moment, des lightnings talks pour vous faire découvrir autre chose, le tout suivi d'un apéro pour se rencontrer et discuter tous ensemble.",
+    "tags": [
+      "JavaScript",
+      "JS",
+      "Angular",
+      "Node.JS"
+    ],
     "patternsGoogleCalendar": ["LyonJS"],
     "socialLinks": [
         { "icon": "link", "tooltip": "Web site", "url": "http://lyonjs.org/"},

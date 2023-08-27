@@ -1,4 +1,13 @@
 {
+  "name": "Café DevOps Lyon",
+  "shortDescription": "Echanges visant à progresser sur les aspects opérationnels cloud, déploiement continu et scalabilité des infrastructures.",
+  "tags": [
+    "Cloud",
+    "Operation",
+    "Infrastructure",
+    "Déploiement continu",
+    "Resilience"
+  ],
   "patternsGoogleCalendar": [
     "Café DevOps Lyon"
   ],

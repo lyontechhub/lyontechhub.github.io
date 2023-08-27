@@ -1,4 +1,12 @@
 {
+    "name": "Rencontres Python",
+    "shortDescription": "Une rencontre Python est un moment où les développeurs et développeuses se retrouvent autour d'un verre et d'une présentation pour échanger autour de ce langage. L'accès est gratuit et ouvert à tous. Cet événement est organisé par l'Association Francophone Python (AFPY).",
+    "tags": [
+      "Python",
+      "DevOps",
+      "Scientific",
+      "Web"
+    ],
     "patternsGoogleCalendar": ["Python"],
     "socialLinks": [
         { "icon": "link", "tooltip": "Web site", "url": "http://www.afpy.org" },
