@@ -48,7 +48,7 @@ exports.buildJs = () =>
 exports.watchJs = () =>
   gulp.watch(sources.js, exports.buildJs);
 
-exports.buildHandlebarTemplates = () => 
+exports.buildHandlebarTemplates = () =>
   gulp.src('templates/communityEvents.html')
     .pipe(gulp.dest(destDir + 'js/'));
 

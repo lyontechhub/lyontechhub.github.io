@@ -1,15 +1,19 @@
 {
-    "name": "Neo4j Graph Database Lyon",
-    "shortDescription": "Cher Graphista, ce groupe a pour objectif de réunir les personnes intéressées par les bases de données NoSql de graphe. Tous les utilisateurs sont les bienvenus, depuis le développeur jusqu'à l'utilisateur final en passant par le simple curieux. A bientôt dans le graphe !",
-    "tags": [
-      "Neo4j",
-      "NoSQL",
-      "Java",
-      "SGBD",
-      "Base de données",
-      "Cypher"
-    ],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Communauté Neo4j", "url": "http://www.meetup.com/graphdb-lyon/"}
-    ]
+  "name": "Neo4j Graph Database Lyon",
+  "shortDescription": "Cher Graphista, ce groupe a pour objectif de réunir les personnes intéressées par les bases de données NoSql de graphe. Tous les utilisateurs sont les bienvenus, depuis le développeur jusqu'à l'utilisateur final en passant par le simple curieux. A bientôt dans le graphe !",
+  "tags": [
+    "Neo4j",
+    "NoSQL",
+    "Java",
+    "SGBD",
+    "Base de données",
+    "Cypher"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Communauté Neo4j",
+      "url": "http://www.meetup.com/graphdb-lyon/"
+    }
+  ]
 }

@@ -1,23 +1,45 @@
 {
-    "name": "MUG (Microsoft User Group) Lyon",
-    "shortDescription": "Le MUG Lyon regroupe les passionnés des technologies Microsoft et affiliées. Un événement par mois est organisé le dernier jeudi de chaque mois soit sur des technos de la plateforme Microsoft (de l'éditeur ou de la communauté) ou sur des pratiques ou des outils.",
-    "tags": [
-      "Microsoft",
-      "pratiques",
-      "outils",
-      ".NET",
-      "C#",
-      "JavaScript"
-    ],
-    "patternsGoogleCalendar": ["MUG"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://muglyon.github.io/"},
-        { "icon": "calendar", "tooltip": "Meetup", "url": "http://www.meetup.com/fr-FR/MUGLyon/"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "http://www.twitter.com/muglyon"},
-        { "icon": "linkedin", "tooltip": "Linked In", "url": "http://www.linkedin.com/groups/MUG-Lyon-4302523"},
-        { "icon": "github", "tooltip": "Git Hub Organization", "url": "http://www.github.com/muglyon"}
-    ],
-    "slackChannels": [
-        "#muglyon"
-    ]
+  "name": "MUG (Microsoft User Group) Lyon",
+  "shortDescription": "Le MUG Lyon regroupe les passionnés des technologies Microsoft et affiliées. Un événement par mois est organisé le dernier jeudi de chaque mois soit sur des technos de la plateforme Microsoft (de l'éditeur ou de la communauté) ou sur des pratiques ou des outils.",
+  "tags": [
+    "Microsoft",
+    "pratiques",
+    "outils",
+    ".NET",
+    "C#",
+    "JavaScript"
+  ],
+  "patternsGoogleCalendar": [
+    "MUG"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://muglyon.github.io/"
+    },
+    {
+      "icon": "calendar",
+      "tooltip": "Meetup",
+      "url": "http://www.meetup.com/fr-FR/MUGLyon/"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "http://www.twitter.com/muglyon"
+    },
+    {
+      "icon": "linkedin",
+      "tooltip": "Linked In",
+      "url": "http://www.linkedin.com/groups/MUG-Lyon-4302523"
+    },
+    {
+      "icon": "github",
+      "tooltip": "Git Hub Organization",
+      "url": "http://www.github.com/muglyon"
+    }
+  ],
+  "slackChannels": [
+    "#muglyon"
+  ]
 }

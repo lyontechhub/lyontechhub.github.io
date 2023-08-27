@@ -1,17 +1,35 @@
 {
-    "name": "LyonJS",
-    "shortDescription": "LyonJS ce sont des talks long format sur un sujet hype du moment, des lightnings talks pour vous faire découvrir autre chose, le tout suivi d'un apéro pour se rencontrer et discuter tous ensemble.",
-    "tags": [
-      "JavaScript",
-      "JS",
-      "Angular",
-      "Node.JS"
-    ],
-    "patternsGoogleCalendar": ["LyonJS"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://lyonjs.org/"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/LyonJS"},
-        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://github.com/lyonjs"},
-        { "icon": "youtube-play", "tooltip": "Youtube channel", "url": "https://www.youtube.com/channel/UCGTVc5PnIgAUoA2D2_6nJLg"}
-    ]
+  "name": "LyonJS",
+  "shortDescription": "LyonJS ce sont des talks long format sur un sujet hype du moment, des lightnings talks pour vous faire découvrir autre chose, le tout suivi d'un apéro pour se rencontrer et discuter tous ensemble.",
+  "tags": [
+    "JavaScript",
+    "JS",
+    "Angular",
+    "Node.JS"
+  ],
+  "patternsGoogleCalendar": [
+    "LyonJS"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://lyonjs.org/"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "https://twitter.com/LyonJS"
+    },
+    {
+      "icon": "github",
+      "tooltip": "Git Hub Organization",
+      "url": "https://github.com/lyonjs"
+    },
+    {
+      "icon": "youtube-play",
+      "tooltip": "Youtube channel",
+      "url": "https://www.youtube.com/channel/UCGTVc5PnIgAUoA2D2_6nJLg"
+    }
+  ]
 }

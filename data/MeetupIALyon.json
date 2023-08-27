@@ -1,21 +1,27 @@
 {
-    "name": "Meetup Intelligence Artificielle Lyon",
-    "shortDescription": "Le but est de rassembler un réseau de passionnés, de mettre en commun les compétences afin de développer des projets (par exemple dans le traitement des datas, ou dans la robotique) et de produire une réflexion sur ce sujet complexe qu'est l'Intelligence Artificielle",
-    "tags": [
-      "meetup",
-      "intelligence artificielle",
-      "networking",
-      "informatique",
-      "Usages",
-      "Design",
-      "innovation",
-      "Big Data",
-      "Philosophie",
-      "entrepreneuriat",
-      "maker"
-    ],
-    "patternsGoogleCalendar": ["Meetup Intelligence Artificielle Lyon"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "https://www.meetup.com/fr-FR/Intelligence-artificielle-formes-enjeux-usages/"}
-    ]
+  "name": "Meetup Intelligence Artificielle Lyon",
+  "shortDescription": "Le but est de rassembler un réseau de passionnés, de mettre en commun les compétences afin de développer des projets (par exemple dans le traitement des datas, ou dans la robotique) et de produire une réflexion sur ce sujet complexe qu'est l'Intelligence Artificielle",
+  "tags": [
+    "meetup",
+    "intelligence artificielle",
+    "networking",
+    "informatique",
+    "Usages",
+    "Design",
+    "innovation",
+    "Big Data",
+    "Philosophie",
+    "entrepreneuriat",
+    "maker"
+  ],
+  "patternsGoogleCalendar": [
+    "Meetup Intelligence Artificielle Lyon"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "https://www.meetup.com/fr-FR/Intelligence-artificielle-formes-enjeux-usages/"
+    }
+  ]
 }

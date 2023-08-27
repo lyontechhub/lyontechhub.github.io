@@ -1,20 +1,24 @@
 {
-    "name": "LAWS - Lyon Amazon Web Services UG",
-    "shortDescription": "Groupe officiel Amazon Web Services de la région Lyonnaise. Organisation de Meetup autour des services AWS, retours d'expériences, live coding, ...",
-    "tags": [
-      "AWS",
-      "EC2",
-      "Cloud Computing",
-      "Information Technology",
-      "Big Data",
-      "High Scalability Computing",
-      "Data Analytics",
-      "IaaS (Infrastructure as a Service)",
-      "S3",
-      "RDS",
-      "Redshift"
-    ],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Groupe Meetup", "url": "http://www.meetup.com/LAWS-Lyon-Amazon-Web-Services-User-Group/" }
-    ]
+  "name": "LAWS - Lyon Amazon Web Services UG",
+  "shortDescription": "Groupe officiel Amazon Web Services de la région Lyonnaise. Organisation de Meetup autour des services AWS, retours d'expériences, live coding, ...",
+  "tags": [
+    "AWS",
+    "EC2",
+    "Cloud Computing",
+    "Information Technology",
+    "Big Data",
+    "High Scalability Computing",
+    "Data Analytics",
+    "IaaS (Infrastructure as a Service)",
+    "S3",
+    "RDS",
+    "Redshift"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Groupe Meetup",
+      "url": "http://www.meetup.com/LAWS-Lyon-Amazon-Web-Services-User-Group/"
+    }
+  ]
 }

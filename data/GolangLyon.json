@@ -1,13 +1,23 @@
 {
-    "name": "Golang Lyon",
-    "shortDescription": "Ce groupe s'adresse à toute personne s'intéressant de près ou de loin au langage Go : curieux, débutants ou personnes expérimentées !",
-    "tags": [
-      "Go",
-      "Golang"
-    ],
-    "patternsGoogleCalendar": ["Golang Lyon"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://www.meetup.com/Golang-Lyon/"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/GolangLyon"}
-    ]
+  "name": "Golang Lyon",
+  "shortDescription": "Ce groupe s'adresse à toute personne s'intéressant de près ou de loin au langage Go : curieux, débutants ou personnes expérimentées !",
+  "tags": [
+    "Go",
+    "Golang"
+  ],
+  "patternsGoogleCalendar": [
+    "Golang Lyon"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://www.meetup.com/Golang-Lyon/"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "https://twitter.com/GolangLyon"
+    }
+  ]
 }

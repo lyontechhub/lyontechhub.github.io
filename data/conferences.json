@@ -1,16 +1,35 @@
 [
   {
-      "key": "afupday2023",
-      "name": "AFUP Day 2023",
-      "url": "https://event.afup.org/afup-day-2023/afup-day-2023-lyon/",
-      "shortDescription": "La communauté PHP se réunit le 12 mai 2023 dans plusieurs antennes de France, et donc à Lyon, pour une journée de conférences mono-track autour du PHP, présentées par des conférencières et conférenciers locaux et nationaux !",
-      "tags": [ "PHP", "AFUP", "Symfony", "Laravel"]
+    "key": "afupday2023",
+    "name": "AFUP Day 2023",
+    "url": "https://event.afup.org/afup-day-2023/afup-day-2023-lyon/",
+    "shortDescription": "La communauté PHP se réunit le 12 mai 2023 dans plusieurs antennes de France, et donc à Lyon, pour une journée de conférences mono-track autour du PHP, présentées par des conférencières et conférenciers locaux et nationaux !",
+    "tags": [
+      "PHP",
+      "AFUP",
+      "Symfony",
+      "Laravel"
+    ]
   },
   {
-      "key": "mixit",
-      "name": "MiXiT",
-      "url": "https://mixitconf.org/",
-      "shortDescription": "La conférence lyonnaise, avec des crêpes et du cœur ! Deux jours de découvertes et de rencontres dans une ambiance conviviale, dédiée à la mixité des sujets, des technologies mais aussi des participants.",
-      "tags": [ "Neo4j", "NoSQL", "Java", "SGBD", "Base de données", "Agilité","Lean", "PHP", "Scala", "SoftwareCraftsmanship", "JS", "JavaScript", "Éthique" ]
+    "key": "mixit",
+    "name": "MiXiT",
+    "url": "https://mixitconf.org/",
+    "shortDescription": "La conférence lyonnaise, avec des crêpes et du cœur ! Deux jours de découvertes et de rencontres dans une ambiance conviviale, dédiée à la mixité des sujets, des technologies mais aussi des participants.",
+    "tags": [
+      "Neo4j",
+      "NoSQL",
+      "Java",
+      "SGBD",
+      "Base de données",
+      "Agilité",
+      "Lean",
+      "PHP",
+      "Scala",
+      "SoftwareCraftsmanship",
+      "JS",
+      "JavaScript",
+      "Éthique"
+    ]
   }
 ]

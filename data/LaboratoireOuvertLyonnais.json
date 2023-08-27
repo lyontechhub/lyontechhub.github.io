@@ -1,28 +1,50 @@
 {
-    "image": "LaboratoireOuvertLyonnais.svg",
-    "name": "Laboratoire Ouvert Lyonnais",
-    "shortDescription": "Le Laboratoire Ouvert Lyonnais est un hackerspace proposant un espace pour sa communauté afin de réaliser et accompagner des projets, apprendre et partager des connaissances ou des technologies (peu importe le domaine), le tous dans la joie et la bonne humeur",
-    "tags": [
-      "Open source",
-      "Électronique",
-      "Informatique",
-      "Hacking",
-      "Ethical Hacker",
-      "DIY",
-      "Projets",
-      "Hackerspace",
-      "Bidouilles",
-      "Apprendre",
-      "Échange",
-      "Partage",
-      "Rencontre"
-    ],
-    "patternsGoogleCalendar": ["LaboratoireOuvertLyonnais"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "https://labolyon.fr" },
-        { "icon": "meetup", "tooltip": "Groupe Meetup", "url": "http://www.meetup.com/fr/Laboratoire-Ouvert-Lyonnais/" },
-        { "icon": "code-fork", "tooltip": "Git Forge", "url": "https://git.labolyon.fr/" },
-        { "icon": "weixin", "tooltip": "IRC", "url": "irc://irc.geeknode.org/labolyon" },
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/LaboLyon" }
-    ]
+  "image": "LaboratoireOuvertLyonnais.svg",
+  "name": "Laboratoire Ouvert Lyonnais",
+  "shortDescription": "Le Laboratoire Ouvert Lyonnais est un hackerspace proposant un espace pour sa communauté afin de réaliser et accompagner des projets, apprendre et partager des connaissances ou des technologies (peu importe le domaine), le tous dans la joie et la bonne humeur",
+  "tags": [
+    "Open source",
+    "Électronique",
+    "Informatique",
+    "Hacking",
+    "Ethical Hacker",
+    "DIY",
+    "Projets",
+    "Hackerspace",
+    "Bidouilles",
+    "Apprendre",
+    "Échange",
+    "Partage",
+    "Rencontre"
+  ],
+  "patternsGoogleCalendar": [
+    "LaboratoireOuvertLyonnais"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "https://labolyon.fr"
+    },
+    {
+      "icon": "meetup",
+      "tooltip": "Groupe Meetup",
+      "url": "http://www.meetup.com/fr/Laboratoire-Ouvert-Lyonnais/"
+    },
+    {
+      "icon": "code-fork",
+      "tooltip": "Git Forge",
+      "url": "https://git.labolyon.fr/"
+    },
+    {
+      "icon": "weixin",
+      "tooltip": "IRC",
+      "url": "irc://irc.geeknode.org/labolyon"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "https://twitter.com/LaboLyon"
+    }
+  ]
 }

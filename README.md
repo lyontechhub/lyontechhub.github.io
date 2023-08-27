@@ -3,7 +3,7 @@ Lyon Tech Hub Web Site
 
 Public url: http://www.lyontechhub.org/
 
-This is the public web site that aggregates communication of group's communities.
+This is the public web site that aggregates communication of group's communities.  
 It consists of the following sections :
 
 * Home page
@@ -34,7 +34,7 @@ Developers
 ----------
 This web site is done with plain HTML/CSS3/Javascript and AngularJS.
 
-The website is hosted through GitHub pages at lyontechhub.github.io as Organization pages (cf. https://help.github.com/articles/user-organization-and-project-pages).
+The website is hosted through GitHub pages at lyontechhub.github.io as Organization pages (cf. https://help.github.com/articles/user-organization-and-project-pages).  
 Note that GitHub uses master branch to deploy, that's why we have 'dev' branch as the default one, which contains source code, that is compiled through Gulp and pushed to master for deployment (see below).
 
 ### Source code
@@ -80,11 +80,11 @@ npm run dev
 
 ### SEO compliance
 
-To be SEO compliant, we embed web site in a Node.js application only to use prerender.io. The application load the Node.js module for prerender.io, called the middleware (see server.js file).
+To be SEO compliant, we embed web site in a Node.js application only to use prerender.io. The application load the Node.js module for prerender.io, called the middleware (see server.js file).  
 It use Google AJAX crawling specification to make AngularJS application search engine compliant. See https://prerender.io/.
 
-We use a heroku application for the prerender service, which crawl the web site with PhantomJS to return full old HTML. Prerender service is at http://mighty-waters-2486.herokuapp.com/.
-It has been deployed with following instructions : https://github.com/prerender/prerender#deploying-your-own-on-heroku.
+We use a heroku application for the prerender service, which crawl the web site with PhantomJS to return full old HTML. Prerender service is at http://mighty-waters-2486.herokuapp.com/.  
+It has been deployed with following instructions : https://github.com/prerender/prerender#deploying-your-own-on-heroku.  
 It has whitelist enabled with Lyon Tech Hub url only (config var : heroku config to list & heroku config:set to set).
 
 ### Deployment
