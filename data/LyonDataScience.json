@@ -1,9 +1,32 @@
 {
-    "patternsGoogleCalendar": ["Lyon Data Science"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://www.lyondata.science"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/LyonDataScience"},
-        { "icon": "facebook", "tooltip": "Facebook", "url": "https://www.facebook.com/pages/Lyondatascience/503525249798412?ref=tn_tnmn"},
-        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://github.com/lyondatascience"}
-    ]
+  "name": "Lyon Data Science",
+  "shortDescription": "Communauté d'échange et apprentissage autour des Data Science et machine learning à Lyon",
+  "tags": [
+    "Elasticsearch"
+  ],
+  "patternsGoogleCalendar": [
+    "Lyon Data Science"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://www.lyondata.science"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "https://twitter.com/LyonDataScience"
+    },
+    {
+      "icon": "facebook",
+      "tooltip": "Facebook",
+      "url": "https://www.facebook.com/pages/Lyondatascience/503525249798412?ref=tn_tnmn"
+    },
+    {
+      "icon": "github",
+      "tooltip": "Git Hub Organization",
+      "url": "https://github.com/lyondatascience"
+    }
+  ]
 }

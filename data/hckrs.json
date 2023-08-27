@@ -1,7 +1,28 @@
 {
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://hckrs.io/+/-__----"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "http://www.twitter.com/hckrslyon"},
-        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://github.com/hckrs/hckrs.io"}
-    ]
+  "name": "hckrs.io",
+  "shortDescription": "Communauté locale de bidouilleurs.",
+  "tags": [
+    "Developpement",
+    "Design",
+    "Hardware",
+    "Growth hacking",
+    "Life Hacking"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://hckrs.io/+/-__----"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "http://www.twitter.com/hckrslyon"
+    },
+    {
+      "icon": "github",
+      "tooltip": "Git Hub Organization",
+      "url": "https://github.com/hckrs/hckrs.io"
+    }
+  ]
 }

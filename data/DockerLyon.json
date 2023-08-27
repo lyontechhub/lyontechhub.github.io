@@ -1,5 +1,14 @@
 {
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://www.meetup.com/Docker-Lyon/"}
-    ]
+  "name": "Docker Lyon",
+  "shortDescription": "Les meetups Docker Lyon sont l'occasion de se retrouver et d'echanger autour de Docker, la technologie de containerisation",
+  "tags": [
+    "Docker"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://www.meetup.com/Docker-Lyon/"
+    }
+  ]
 }

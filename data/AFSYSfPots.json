@@ -1,5 +1,15 @@
 {
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://www.meetup.com/afsy-sfpot/"}
-    ]
+  "name": "AFSY SfPots",
+  "shortDescription": "L'AFSY organise les SfPots, des apéros décontractés autour du framework PHP Symfony",
+  "tags": [
+    "PHP",
+    "Symfony"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://www.meetup.com/afsy-sfpot/"
+    }
+  ]
 }

@@ -1,28 +1,29 @@
-var gulp = require('gulp');
-var fsExtra = require('fs-extra')
-var less = require("gulp-less");
-var yargs = require('yargs/yargs');
-var {hideBin} = require('yargs/helpers');
-var gulpIf = require('gulp-if');
-var minifyCSS = require('gulp-clean-css');
-var path = require('path');
-var handlebars = require('handlebars');
+const gulp = require('gulp');
+const fs = require('fs');
+const fsExtra = require('fs-extra')
+const less = require("gulp-less");
+const yargs = require('yargs/yargs');
+const {hideBin} = require('yargs/helpers');
+const gulpIf = require('gulp-if');
+const minifyCSS = require('gulp-clean-css');
+const path = require('path');
+const handlebars = require('handlebars');
 
-var argv = yargs(hideBin(process.argv)).argv;
+const argv = yargs(hideBin(process.argv)).argv;
 
 /* Configuration */
-var sources = {
+const sources = {
   css: ['css/main.less']
 , js: ['js/**/*']
 , handlebarTemplates: ['templates/communityEvents.html']
 , imgs: ['imgs/**/*']
 , pages: ['data/*.json', 'templates/*.html']
 };
-var destDir = 'public/';
+const destDir = 'public/';
 
 /* Tasks */
 exports.clean = async () =>
-  fsExtra.removeSync('public');
+  fsExtra.removeSync(destDir);
 
 exports.buildCss = () =>
   gulp.src(sources.css)
@@ -47,7 +48,7 @@ exports.buildJs = () =>
 exports.watchJs = () =>
   gulp.watch(sources.js, exports.buildJs);
 
-exports.buildHandlebarTemplates = () => 
+exports.buildHandlebarTemplates = () =>
   gulp.src('templates/communityEvents.html')
     .pipe(gulp.dest(destDir + 'js/'));
 
@@ -58,7 +59,7 @@ exports.buildPages = async () => {
   const withTemplate = (src) => handlebars.compile(fsExtra.readFileSync('templates/' + src, 'utf8'));
   const baseOf = withTemplate("baseof.html");
   const withBody = (target, body) => {
-    const dest = 'public/' + target;
+    const dest = destDir + target;
     fsExtra.ensureDirSync(path.dirname(dest));
     fsExtra.writeFileSync(dest, baseOf({content: body}));
   };
@@ -74,26 +75,17 @@ exports.buildPages = async () => {
     return x;
   };
   const communities =
-    fsExtra
-      .readJsonSync('data/communities.json')
-      .map(defaultImage)
-      .map(addDetailKey)
+    fs.readdirSync('data/')
+    .filter(f => f.endsWith('.json') && f != 'conferences.json')
+    .map(f => {
+      const content = fs.readFileSync('data/' + f)
+      const json = JSON.parse(content)
+      json.key = f.substring(0, f.length - '.json'.length)
+      return json
+    })
+    .map(defaultImage)
+    .map(addDetailKey)
     ;
-  const keyedCommunities =
-    communities
-      .reduce((map, obj) => {
-        map[obj.key] = obj;
-        return map;
-    }, {})
-  const detailsData = (communityKey) => {
-    const detailsFilename = 'data/' + communityKey + '.json';
-    if (fsExtra.pathExistsSync(detailsFilename))
-      return defaultImage(fsExtra.readJsonSync(detailsFilename));
-    else {
-      console.warn('Community file is missing: ' + detailsFilename);
-      return {};
-    }
-  };
 
   page('index.html', 'index.html', {});
   page('about.html', 'about/index.html', {});
@@ -110,10 +102,7 @@ exports.buildPages = async () => {
         .toSorted((x, y) => x.name.localeCompare(y.name))
   });
   communities.forEach((community) => {
-    const data = {
-      ...detailsData(community.key),
-      ...keyedCommunities[community.key]
-    };
+    const data = { ...community };
     data.patternsGoogleCalendar = JSON.stringify(data.patternsGoogleCalendar || [community.key]);
     page('community.html', 'community/' + community.detailKey + '/index.html', data);
   });

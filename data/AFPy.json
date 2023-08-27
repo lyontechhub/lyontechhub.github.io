@@ -1,9 +1,35 @@
 {
-    "patternsGoogleCalendar": ["Python"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://www.afpy.org" },
-        { "icon": "link", "tooltip": "Groupe Meetup", "url": "http://www.meetup.com/fr/Python-AFPY-Lyon/" },
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/python_lyon" },
-        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://www.github.com/AFPy"}
-    ]
+  "name": "Rencontres Python",
+  "shortDescription": "Une rencontre Python est un moment où les développeurs et développeuses se retrouvent autour d'un verre et d'une présentation pour échanger autour de ce langage. L'accès est gratuit et ouvert à tous. Cet événement est organisé par l'Association Francophone Python (AFPY).",
+  "tags": [
+    "Python",
+    "DevOps",
+    "Scientific",
+    "Web"
+  ],
+  "patternsGoogleCalendar": [
+    "Python"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://www.afpy.org"
+    },
+    {
+      "icon": "link",
+      "tooltip": "Groupe Meetup",
+      "url": "http://www.meetup.com/fr/Python-AFPY-Lyon/"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "https://twitter.com/python_lyon"
+    },
+    {
+      "icon": "github",
+      "tooltip": "Git Hub Organization",
+      "url": "https://www.github.com/AFPy"
+    }
+  ]
 }

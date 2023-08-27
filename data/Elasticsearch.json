@@ -1,6 +1,17 @@
 {
-    "patternsGoogleCalendar": ["Elasticsearch"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://www.meetup.com/fr/ElasticFR/" }
-    ]
+  "name": "Elasticsearch Lyon",
+  "shortDescription": "Meetups Elasticsearch Lyon",
+  "tags": [
+    "Elasticsearch"
+  ],
+  "patternsGoogleCalendar": [
+    "Elasticsearch"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://www.meetup.com/fr/ElasticFR/"
+    }
+  ]
 }

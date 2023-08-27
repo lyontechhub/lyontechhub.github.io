@@ -1,7 +1,23 @@
 {
-    "patternsGoogleCalendar": ["Lyaug"],
-    "socialLinks": [
-        { "icon": "meetup", "tooltip": "Meetup", "url": "https://www.meetup.com/Lyon-Android-User-Group-LYAUG/"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/LyonAndroidUG"}
-    ]
+  "name": "Lyon Android User Group",
+  "shortDescription": "Le Google Developer Group (GDG) Lyon Android, alias #LYAUG est une association visant à regrouper les professionnels et les développeurs Android/Google de Lyon et de la région Rhône-Alpes lors de différents évènements.",
+  "tags": [
+    "Android",
+    "Google"
+  ],
+  "patternsGoogleCalendar": [
+    "Lyaug"
+  ],
+  "socialLinks": [
+    {
+      "icon": "meetup",
+      "tooltip": "Meetup",
+      "url": "https://www.meetup.com/Lyon-Android-User-Group-LYAUG/"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "https://twitter.com/LyonAndroidUG"
+    }
+  ]
 }

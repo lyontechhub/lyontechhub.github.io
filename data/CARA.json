@@ -1,11 +1,33 @@
 {
-    "patternsGoogleCalendar": ["CARA"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://lyon.clubagilerhonealpes.org/"},
-        { "icon": "link", "tooltip": "Agile Lyon", "url": "http://agilelyon.fr/"},
-        { "icon": "calendar", "tooltip": "Meetup", "url": "https://www.meetup.com/fr-FR/CARA-Lyon/"}
-    ],
-    "slackChannels": [
-        "#caralyon"
-    ]
+  "name": "CARA (Club Agile Rhône Alpes) Lyon",
+  "shortDescription": "Le CARA propose des événements mensuels le premier mardi du mois sur des sujets très variés autour des démarches Agiles, du Lean, de l'entrepreunariat....",
+  "tags": [
+    "Agile",
+    "Lean",
+    "entreprenariat",
+    "jeux"
+  ],
+  "patternsGoogleCalendar": [
+    "CARA"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://lyon.clubagilerhonealpes.org/"
+    },
+    {
+      "icon": "link",
+      "tooltip": "Agile Lyon",
+      "url": "http://agilelyon.fr/"
+    },
+    {
+      "icon": "calendar",
+      "tooltip": "Meetup",
+      "url": "https://www.meetup.com/fr-FR/CARA-Lyon/"
+    }
+  ],
+  "slackChannels": [
+    "#caralyon"
+  ]
 }

@@ -1,8 +1,32 @@
 {
-    "patternsGoogleCalendar": ["Lyon DataViz"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://www.meetup.com/Lyon-Dataviz/"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/LyonDataViz"},
-        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://github.com/LyonDataViz/"}
-    ]
+  "name": "Lyon DataViz",
+  "shortDescription": "Echange de pratiques, idées et outils autour de la Data Visualization",
+  "tags": [
+    "Dataviz",
+    "D3.js",
+    "JavaScript",
+    "Visualisation",
+    "Visual Analytics",
+    "Design"
+  ],
+  "patternsGoogleCalendar": [
+    "Lyon DataViz"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://www.meetup.com/Lyon-Dataviz/"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "https://twitter.com/LyonDataViz"
+    },
+    {
+      "icon": "github",
+      "tooltip": "Git Hub Organization",
+      "url": "https://github.com/LyonDataViz/"
+    }
+  ]
 }

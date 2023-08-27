@@ -1,12 +1,49 @@
 {
-    "patternsGoogleCalendar": ["Lyon.rb"],
-    "socialLinks": [
-        { "icon": "meetup", "tooltip": "Meetup", "url": "https://www.meetup.com/LyonRB" },
-        { "icon": "youtube", "tooltip": "Youtube", "url": "https://www.youtube.com/user/lyonrb" },
-        { "icon": "link", "tooltip": "Web site", "url": "http://lyonrb.fr"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/lyonrb"},
-        { "icon": "linkedin", "tooltip": "Linked In", "url": "https://www.linkedin.com/company/lyon-rb---lyon-ruby-brigade"},
-        { "icon": "facebook", "tooltip": "Facebook", "url": "https://www.facebook.com/lyonrb"},
-        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://www.github.com/lyonrb"}
-    ]
+  "name": "Lyon.rb (Ruby)",
+  "shortDescription": "Communauté de développeurs Ruby qui organisent un meetup tous les mois et demi environ avec 1 ou plusieurs talks, suivis de discussions autour d'un buffet responsable.",
+  "tags": [
+    "Ruby",
+    "Rails",
+    "Sinatra"
+  ],
+  "patternsGoogleCalendar": [
+    "Lyon.rb"
+  ],
+  "socialLinks": [
+    {
+      "icon": "meetup",
+      "tooltip": "Meetup",
+      "url": "https://www.meetup.com/LyonRB"
+    },
+    {
+      "icon": "youtube",
+      "tooltip": "Youtube",
+      "url": "https://www.youtube.com/user/lyonrb"
+    },
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://lyonrb.fr"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "https://twitter.com/lyonrb"
+    },
+    {
+      "icon": "linkedin",
+      "tooltip": "Linked In",
+      "url": "https://www.linkedin.com/company/lyon-rb---lyon-ruby-brigade"
+    },
+    {
+      "icon": "facebook",
+      "tooltip": "Facebook",
+      "url": "https://www.facebook.com/lyonrb"
+    },
+    {
+      "icon": "github",
+      "tooltip": "Git Hub Organization",
+      "url": "https://www.github.com/lyonrb"
+    }
+  ]
 }

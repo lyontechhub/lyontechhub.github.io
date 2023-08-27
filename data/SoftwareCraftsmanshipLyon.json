@@ -1,11 +1,32 @@
 {
-    "patternsGoogleCalendar": ["Software Craftsmanship Lyon"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://www.meetup.com/fr/Software-Craftsmanship-Lyon/"},
-        { "icon": "calendar", "tooltip": "Meetup", "url": "http://www.meetup.com/fr/Software-Craftsmanship-Lyon/"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "http://www.twitter.com/swcraftlyon"}
-    ],
-    "slackChannels": [
-        "#swcrafts_meetup"
-    ]
+  "name": "Software Craftsmanship Lyon",
+  "shortDescription": "La communauté Software Craftsmanship Lyon réunit les développeurs, sans sexisme, élitisme ni langage ou techno obligatoire.",
+  "tags": [
+    "Craftsmanship",
+    "artisan",
+    "Coding Dojo"
+  ],
+  "patternsGoogleCalendar": [
+    "Software Craftsmanship Lyon"
+  ],
+  "socialLinks": [
+    {
+      "icon": "link",
+      "tooltip": "Web site",
+      "url": "http://www.meetup.com/fr/Software-Craftsmanship-Lyon/"
+    },
+    {
+      "icon": "calendar",
+      "tooltip": "Meetup",
+      "url": "http://www.meetup.com/fr/Software-Craftsmanship-Lyon/"
+    },
+    {
+      "icon": "twitter",
+      "tooltip": "Twitter",
+      "url": "http://www.twitter.com/swcraftlyon"
+    }
+  ],
+  "slackChannels": [
+    "#swcrafts_meetup"
+  ]
 }

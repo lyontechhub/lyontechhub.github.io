@@ -1,6 +1,19 @@
 {
-    "patternsGoogleCalendar": ["TheNEO"],
-    "socialLinks": [
-        { "icon": "calendar", "tooltip": "Meetup", "url": "http://www.meetup.com/fr-FR/theneo/"}
-    ]
+  "name": "The Next Entreprise Organisation",
+  "shortDescription": "Les nouvelles formes d'organisations",
+  "tags": [
+    "Agile",
+    "Lean",
+    "Organisations liberées"
+  ],
+  "patternsGoogleCalendar": [
+    "TheNEO"
+  ],
+  "socialLinks": [
+    {
+      "icon": "calendar",
+      "tooltip": "Meetup",
+      "url": "http://www.meetup.com/fr-FR/theneo/"
+    }
+  ]
 }
