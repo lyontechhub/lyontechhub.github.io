@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+const fs = require('fs');
 var fsExtra = require('fs-extra')
 var less = require("gulp-less");
 var yargs = require('yargs/yargs');
@@ -74,26 +75,17 @@ exports.buildPages = async () => {
     return x;
   };
   const communities =
-    fsExtra
-      .readJsonSync('data/communities.json')
-      .map(defaultImage)
-      .map(addDetailKey)
+    fs.readdirSync('data/')
+    .filter(f => f.endsWith('.json') && f != 'communities.json' && f != 'conferences.json')
+    .map(f => {
+      const content = fs.readFileSync('data/' + f)
+      const json = JSON.parse(content)
+      json.key = f.substring(0, f.length - '.json'.length)
+      return json
+    })
+    .map(defaultImage)
+    .map(addDetailKey)
     ;
-  const keyedCommunities =
-    communities
-      .reduce((map, obj) => {
-        map[obj.key] = obj;
-        return map;
-    }, {})
-  const detailsData = (communityKey) => {
-    const detailsFilename = 'data/' + communityKey + '.json';
-    if (fsExtra.pathExistsSync(detailsFilename))
-      return defaultImage(fsExtra.readJsonSync(detailsFilename));
-    else {
-      console.warn('Community file is missing: ' + detailsFilename);
-      return {};
-    }
-  };
 
   page('index.html', 'index.html', {});
   page('about.html', 'about/index.html', {});
@@ -110,10 +102,7 @@ exports.buildPages = async () => {
         .toSorted((x, y) => x.name.localeCompare(y.name))
   });
   communities.forEach((community) => {
-    const data = {
-      ...detailsData(community.key),
-      ...keyedCommunities[community.key]
-    };
+    const data = { ...community };
     data.patternsGoogleCalendar = JSON.stringify(data.patternsGoogleCalendar || [community.key]);
     page('community.html', 'community/' + community.detailKey + '/index.html', data);
   });

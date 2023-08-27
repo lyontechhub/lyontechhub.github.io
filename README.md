@@ -49,7 +49,6 @@ Index.html file is the main entry point that define AngularJS application. Each 
 
 The following JSON files are used to provide content to dynamic views in 'data' directory:
 
-* communities.json
 * communities/[one per community].json
 
 Images like community icons are in 'imgs' directory.
