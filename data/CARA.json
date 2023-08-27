@@ -1,0 +1,7 @@
+{
+    "patternsGoogleCalendar": ["CARA"],
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://lyon.clubagilerhonealpes.org/"},
+        { "icon": "calendar", "tooltip": "Meetup", "url": "https://www.meetup.com/fr-FR/CARA-Lyon/"},
+    ]
+}
