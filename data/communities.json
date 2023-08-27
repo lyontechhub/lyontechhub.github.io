@@ -1,16 +1,5 @@
 [
   {
-    "key": "AngularLyon",
-    "name": "Angular Lyon",
-    "shortDescription": "Ce groupe souhaite rassembler toutes les personnes intéressées de près ou de loin par le framework, ou plutôt la plateforme, Angular et tout ce qui s'y approche.",
-    "tags": [
-      "Angular",
-      "RxJS",
-      "JavaScript",
-      "TypeScript"
-    ]
-  },
-  {
     "key": "graphdb-lyon",
     "name": "Neo4j Graph Database Lyon",
     "shortDescription": "Cher Graphista, ce groupe a pour objectif de réunir les personnes intéressées par les bases de données NoSql de graphe. Tous les utilisateurs sont les bienvenus, depuis le développeur jusqu'à l'utilisateur final en passant par le simple curieux. A bientôt dans le graphe !",
@@ -103,24 +92,6 @@
     ]
   },
   {
-    "key": "SLUG",
-    "name": "Scala Lyon User Group",
-    "shortDescription": "Le Scala Lyon User Group, #slug, se réunit régulièrement depuis janvier 2014 pour échanger autour de Scala et de son écosystème. Que tu sois juste curieux ou que tu fasses du Scala depuis 10 ans, tu es le bienvenu. Tout le monde est invité à proposer des sujets et à venir donner son avis. Quelques sujets abordés depuis janvier : REX playframework/akka, Implémentation des collections scala, Typeclasses, SBT.",
-    "tags": [
-      "Java",
-      "Scala",
-      "JVM"
-    ]
-  },
-  {
-    "key": "CodeRetreat",
-    "name": "Code Retreat Lyon",
-    "shortDescription": "Les Code Retreat sont des événements d'une journée réalisés une à deux fois par an. Le but est d'explorer un sujet donné selon différentes approches en pair programming.",
-    "tags": [
-      "Coding Dojo"
-    ]
-  },
-  {
     "key": "CocoaHeads",
     "name": "CocoaHeads Lyon",
     "shortDescription": "CocoaHeads est un groupe de développeurs passionnés par les technologies Apple (iPhone, iPad et Mac). L’accès y est ouvert à tous et gratuit.",
@@ -153,22 +124,6 @@
     ]
   },
   {
-    "key": "LyonCpp",
-    "name": "Lyon C++",
-    "shortDescription": "A venir...",
-    "tags": [
-      "C++"
-    ]
-  },
-  {
-    "key": "OpenStack",
-    "name": "OpenStack",
-    "shortDescription": "A venir...",
-    "tags": [
-      "OpenStack"
-    ]
-  },
-  {
     "key": "GameDevParty",
     "name": "Game Dev Party",
     "shortDescription": "Game Dev Party est une association lyonnaise ayant pour but la création et la promotion des jeux vidéo indépendants en Rhône Alpes. ",
@@ -179,27 +134,11 @@
     ]
   },
   {
-    "key": "Cassandra",
-    "name": "Cassandra Lyon User Group",
-    "shortDescription": "A venir...",
-    "tags": [
-      "Cassandra"
-    ]
-  },
-  {
     "key": "DockerLyon",
     "name": "Docker Lyon",
     "shortDescription": "Les meetups Docker Lyon sont l'occasion de se retrouver et d'echanger autour de Docker, la technologie de containerisation",
     "tags": [
       "Docker"
-    ]
-  },
-  {
-    "key": "PuzzleIT",
-    "name": "Puzzle IT ",
-    "shortDescription": "Les meetups PUZZLE IT sont l'occasion de se retrouver pour apprendre et echanger autour de sujets agiles et techniques. L'accès est gratuit et ouvert à tous.",
-    "tags": [
-      "Puzzle IT"
     ]
   },
   {
@@ -234,31 +173,6 @@
     ]
   },
   {
-    "key": "TupperRust",
-    "image": "TupperRust.svg",
-    "name": "TupperRust",
-    "shortDescription": "Les TupperRust sont des évènements autour du langage Rust, comprenant une présentation et des revues de code. Que vous soyez débutant ou expert vous êtes les bienvenus. Ces activités vous sont proposées par l'ALDIL.",
-    "tags": [
-      "TupperRust",
-      "rust",
-      "servo",
-      "ALDIL"
-    ]
-  },
-  {
-    "key": "TupperVim",
-    "image": "TupperVim.svg",
-    "name": "TupperVim",
-    "shortDescription": "Les Tuppervim sont des évènements où l’on partage des connaissances et des astuces à propos de Vim. Ces activités vous sont proposées par l'ALDIL.",
-    "tags": [
-      "TupperVim",
-      "vim",
-      "vi",
-      "neovim",
-      "ALDIL"
-    ]
-  },
-  {
     "key": "Elasticsearch",
     "name": "Elasticsearch Lyon",
     "shortDescription": "Meetups Elasticsearch Lyon",
@@ -272,14 +186,6 @@
     "shortDescription": "Communauté d'échange et apprentissage autour des Data Science et machine learning à Lyon",
     "tags": [
       "Elasticsearch"
-    ]
-  },
-  {
-    "key": "Ansible",
-    "name": "Ansible Lyon",
-    "shortDescription": "Groupe Ansible officiel d'échange et apprentissage à Lyon. Organisation de talks autour d'apéros communautaires.",
-    "tags": [
-      "Ansible"
     ]
   },
   {
@@ -314,64 +220,6 @@
     ]
   },
   {
-    "key": "ApprendreACoderEnsemble",
-    "name": "Apprendre à coder ensemble",
-    "shortDescription": "Marre d'apprendre à coder dans votre coin ? Intéressés pour monter un site Internet, porteurs de projets ou simplement intéressés par le dev ? Vous ne savez pas coder, vous êtes débutants, mais aimeriez apprendre, sauf que vous n'avez pas assez de budget pour prendre des cours ! Nous vous proposons de nous retrouver régulièrement pour pratiquer ensemble.",
-    "tags": []
-  },
-  {
-    "key": "WordpressLyon",
-    "name": "WordPress Lyon",
-    "shortDescription": "L'objectif de ce groupe est de créer un évènement mensuel regroupant les amoureux de WordPress sur la région Rhône-Alpes, pour échanger nos bonnes pratiques, nouveautés, obtenir de l'aide et tout ce qui peut-être utile à propos de notre CMS préféré. Ce groupe est à destination de tout public, ayant des connaissances en développement ou non. L'idée est d'échanger nos expériences à l'occasion d'un moment convivial !",
-    "tags": [
-      "WordPress",
-      "themes",
-      "plugins",
-      "Meetup"
-    ]
-  },
-  {
-    "key": "ClojureLyon",
-    "name": "Clojure Lyon",
-    "shortDescription": "Clojure est un langage fonctionnel inspiré de LISP fonctionnant sur la JVM/Javascript/CLR. REPL Driven Development, programmation fonctionnelle, immutabilité, concurrence/parallélisme... sont autant de sujets où Clojure montre son efficacité. Débutant sur le sujet ou ayant déjà une expérience en Clojure, vous êtes les bienvenus ;)",
-    "tags": [
-      "Clojure",
-      "Java",
-      "JVM",
-      "Lisp"
-    ]
-  },
-  {
-    "key": "MeteorLyon",
-    "name": "Meteor Lyon",
-    "shortDescription": "MeteorJS est une plateforme web sortie en v1 fin 2014. L'îdée de base est de fournir une solution fullstack pour en finir avec le 'Javascript Fatigue' de ces dernières années. Très bonne solution pour se former sur ES6, NodeJS et les problématiques d'Isomorphisme, vous êtes les bienvenues pour découvrir cette techno ou bien approfondir vos connaissances à son sujet.",
-    "tags": [
-      "MeteorJS",
-      "Javascript",
-      "NodeJS",
-      "Lisp"
-    ]
-  },
-  {
-    "key": "RencardsduWebLyon",
-    "name": "Rencards du Web Lyon",
-    "shortDescription": "Le principe d'un rencard est de réunir les professionnels ou les passionnés d'un secteur d'activité pour que chacun améliore et profite de son réseau. Dans de nombreux métiers, le réseau professionnel permet de résoudre beaucoup de problèmes. C'est pourquoi il est important d'aller à la rencontre des gens qui font le même métier ou un métier complémentaire près de chez soi.",
-    "tags": [
-      "rencontre",
-      "netowrking",
-      "réseau",
-      "dev",
-      "Meetup",
-      "Design",
-      "pratiques",
-      "Developpement",
-      "Growth Hacking",
-      "Agile",
-      "Lean",
-      "entreprenariat"
-    ]
-  },
-  {
     "key": "MeetupIALyon",
     "name": "Meetup Intelligence Artificielle Lyon",
     "shortDescription": "Le but est de rassembler un réseau de passionnés, de mettre en commun les compétences afin de développer des projets (par exemple dans le traitement des datas, ou dans la robotique) et de produire une réflexion sur ce sujet complexe qu'est l'Intelligence Artificielle",
@@ -387,16 +235,6 @@
       "Philosophie",
       "entrepreneuriat",
       "maker"
-    ]
-  },
-  {
-    "key": "ElixirLyon",
-    "name": "Elixir Lyon",
-    "shortDescription": "Ce groupe s'adresse aux personnes intéressées par Elixir, un langage fonctionnel basée sur la VM d'erlang et de la syntaxe inspirée de Ruby. Vous êtes bienvenue pour découvrir cette nouvelle technologie ou pour appronfondir vos connaissances.",
-    "tags": [
-      "Elixir",
-      "Phoenix Framework",
-      "Erlang"
     ]
   },
   {
@@ -421,19 +259,6 @@
     ]
   },
   {
-    "key": "ContribateliersLyon",
-    "image": "ContribateliersLyon.png",
-    "name": "Contrib'ateliers Lyon",
-    "shortDescription": "Les Contrib'ateliers sont des événements conviviaux pour pouvoir contribuer ensemble aux logiciels libres et à la culture libre, notamment aux services proposés par Framasoft. Tout le monde est bienvenu, membres ou non de Framasoft, que l'on s'y connaisse déjà ou que l'on veuille découvrir ensemble comment contribuer au libre.",
-    "tags": [
-      "Contrib'ateliers",
-      "Contribution",
-      "Open source",
-      "Libre",
-      "Framasoft"
-    ]
-  },
-  {
     "key": "LyonGameDev",
     "image": "lyongamedev.png",
     "name": "LyonGameDev",
@@ -443,19 +268,6 @@
       "Jeu vidéo",
       "Game",
       "Video Game"
-    ]
-  },
-  {
-    "key": "XPSocialClub",
-    "name": "eXtreme Programming Social Club",
-    "shortDescription": "L'eXtreme Programming Social Club organise des ateliers techniques et pragmatiques autour d'une bière.",
-    "tags": [
-      "Agile",
-      "eXtreme Programming",
-      "JavaScript",
-      "Angular",
-      "Python",
-      "Workshops"
     ]
   },
   {
@@ -471,25 +283,22 @@
     ]
   },
   {
-    "key": "FhacktoryLyon",
-    "name": "fHACKtory Lyon",
-    "shortDescription": "Les hackathons lyonnais 100% Hack, 0% Bullshit.",
-    "tags": [
-      "Hackathon",
-      "Hacking",
-      "Électronique",
-      "Open source",
-      "Hardware"
-    ]
-  },
-  {
-    "key": "The NEO",
+    "key": "TheNEO",
     "name": "The Next Entreprise Organisation",
     "shortDescription": "Les nouvelles formes d'organisations",
     "tags": [
       "Agile",
       "Lean",
       "Organisations liberées"
+    ]
+  },
+  {
+    "key": "Aldil",
+    "name": "Aldil",
+    "shortDescription": "Association Lyonnaise pour le Développement de l'Informatique Libre",
+    "tags": [
+      "Libre",
+      "Opensource"
     ]
   }
 ]
