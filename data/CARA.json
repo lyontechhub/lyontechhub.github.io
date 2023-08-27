@@ -1,0 +1,11 @@
+{
+    "patternsGoogleCalendar": ["CARA"],
+    "socialLinks": [
+        { "icon": "link", "tooltip": "Web site", "url": "http://lyon.clubagilerhonealpes.org/"},
+        { "icon": "link", "tooltip": "Agile Lyon", "url": "http://agilelyon.fr/"},
+        { "icon": "calendar", "tooltip": "Meetup", "url": "https://www.meetup.com/fr-FR/CARA-Lyon/"}
+    ],
+    "slackChannels": [
+        "#caralyon"
+    ]
+}

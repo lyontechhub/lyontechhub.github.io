@@ -1,8 +1,0 @@
-{
-    "patternsGoogleCalendar": ["WordpressLyon"],
-    "socialLinks": [
-        { "icon": "meetup", "tooltip": "Meetup", "url": "https://www.meetup.com/fr-FR/WordPress-Lyon-Meetup"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/wplyon"},
-        { "icon": "slack", "tooltip": "Slack", "url": "https://wordpressfr.slack.com"}
-    ]
-}

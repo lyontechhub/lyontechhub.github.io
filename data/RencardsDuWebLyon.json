@@ -1,7 +1,0 @@
-{
-    "patternsGoogleCalendar": ["Rencards du Web Lyon"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://www.rencards.org/"},
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/les_rencards"}
-    ]
-}

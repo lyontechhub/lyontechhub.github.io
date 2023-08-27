@@ -1,7 +1,0 @@
-{
-    "patternsGoogleCalendar": ["MeteorLyon"],
-    "socialLinks": [
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/MeteorLyon"},
-        { "icon": "github", "tooltip": "Git Hub Organization", "url": "https://github.com/MeteorLyon"}
-    ]
-}

@@ -6,5 +6,8 @@
         { "icon": "twitter", "tooltip": "Twitter", "url": "http://www.twitter.com/muglyon"},
         { "icon": "linkedin", "tooltip": "Linked In", "url": "http://www.linkedin.com/groups/MUG-Lyon-4302523"},
         { "icon": "github", "tooltip": "Git Hub Organization", "url": "http://www.github.com/muglyon"}
+    ],
+    "slackChannels": [
+        "#muglyon"
     ]
 }
