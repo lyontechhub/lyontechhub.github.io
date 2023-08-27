@@ -1,29 +1,29 @@
-var gulp = require('gulp');
+const gulp = require('gulp');
 const fs = require('fs');
-var fsExtra = require('fs-extra')
-var less = require("gulp-less");
-var yargs = require('yargs/yargs');
-var {hideBin} = require('yargs/helpers');
-var gulpIf = require('gulp-if');
-var minifyCSS = require('gulp-clean-css');
-var path = require('path');
-var handlebars = require('handlebars');
+const fsExtra = require('fs-extra')
+const less = require("gulp-less");
+const yargs = require('yargs/yargs');
+const {hideBin} = require('yargs/helpers');
+const gulpIf = require('gulp-if');
+const minifyCSS = require('gulp-clean-css');
+const path = require('path');
+const handlebars = require('handlebars');
 
-var argv = yargs(hideBin(process.argv)).argv;
+const argv = yargs(hideBin(process.argv)).argv;
 
 /* Configuration */
-var sources = {
+const sources = {
   css: ['css/main.less']
 , js: ['js/**/*']
 , handlebarTemplates: ['templates/communityEvents.html']
 , imgs: ['imgs/**/*']
 , pages: ['data/*.json', 'templates/*.html']
 };
-var destDir = 'public/';
+const destDir = 'public/';
 
 /* Tasks */
 exports.clean = async () =>
-  fsExtra.removeSync('public');
+  fsExtra.removeSync(destDir);
 
 exports.buildCss = () =>
   gulp.src(sources.css)
@@ -59,7 +59,7 @@ exports.buildPages = async () => {
   const withTemplate = (src) => handlebars.compile(fsExtra.readFileSync('templates/' + src, 'utf8'));
   const baseOf = withTemplate("baseof.html");
   const withBody = (target, body) => {
-    const dest = 'public/' + target;
+    const dest = destDir + target;
     fsExtra.ensureDirSync(path.dirname(dest));
     fsExtra.writeFileSync(dest, baseOf({content: body}));
   };
@@ -76,7 +76,7 @@ exports.buildPages = async () => {
   };
   const communities =
     fs.readdirSync('data/')
-    .filter(f => f.endsWith('.json') && f != 'communities.json' && f != 'conferences.json')
+    .filter(f => f.endsWith('.json') && f != 'conferences.json')
     .map(f => {
       const content = fs.readFileSync('data/' + f)
       const json = JSON.parse(content)
