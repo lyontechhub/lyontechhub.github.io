@@ -1,7 +1,0 @@
-{
-    "patternsGoogleCalendar": ["TupperVim"],
-    "socialLinks": [
-        { "icon": "link", "tooltip": "Web site", "url": "http://tuppervim.org" },
-        { "icon": "twitter", "tooltip": "Twitter", "url": "https://twitter.com/tupperVim" }
-    ]
-}
