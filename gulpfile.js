@@ -58,12 +58,15 @@ exports.watchHandlebarTemplates = () =>
 exports.buildPages = async () => {
   const withTemplate = (src) => handlebars.compile(fsExtra.readFileSync('templates/' + src, 'utf8'));
   const baseOf = withTemplate("baseof.html");
-  const withBody = (target, body) => {
+  const writeRaw = (target, body) => {
     const dest = destDir + target;
     fsExtra.ensureDirSync(path.dirname(dest));
-    fsExtra.writeFileSync(dest, baseOf({content: body}));
+    fsExtra.writeFileSync(dest, body);
   };
-  const page = (src, target, args) => withBody(target, withTemplate(src)(args));
+  const writeWithBody = (target, body) => {
+    writeRaw(target, baseOf({content: body}));
+  };
+  const page = (src, target, args) => writeWithBody(target, withTemplate(src)(args));
   const defaultImage = (x) => {
     if (!x.image) {
         x.image = x.key + ".png";
@@ -87,6 +90,7 @@ exports.buildPages = async () => {
     .map(addDetailKey)
     ;
 
+  writeRaw('CNAME', 'www.lyontechhub.org');
   page('index.html', 'index.html', {});
   page('about.html', 'about/index.html', {});
   page('calendar.html', 'calendar/index.html', {});
