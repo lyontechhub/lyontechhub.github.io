@@ -24,7 +24,7 @@
   "dependencies": {
     "bootstrap": "~3.4.1",
     "fs-extra": "^11.2.0",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-if": "^3.0.0",
     "gulp-less": "^5.0.0",
