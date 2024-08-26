@@ -1,17 +1,31 @@
-import fs from 'node:fs/promises';
-import __dirname from '../../__dirname';
-import path from 'path';
+export interface SocialLink {
+    icon: string;
+    url: string;
+    tooltip: string;
+}
 
-export async function getList() {
-    const dataDir = path.join(__dirname, 'data');
-    const communityFiles = await fs.readdir(dataDir);
-    return await Promise.all(communityFiles
-        .filter(f => f.endsWith('.json') && f != 'conferences.json')
-        .map(async (f) => {
-            const content = await fs.readFile(path.join(dataDir, f));
-            const json = JSON.parse(content);
-            json.key = f.substring(0, f.length - '.json'.length);
-            return json;
-        })
-    );
+export interface FileCommunity {
+    name: string;
+    shortDescription: string;
+    image: string | null;
+    patternsGoogleCalendar: string[];
+    socialLinks: SocialLink[];
+}
+
+export interface Community extends FileCommunity {
+    key: string;
+}
+
+const keyPattern = /([^\/]+?)(\.[^.]*$|$)/;
+
+export function getList(): Community[] {
+    const files: Record<string, FileCommunity> =
+        import.meta.glob(['../../data/*.json', '!**/conferences.json'], { eager: true });
+    return Object.keys(files)
+            .map((path: string) => {
+                return {
+                    key: (path.match(keyPattern) ?? [path, path])[1],
+                    ...files[path]
+                };
+            });
 }

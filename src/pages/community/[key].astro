@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { getList } from '../../lib/communities.ts';
 
 export async function getStaticPaths() {
-    const communities = await getList();
+    const communities = getList();
     return communities.map((community) => {
       return {
         params: {key: community.key},

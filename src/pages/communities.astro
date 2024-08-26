@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { getList } from '../lib/communities.ts';
 
-const communities = await getList();
+const communities = getList();
 
 ---
 
@@ -20,7 +20,7 @@ const communities = await getList();
                     {communities
                         .map(
                             (community) => (
-                                <div class="col-sm-6 col-md-4 filterable" key={community.name}>
+                                <div class="col-sm-6 col-md-4 filterable" data-key={community.name}>
                                     <div class="thumbnail">
                                         <a href={`/community/` + community.key}>
                                             <img src={`/imgs/communities/` + community.image}
