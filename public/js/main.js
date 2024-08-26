@@ -6,7 +6,7 @@ function dynamicFilter(inputId) {
     items = document.getElementsByClassName('filterable');
 
     for (i = 0; i < items.length; i++) {
-        txtValue = items[i].getAttribute('data-filter-value');
+        txtValue = items[i].getAttribute('key');
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             items[i].style.display = '';
         } else {

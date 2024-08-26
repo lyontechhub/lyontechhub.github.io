@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getList } from '../lib/communities.ts';
+
+const communities = await getList();
+
+---
+
+<Layout>
+	<main>
+        <div class="container-fluid">
+            <div class="container">
+                <h1>
+                    {communities.length} communautés diverses et variées regroupées dans Lyon Tech Hub<br />
+                    <small><a href="/about">Par ici pour référencer la votre !</a></small>
+                </h1>
+                Rechercher :
+                <input type="text" id="filterCommunities" onkeyup="dynamicFilter('filterCommunities')" />
+                <div class="row communitiesList">
+                    {communities
+                        .map(
+                            (community) => (
+                                <div class="col-sm-6 col-md-4 filterable" key={community.name}>
+                                    <div class="thumbnail">
+                                        <a href={`/community/` + community.key}>
+                                            <img src={`/imgs/communities/` + community.image}
+                                                    alt={community.name}
+                                                    onerror="this.onerror=null;this.src='/imgs/noLogo.png';" />
+                                        </a>
+
+                                        <div class="caption">
+                                            <h3>{community.name}</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+	</main>
+</Layout>

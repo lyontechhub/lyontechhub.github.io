@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getList } from '../../lib/communities.ts';
+
+export async function getStaticPaths() {
+    const communities = await getList();
+    return communities.map((community) => {
+      return {
+        params: {key: community.key},
+        props: {community}
+        };
+    });
+}
+
+const { community } = Astro.props;
+---
+
+<Layout>
+	<main>
+        <h1>
+            <img src={"/imgs/communities/" + community.image}
+                 onerror="this.onerror=null;this.src='/imgs/noLogo.png';"
+            />
+            {community.name}
+        </h1>
+        <div class="container-fluid community"
+             id="communityDetails"
+             data-patterns-google-calendar={JSON.stringify(community.patternsGoogleCalendar)}>
+            <div class="col-lg-4">
+                <h2>En bref...</h2>
+                <p>{community.shortDescription}</p>
+                <ul class="socialLinks">
+                    {community.socialLinks
+                        .map(
+                            (socialLink) => (
+                            <li>
+                                <a href={socialLink.url} target="_blank" class={"fa fa-2x fa-" + socialLink.icon} title={socialLink.tooltip}></a>
+                            </li>
+                            )
+                        )
+                    }
+                </ul>
+            </div>
+            <div class="col-lg-4"
+                 id="upcomingEvents"
+                 data-pane-title="A venir !"
+                 data-no-event-caption="Pas d'événements dans les 4 prochains mois.">
+            </div>
+            <div class="col-lg-4"
+                 id="pastEvents"
+                 data-pane-title="Ce que vous avez manqué..."
+                 data-no-event-caption="Pas d'événements durant les 4 derniers mois.">
+            </div>
+        </div>
+	</main>
+</Layout>

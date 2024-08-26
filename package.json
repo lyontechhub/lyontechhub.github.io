@@ -1,39 +1,17 @@
 {
-  "name": "LyonTechHub",
-  "version": "0.1.0",
-  "description": "Lyon Tech Hub Web Site",
-  "main": "gulpfile.js",
-  "type": "commonjs",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/lyontechhub/lyontechhub.github.io"
-  },
-  "engines": {
-    "node": "20.5.1"
-  },
+  "name": "lyontechhub",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "watch:build": "gulp watch",
-    "watch:server": "http-server ./public/",
-    "start": "npm-run-all --parallel watch:build watch:server",
-    "build": "gulp build",
-    "publish": "gulp publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "author": "Lyon Tech Hub community",
-  "license": "MIT",
   "dependencies": {
-    "bootstrap": "~3.4.1",
-    "fs-extra": "^11.2.0",
-    "gulp": "^5.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-if": "^3.0.0",
-    "gulp-less": "^5.0.0",
-    "handlebars": "^4.7.8",
-    "path": "^0.12.7",
-    "yargs": "^17.7.2"
-  },
-  "devDependencies": {
-    "http-server": "^14.1.1",
-    "npm-run-all": "^4.1.5"
+    "@astrojs/check": "^0.9.3",
+    "astro": "^4.14.5",
+    "typescript": "^5.5.4"
   }
 }
