@@ -1,9 +1,9 @@
 [
   {
-    "key": "afupday2023",
-    "name": "AFUP Day 2023",
-    "url": "https://event.afup.org/afup-day-2023/afup-day-2023-lyon/",
-    "shortDescription": "La communauté PHP se réunit le 12 mai 2023 dans plusieurs antennes de France, et donc à Lyon, pour une journée de conférences mono-track autour du PHP, présentées par des conférencières et conférenciers locaux et nationaux !",
+    "key": "afup-day",
+    "name": "AFUP Day",
+    "url": "https://event.afup.org",
+    "shortDescription": "La communauté PHP se réunit en mai dans plusieurs antennes de France, et donc à Lyon, pour une journée de conférences mono-track autour du PHP, présentées par des conférencières et conférenciers locaux et nationaux !",
     "tags": [
       "PHP",
       "AFUP",
