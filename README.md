@@ -13,7 +13,7 @@ It consists of the following sections :
 
 Join Us
 -------
-Send us a mail to lyonytechhub@googlegroups.com or even request to join the group, it is totally free.
+It is totally free. Send us a mail at contact@lyontechhub.org, or [request access to our Slack](https://slack.lyontechhub.org).
 
 If you have a tech/IT community in Lyon area, request to join Lyon Tech Hub to promote your exciting activity to the community, it is simple as :
 
@@ -23,11 +23,11 @@ If you have a tech/IT community in Lyon area, request to join Lyon Tech Hub to p
 Make sure you do a pull request on master branch including the following :
 
 * your community details in file data/[key used in list].json
-* your community logo in imgs in PNG format with a 100x100 minimum resolution
+* your community logo in imgs in PNG or SVG format with a 100x100 minimum resolution to `/public/imgs/communities` directory.
 
 Contribute
 ----------
-Contact us on the Google Group, make pull-request, this web site must be managed by Lyon communities themselves.
+Contact us on [Slack](https://slack.lyontechhub.org), at contact@lyontechhub.org, or submit a pull-request: this web site must be managed by Lyon communities themselves.
 
 Developers
 ----------
