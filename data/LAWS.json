@@ -1,6 +1,9 @@
 {
   "name": "LAWS - Lyon Amazon Web Services UG",
   "shortDescription": "Groupe officiel Amazon Web Services de la région Lyonnaise. Organisation de Meetup autour des services AWS, retours d'expériences, live coding, ...",
+  "patternsGoogleCalendar": [
+    "LAWS"
+  ],
   "tags": [
     "AWS",
     "EC2",

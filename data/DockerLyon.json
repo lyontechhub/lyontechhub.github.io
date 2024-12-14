@@ -4,6 +4,9 @@
   "tags": [
     "Docker"
   ],
+  "patternsGoogleCalendar": [
+    "DockerLyon"
+  ],
   "socialLinks": [
     {
       "icon": "link",

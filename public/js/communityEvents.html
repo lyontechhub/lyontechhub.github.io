@@ -12,7 +12,13 @@
                 <div>{{ startDateMonth }}</div>
             </div>
             <div>
-                <div>{{ title }} <a href="{{ url }}" target="_blank" class="fa fa-external-link" title="Lien vers l'événement dans Google Calendar"></a></div>
+                <div class="event-title">
+                  {{#if hasUrl}}
+                    <a href="{{url}}" target="_blank">{{ title }} <span class="fa fa-external-link" title="Lien vers l'événement dans Google Calendar"></span></a>
+                  {{else}}
+                    {{ title }}
+                  {{/if}}
+                </div>
                 <div>De {{ startDateHour }} à {{ endDateHour }} - {{ location }}</div>
             </div>
         </div>

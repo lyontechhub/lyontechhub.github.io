@@ -5557,11 +5557,13 @@ footer a:hover {
   font-size: 100%;
 }
 .events li > :first-child > :nth-child(2) :first-child {
-  font-size: 120%;
+  font-size: 1.4rem;
   font-weight: bold;
 }
-.events li > :first-child > :nth-child(2) :first-child a {
-  font-size: 50%;
+
+.events li > :first-child > :nth-child(2) .event-title .fa {
+  font-size: 80%;
+  padding: 0;
 }
 .events li > :nth-child(2) {
   padding: 5px 10px 5px 10px;
