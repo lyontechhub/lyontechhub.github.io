@@ -1,5 +1,11 @@
 # build output
 dist/
+public/about/
+public/calendar/
+public/communities/
+public/community/
+public/conferences/
+public/index.html
 
 # generated types
 .astro/
