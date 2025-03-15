@@ -2,39 +2,23 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "image": {
-      "type": "string"
-    },
-    "name": {
-      "type": "string"
-    },
-    "shortDescription": {
-      "type": "string"
-    },
+    "image": { "type": "string" },
+    "name": { "type": "string" },
+    "shortDescription": { "type": "string" },
     "tags": {
       "type": "array",
       "items": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "string"
-        },
-        {
-          "type": "string"
-        }
-      ]
+        { "type": "string" }
+      ],
+      "uniqueItems": true
     },
     "patternsGoogleCalendar": {
       "type": "array",
       "items": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "string"
-        }
-      ]
+        { "type": "string" }
+      ],
+      "minItems": 1,
+      "uniqueItems": true
     },
     "socialLinks": {
       "type": "array",
@@ -42,53 +26,9 @@
         {
           "type": "object",
           "properties": {
-            "icon": {
-              "type": "string"
-            },
-            "tooltip": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "icon",
-            "tooltip",
-            "url"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "icon": {
-              "type": "string"
-            },
-            "tooltip": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "icon",
-            "tooltip",
-            "url"
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "icon": {
-              "type": "string"
-            },
-            "tooltip": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            }
+            "icon": { "type": "string" },
+            "tooltip": { "type": "string" },
+            "url": { "type": "string" }
           },
           "required": [
             "icon",
@@ -96,15 +36,15 @@
             "url"
           ]
         }
-      ]
+      ],
+      "uniqueItems": true
     },
     "slackChannels": {
       "type": "array",
       "items": [
-        {
-          "type": "string"
-        }
-      ]
+        { "type": "string" }
+      ],
+      "uniqueItems": true
     }
   },
   "required": [
@@ -112,7 +52,6 @@
     "name",
     "shortDescription",
     "tags",
-    "patternsGoogleCalendar",
     "socialLinks"
   ]
 }
