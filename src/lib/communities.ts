@@ -1,5 +1,3 @@
-import { parse as parseUrl } from 'url';
-
 export interface SocialLink {
     url: string;
     name?: string;
@@ -47,7 +45,7 @@ const knownSocialHosts: Record<string, SocialDisplayData> = {
 }
 
 export function getSocialDisplayData(socialLink: SocialLink): SocialDisplayData {
-    const hostname = parseUrl(socialLink.url).hostname.replace('www.', '')
+    const hostname = new URL(socialLink.url).hostname.replace('www.', '')
 
     const defaultResult = knownSocialHosts[hostname] || { icon: "fas fa-link", tooltip: "Web site" }
 
