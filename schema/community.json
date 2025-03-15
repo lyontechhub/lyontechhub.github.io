@@ -43,6 +43,22 @@
         { "type": "string" }
       ],
       "uniqueItems": true
+    },
+    "calendars": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "prefixTag": { "type": "string" },
+            "url": { "type": "string" }
+          },
+          "required": [
+            "url"
+          ]
+        }
+      ],
+      "uniqueItems": true
     }
   },
   "required": [

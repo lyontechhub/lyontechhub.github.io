@@ -16,5 +16,8 @@
     {
       "url": "https://twitter.com/aldil_lyon"
     }
+  ],
+  "calendars": [
+    { "url": "https://www.aldil.org/events.ics" }
   ]
 }
