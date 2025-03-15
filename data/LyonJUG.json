@@ -11,13 +11,9 @@
   ],
   "socialLinks": [
     {
-      "icon": "fas fa-link",
-      "tooltip": "Web site",
       "url": "http://lyonjug.org"
     },
     {
-      "icon": "fab fa-twitter",
-      "tooltip": "Twitter",
       "url": "https://twitter.com/lyonjug"
     }
   ]

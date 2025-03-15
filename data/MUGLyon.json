@@ -16,29 +16,19 @@
   ],
   "socialLinks": [
     {
-      "icon": "fas fa-link",
-      "tooltip": "Web site",
       "url": "http://muglyon.github.io/"
     },
     {
-      "icon": "fas fa-calendar",
-      "tooltip": "Meetup",
-      "url": "http://www.meetup.com/fr-FR/MUGLyon/"
+      "url": "https://www.meetup.com/fr-FR/MUGLyon/"
     },
     {
-      "icon": "fab fa-twitter",
-      "tooltip": "Twitter",
-      "url": "http://www.twitter.com/muglyon"
+      "url": "https://www.twitter.com/muglyon"
     },
     {
-      "icon": "fab fa-linkedin",
-      "tooltip": "Linked In",
-      "url": "http://www.linkedin.com/groups/MUG-Lyon-4302523"
+      "url": "https://www.linkedin.com/groups/MUG-Lyon-4302523"
     },
     {
-      "icon": "fab fa-github",
-      "tooltip": "Git Hub Organization",
-      "url": "http://www.github.com/muglyon"
+      "url": "https://www.github.com/muglyon"
     }
   ],
   "slackChannels": [

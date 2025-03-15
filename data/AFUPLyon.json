@@ -14,23 +14,15 @@
   ],
   "socialLinks": [
     {
-      "icon": "fab fa-meetup",
-      "tooltip": "Groupe Meetup",
       "url": "https://www.meetup.com/fr-FR/afup-lyon-php/"
     },
     {
-      "icon": "fab fa-twitter",
-      "tooltip": "Twitter",
       "url": "https://twitter.com/AFUP_lyon"
     },
     {
-      "icon": "fab fa-linkedin",
-      "tooltip": "LinkedIn",
       "url": "https://www.linkedin.com/company/afup-lyon/"
     },
     {
-      "icon": "fab fa-github",
-      "tooltip": "GitHub Organization",
       "url": "https://www.github.com/afup"
     }
   ]

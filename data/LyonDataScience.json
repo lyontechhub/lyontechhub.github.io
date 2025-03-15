@@ -11,23 +11,15 @@
   ],
   "socialLinks": [
     {
-      "icon": "fas fa-link",
-      "tooltip": "Web site",
       "url": "http://www.lyondata.science"
     },
     {
-      "icon": "fab fa-twitter",
-      "tooltip": "Twitter",
       "url": "https://twitter.com/LyonDataScience"
     },
     {
-      "icon": "fab fa-facebook",
-      "tooltip": "Facebook",
       "url": "https://www.facebook.com/pages/Lyondatascience/503525249798412?ref=tn_tnmn"
     },
     {
-      "icon": "fab fa-github",
-      "tooltip": "Git Hub Organization",
       "url": "https://github.com/lyondatascience"
     }
   ]

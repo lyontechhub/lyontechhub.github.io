@@ -12,9 +12,7 @@
   ],
   "socialLinks": [
     {
-      "icon": "fas fa-calendar",
-      "tooltip": "Meetup",
-      "url": "http://www.meetup.com/fr-FR/theneo/"
+      "url": "https://www.meetup.com/fr-FR/theneo/"
     }
   ]
 }

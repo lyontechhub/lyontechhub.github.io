@@ -13,19 +13,10 @@
   ],
   "socialLinks": [
     {
-      "icon": "fas fa-link",
-      "tooltip": "Web site",
-      "url": "http://www.meetup.com/fr/Software-Craftsmanship-Lyon/"
+      "url": "https://www.meetup.com/fr/Software-Craftsmanship-Lyon/"
     },
     {
-      "icon": "fas fa-calendar",
-      "tooltip": "Meetup",
-      "url": "http://www.meetup.com/fr/Software-Craftsmanship-Lyon/"
-    },
-    {
-      "icon": "fab fa-twitter",
-      "tooltip": "Twitter",
-      "url": "http://www.twitter.com/swcraftlyon"
+      "url": "https://www.twitter.com/swcraftlyon"
     }
   ],
   "slackChannels": [

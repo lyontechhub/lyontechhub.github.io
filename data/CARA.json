@@ -13,18 +13,13 @@
   ],
   "socialLinks": [
     {
-      "icon": "fas fa-link",
-      "tooltip": "Web site",
       "url": "http://lyon.clubagilerhonealpes.org/"
     },
     {
-      "icon": "fas fa-link",
-      "tooltip": "Agile Lyon",
+      "name": "Agile Lyon",
       "url": "http://agilelyon.fr/"
     },
     {
-      "icon": "fas fa-calendar",
-      "tooltip": "Meetup",
       "url": "https://www.meetup.com/fr-FR/CARA-Lyon/"
     }
   ],

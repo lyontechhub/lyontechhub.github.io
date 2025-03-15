@@ -12,13 +12,9 @@
   ],
   "socialLinks": [
     {
-      "icon": "fab fa-meetup",
-      "tooltip": "Meetup",
       "url": "https://www.meetup.com/Lyon-Android-User-Group-LYAUG/"
     },
     {
-      "icon": "fab fa-twitter",
-      "tooltip": "Twitter",
       "url": "https://twitter.com/LyonAndroidUG"
     }
   ]

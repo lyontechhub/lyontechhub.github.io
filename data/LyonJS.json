@@ -13,23 +13,15 @@
   ],
   "socialLinks": [
     {
-      "icon": "fas fa-link",
-      "tooltip": "Web site",
       "url": "http://lyonjs.org/"
     },
     {
-      "icon": "fab fa-twitter",
-      "tooltip": "Twitter",
       "url": "https://twitter.com/LyonJS"
     },
     {
-      "icon": "fab fa-github",
-      "tooltip": "Git Hub Organization",
       "url": "https://github.com/lyonjs"
     },
     {
-      "icon": "fab fa-youtube",
-      "tooltip": "Youtube channel",
       "url": "https://www.youtube.com/channel/UCGTVc5PnIgAUoA2D2_6nJLg"
     }
   ]

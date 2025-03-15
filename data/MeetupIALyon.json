@@ -21,8 +21,6 @@
   ],
   "socialLinks": [
     {
-      "icon": "fas fa-link",
-      "tooltip": "Web site",
       "url": "https://www.meetup.com/fr-FR/Intelligence-artificielle-formes-enjeux-usages/"
     }
   ]

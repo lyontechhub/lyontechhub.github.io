@@ -11,18 +11,12 @@
   ],
   "socialLinks": [
     {
-      "icon": "fas fa-link",
-      "tooltip": "Web site",
       "url": "http://hckrs.io/+/-__----"
     },
     {
-      "icon": "fab fa-twitter",
-      "tooltip": "Twitter",
-      "url": "http://www.twitter.com/hckrslyon"
+      "url": "https://www.twitter.com/hckrslyon"
     },
     {
-      "icon": "fab fa-github",
-      "tooltip": "Git Hub Organization",
       "url": "https://github.com/hckrs/hckrs.io"
     }
   ]
