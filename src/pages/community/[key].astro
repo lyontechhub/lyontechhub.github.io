@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getList } from '../../lib/communities.ts';
+import { getList, getSocialDisplayData } from '../../lib/communities.ts';
 
 export async function getStaticPaths() {
     const communities = getList();
@@ -41,15 +41,17 @@ const { community } = Astro.props;
                 <p>{community.shortDescription}</p>
                 <p>
                     {community.socialLinks
-                        .map(
-                            (socialLink) => (
-                            <a href={socialLink.url} target="_blank" title={socialLink.tooltip}>
-                              <span class="icon is-large">
-                                <i class={"fa-2x " + socialLink.icon}></i>
-                              </span>
-                            </a>
+                        .map(socialLink => {
+                            const displayData = getSocialDisplayData(socialLink)
+
+                            return (
+                                <a href={socialLink.url} target="_blank" title={displayData.tooltip}>
+                                    <span class="icon is-large">
+                                        <i class={"fa-2x " + displayData.icon}></i>
+                                    </span>
+                                </a>
                             )
-                        )
+                        })
                     }
                 </p>
               </div>

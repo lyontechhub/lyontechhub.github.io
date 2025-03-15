@@ -1,7 +1,9 @@
+import { parse as parseUrl } from 'url';
+
 export interface SocialLink {
-    icon: string;
     url: string;
-    tooltip: string;
+    name?: string;
+    icon?: string;
 }
 
 export interface FileCommunity {
@@ -28,4 +30,25 @@ export function getList(): Community[] {
                     ...files[path]
                 };
             });
+}
+
+type SocialDisplayData = { icon: string, tooltip: string }
+const knownSocialHosts: Record<string, SocialDisplayData> = {
+    'twitter.com': { icon: "fab fa-twitter", tooltip: "Twitter" },
+    'meetup.com': { icon: "fas fa-calendar", tooltip: "Groupe Meetup" },
+    'github.com': { icon: "fab fa-github", tooltip: "Github" },
+    'linkedin.com': { icon: "fab fa-linkedin", tooltip: "LinkedIn" },
+    'facebook.com': { icon: "fab fa-facebook", tooltip: "Facebook" },
+    'youtube.com': { icon: "fab fa-youtube", tooltip: "Youtube channel" },
+}
+
+export function getSocialDisplayData(socialLink: SocialLink): SocialDisplayData {
+    const hostname = parseUrl(socialLink.url).hostname.replace('www.', '')
+
+    const defaultResult = knownSocialHosts[hostname] || { icon: "fas fa-link", tooltip: "Web site" }
+
+    return {
+        icon: socialLink.icon || defaultResult.icon,
+        tooltip: socialLink.name || defaultResult.tooltip,
+    };
 }
