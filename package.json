@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "test": "vitest run",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
@@ -13,5 +14,8 @@
     "@astrojs/check": "^0.9.3",
     "astro": "^5.4.2",
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.8"
   }
 }
