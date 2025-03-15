@@ -10,12 +10,13 @@ export interface FileCommunity {
     name: string;
     shortDescription: string;
     image: string | null;
-    patternsGoogleCalendar: string[];
+    patternsGoogleCalendar?: string[];
     socialLinks: SocialLink[];
 }
 
-export interface Community extends FileCommunity {
+export interface Community extends Omit<FileCommunity, "patternsGoogleCalendar"> {
     key: string;
+    patternsGoogleCalendar: string[];
 }
 
 const keyPattern = /([^\/]+?)(\.[^.]*$|$)/;
@@ -25,9 +26,12 @@ export function getList(): Community[] {
         import.meta.glob(['../../data/*.json', '!**/conferences.json'], { eager: true });
     return Object.keys(files)
             .map((path: string) => {
+                const community = files[path]
+                const key = (path.match(keyPattern) ?? [path, path])[1]
                 return {
-                    key: (path.match(keyPattern) ?? [path, path])[1],
-                    ...files[path]
+                    key: key,
+                    ...community,
+                    patternsGoogleCalendar: [key, ...(community.patternsGoogleCalendar || [])]
                 };
             });
 }
