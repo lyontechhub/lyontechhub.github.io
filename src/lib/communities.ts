@@ -67,12 +67,19 @@ export function getSocialDisplayData(socialLink: SocialLink): SocialDisplayData 
 }
 
 export function extractCalendars(community: Community) {
+    function isLocale(segment: string) {
+        if(segment.length < 3) return true;
+        if(segment.length !== 5) return false;
+
+        return segment[2] === '-'
+    }
+
     return community.socialLinks.flatMap(socialLink => {
         const hostname = extractMainDomain(socialLink.url);
 
         if(hostname === 'meetup.com') {
             const path = new URL(socialLink.url).pathname.split('/');
-            const meetupKey = path[1] === 'fr-FR' ? path[2] : path[1];
+            const meetupKey = isLocale(path[1]) ? path[2] : path[1];
             return [
                 { tag: community.key, url: `https://www.meetup.com/${meetupKey}/events/ical/` }
             ];

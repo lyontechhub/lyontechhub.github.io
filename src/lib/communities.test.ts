@@ -71,6 +71,10 @@ describe('communities', () => {
             { link: { url: 'https://www.meetup.com/tada'}, expected: [{ tag: defaultCommunity.key, url: 'https://www.meetup.com/tada/events/ical/' }]},
             { link: { url: 'https://www.meetup.com/fr-FR/tada/fsdfsf'}, expected: [{ tag: defaultCommunity.key, url: 'https://www.meetup.com/tada/events/ical/' }]},
             { link: { url: 'https://www.meetup.com/fr-FR/tada/fsdfsf/'}, expected: [{ tag: defaultCommunity.key, url: 'https://www.meetup.com/tada/events/ical/' }]},
+            { link: { url: 'https://www.meetup.com/fr/tada/fsdfsf/'}, expected: [{ tag: defaultCommunity.key, url: 'https://www.meetup.com/tada/events/ical/' }]},
+            { link: { url: 'https://www.meetup.com/en/tada/fsdfsf/'}, expected: [{ tag: defaultCommunity.key, url: 'https://www.meetup.com/tada/events/ical/' }]},
+            { link: { url: 'https://www.meetup.com/fr-fr/tada/fsdfsf/'}, expected: [{ tag: defaultCommunity.key, url: 'https://www.meetup.com/tada/events/ical/' }]},
+            { link: { url: 'https://www.meetup.com/en-us/tada/fsdfsf/'}, expected: [{ tag: defaultCommunity.key, url: 'https://www.meetup.com/tada/events/ical/' }]},
         ])('return meetup if meetup in social link', ({link, expected}) => {
             const result = extractCalendars({ ...defaultCommunity, socialLinks: [link] })
 
