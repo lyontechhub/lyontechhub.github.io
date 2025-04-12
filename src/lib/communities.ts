@@ -51,8 +51,12 @@ const knownSocialHosts: Record<string, SocialDisplayData> = {
     'youtube.com': { icon: "fab fa-youtube", tooltip: "Youtube channel" },
 }
 
+function extractMainDomain(url: string) {
+    return new URL(url).hostname.replace('www.', '');
+}
+
 export function getSocialDisplayData(socialLink: SocialLink): SocialDisplayData {
-    const hostname = new URL(socialLink.url).hostname.replace('www.', '')
+    const hostname = extractMainDomain(socialLink.url)
 
     const defaultResult = knownSocialHosts[hostname] || { icon: "fas fa-link", tooltip: "Web site" }
 
@@ -60,4 +64,23 @@ export function getSocialDisplayData(socialLink: SocialLink): SocialDisplayData 
         icon: socialLink.icon || defaultResult.icon,
         tooltip: socialLink.name || defaultResult.tooltip,
     };
+}
+
+export function extractCalendars(community: Community) {
+    return community.socialLinks.flatMap(socialLink => {
+        const hostname = extractMainDomain(socialLink.url);
+
+        if(hostname === 'meetup.com') {
+            const path = new URL(socialLink.url).pathname.split('/');
+            const meetupKey = path[1] === 'fr-FR' ? path[2] : path[1];
+            return [
+                { tag: community.key, url: `https://www.meetup.com/${meetupKey}/events/ical/` }
+            ];
+        }
+
+        return [];
+    }).concat((community.calendars || []).map(c => {
+        return { tag: c.prefixTag || community.key, url: c.url }
+    }))
+
 }
