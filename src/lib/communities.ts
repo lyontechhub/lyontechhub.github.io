@@ -3,13 +3,20 @@ export interface SocialLink {
     name?: string;
     icon?: string;
 }
+export interface ExternalCalendar {
+    prefixTag?: string
+    url: string
+}
 
 export interface FileCommunity {
     name: string;
     shortDescription: string;
-    image: string | null;
+    image: string;
+    tags: string[];
     patternsGoogleCalendar?: string[];
     socialLinks: SocialLink[];
+    slackChannels?: string[]
+    calendars?: ExternalCalendar[]
 }
 
 export interface Community extends Omit<FileCommunity, "patternsGoogleCalendar"> {
