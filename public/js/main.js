@@ -90,6 +90,12 @@ const loadCommunities = () =>
         .then((response) => response.text())
         .then((body) => JSON.parse(body));
 
+const refreshCurrentMonth = (calendar) =>{
+    let dateRangeStart = calendar.getDate();
+    const monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    document.querySelector('#calendarDate').textContent = monthNames[dateRangeStart.getMonth()] + ' ' + dateRangeStart.getFullYear();
+}
+
 const loadCalendar = async () => {
     const communities = await loadCommunities();
     const communitiesCalendars =
@@ -129,6 +135,7 @@ const loadCalendar = async () => {
         ],
     });
 
+    refreshCurrentMonth(calendar);
     fetch(calendarICSUrl)
         .then((response) => response.text())
         .then((raw) => listVEventComponents(raw).map(toEvent))
@@ -153,34 +160,38 @@ const loadCalendar = async () => {
                         }
                     }
 
+                    function formatWithLink(text, url) {
+                        return url ? "<a class='calendar-popup-text' href='" + url + "'>" + text + "</a>" : text;
+                    }
+
                     return {
                         calendarId: calendarId,
                         id: item.id,
-                        title: title,
-                        body: item.description,
+                        title: formatWithLink(title, item.url),
+                        body: formatWithLink(item.description + " " + (item.url ?? ""), item.url),
                         start: item.startDate,
                         end: item.endDate,
                         location: item.location,
                         raw: { url: item.url },
+                        isReadOnly: true,
                     }
                 })
             );
         })
     ;
 
-    const monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
-    const updateMonthDisplay = () => {
-        const date = calendar.getDate();
-        const monthElement = document.querySelector('#calendarMonth');
-        if (monthElement) {
-            monthElement.textContent = monthNames[date.getMonth()] + ' ' + date.getFullYear();
-        }
+    document.querySelector('#calendarToday').onclick = () => {
+        calendar.today();
+        refreshCurrentMonth(calendar);
     };
-    updateMonthDisplay();
-
-    document.querySelector('#calendarToday').onclick = () => { calendar.today(); updateMonthDisplay(); };
-    document.querySelector('#calendarNext').onclick = () => { calendar.next(); updateMonthDisplay(); };
-    document.querySelector('#calendarPrevious').onclick = () => { calendar.prev(); updateMonthDisplay(); };
+    document.querySelector('#calendarNext').onclick = () => {
+        calendar.next();
+        refreshCurrentMonth(calendar);
+    };
+    document.querySelector('#calendarPrevious').onclick = () => {
+        calendar.prev();
+        refreshCurrentMonth(calendar);
+    };
 
 };
 

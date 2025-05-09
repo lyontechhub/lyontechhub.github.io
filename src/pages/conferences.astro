@@ -16,45 +16,33 @@ const conferences: Conference[] = globFiles['../../data/conferences.json'].defau
 
 <Layout>
   <main>
-    <div class="container is-fluid">
+    <div class="section">
         <div class="container">
             <p class="title">
               {conferences.length} conférences organisées par les communautés du LyonTechHub
             </p>
-            <p class="subtitle">
-              <a href="/about">Par ici pour référencer la votre !</a>
-            </p>
-            <div class="field">
-              <label class="label" for="filterConferences">Rechercher</label>
-              <div class="control">
-                <input type="text" id="filterConferences" onkeyup="dynamicFilter('filterConferences')">
-              </div>
+            <div class="search-header">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input class="search-input" type="text" id="filterConferences"
+                           onkeyup="dynamicFilter('filterConferences')" placeholder="Rechercher"/>
+                </div>
+                <a href="/about" class="search-header-link">Par ici pour référencer la votre !</a>
             </div>
-            <div class="grid is-col-min-12">
+            <div class="grid is-col-min-10">
                 {conferences
                     .map(
                         (conference) => (
-                            <div class="cell filterable" data-key={conference.name}>
-                                <div class="card">
-                                    <header class="card-header">
-                                      <a href={conference.url}>
-                                        <p class="card-header-title">{conference.name}</p>
-                                      </a>
-                                    </header>
-                                    <div class="card-image p-6 has-text-centered">
-                                      <a href={conference.url} target="_blank">
-                                        <figure class="image is-128x128 is-inline-block">
-                                          <img src={"/imgs/conferences/" + conference.image} onerror="this.onerror=null;this.src='/imgs/noLogo.png';" />
-                                        </figure>
-                                      </a>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="content">
-                                            {conference.shortDescription}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <a class="lth-card lth-card-reference filterable" href={conference.url}
+                               data-key={conference.name} target="_blank">
+                                <p class="lth-card-title">{conference.name}</p>
+                                <img src={"/imgs/conferences/" + conference.image}
+                                     alt={conference.name}
+                                     onerror="this.onerror=null;this.src='/imgs/noLogo.png';"
+                                />
+                                <p class="lth-card-text">{conference.shortDescription}</p>
+                                <span class="learn-more">En savoir plus</span>
+                            </a>
                         )
                     )
                 }

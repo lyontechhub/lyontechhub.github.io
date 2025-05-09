@@ -2,72 +2,80 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
-  <main>
-      <div class="section">
-        <div class="container">
-          <p class="title">Vous êtes membre d'une communauté</p>
+    <main>
+        <div class="section">
+            <div class="container">
+                <p class="title">Vous êtes membre d'une communauté</p>
+                <div class="grid mt-4">
+                    <div class="cell is-6">
+                        <a
+                            href="https://slack.lyontechhub.org/" title="Inscription sur le Slack de Lyon Tech Hub"
+                            class="lth-card">
+                            <span class="lth-card-icon"><i class="fab fa-slack"></i></span>
+                            <p class="lth-card-title">Slack</p>
+                            <p class="lth-card-text">Rejoignez le slack pour continuer à échanger entre les évènements
+                                de
+                                vos
+                                communautés, et mettre en avant vos prochains événements.
+                            </p>
+                            <span class="learn-more">En savoir plus</span>
+                        </a>
+                    </div>
+                    <div class="cell is-6">
+                        <div class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-handshake"></i></span>
+                            <p class="lth-card-title">Soirée des Communautés</p>
+                            <p class="lth-card-text">Ne manquez pas notre événement annuel en juin, la Soirée des
+                                Communautés, où vous pourrez rencontrer d'autres organisateurs, échanger des conseils et
+                                résoudre des problèmes ensemble. C'est l'occasion idéale pour découvrir de nouvelles
+                                astuces
+                                et partager vos expériences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <p class="title">Pour plus d'opportunités de...</p>
+                <div class="grid mt-4">
+                    <div class="cell is-3">
+                        <div class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-beer"></i></span>
+                            <p class="lth-card-title">Rencontrer</p>
+                            <p class="lth-card-text">Les événements sont une très bonne occasion pour rencontrer des
+                                experts pour vous aider dans
+                                vos projets, de potentiels clients, de futurs ou anciens collègues, ou pour le plaisir
+                                !</p>
+                        </div>
+                    </div>
+                    <div class="cell is-3">
+                        <div class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-flask"></i></span>
+                            <p class="lth-card-title">Découvrir</p>
+                            <p class="lth-card-text">Vous trouverez toujours un sujet à découvrir pour en faire une
+                                opportunité de faire mieux
+                                ou tout simplement autrement.</p>
+                        </div>
+                    </div>
+                    <div class="cell is-3">
+                        <div class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-cogs"></i></span>
+                            <p class="lth-card-title">Apprendre</p>
+                            <p class="lth-card-text">Vous apprendrez des expériences des autres, vous serez motivé pour
+                                aller plus loin suite
+                                à la découverte d'un sujet, vous rencontrerez des formateurs reconnus...</p>
+                        </div>
+                    </div>
+                    <div class="cell is-3">
+                        <div class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-rocket"></i></span>
+                            <p class="lth-card-title">Echanger</p>
+                            <p class="lth-card-text">La richesse et la diversité des échanges vous apporteront de
+                                nouvelles perspectives et
+                                des idées pour le futur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="grid mt-4">
-            <div class="cell is-6">
-                <div class="card">
-                    <div class="card-content has-text-centered">
-                        <span class="icon is-large"><i class="fab fa-slack fa-3x"></i></span>
-                        <h3 class="title is-3">Slack</h3>
-                        <p>Rejoignez le slack pour continuer à échanger entre les évènements de vos communautés, et mettre en avant vos prochains événements. Inscrivez vous : <b><a href="https://slack.lyontechhub.org/" title="Inscription sur le Slack de Lyon Tech Hub">https://slack.lyontechhub.org/</a></b></p>
-                    </div>
-                </div>
-            </div>
-            <div class="cell is-6">
-                <div class="card">
-                    <div class="card-content has-text-centered">
-                        <span class="icon is-large"><i class="fa fa-handshake fa-3x"></i></span>
-                        <h3 class="title is-3">Soirée des Communautés</h3>
-                        <p>Ne manquez pas notre événement annuel en juin, la Soirée des Communautés, où vous pourrez rencontrer d'autres organisateurs, échanger des conseils et résoudre des problèmes ensemble. C'est l'occasion idéale pour découvrir de nouvelles astuces et partager vos expériences.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-          <p class="title">Pour plus d'opportunités de...</p>
-        </div>
-        <div class="grid mt-4">
-            <div class="cell is-3">
-                <div class="card">
-                    <div class="card-content has-text-centered">
-                        <span class="icon is-large"><i class="fa fa-beer fa-3x"></i></span>
-                        <h3 class="title is-3">Rencontrer</h3>
-                        <p>Les événements sont une très bonne occasion pour rencontrer des experts pour vous aider dans vos projets, de potentiels clients, de futurs ou anciens collègues, ou pour le plaisir !</p>
-                    </div>
-                </div>
-            </div>
-            <div class="cell is-3">
-                <div class="card">
-                    <div class="card-content has-text-centered">
-                        <span class="icon is-large"><i class="fa fa-flask fa-3x"></i></span>
-                        <h3 class="title is-3">Découvrir</h3>
-                        <p>Vous trouverez toujours un sujet à découvrir pour en faire une opportunité de faire mieux ou tout simplement autrement</p>
-                    </div>
-                </div>
-            </div>
-            <div class="cell is-3">
-                <div class="card">
-                    <div class="card-content has-text-centered">
-                        <span class="icon is-large"><i class="fa fa-rocket fa-3x"></i></span>
-                        <h3 class="title is-3">Apprendre</h3>
-                        <p>Vous apprendrez des expériences des autres, vous serez motivé pour aller plus loin suite à la découverte d'un sujet, vous rencontrerez des formateurs reconnus...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="cell is-3">
-                <div class="card">
-                    <div class="card-content has-text-centered">
-                        <span class="icon is-large"><i class="fas fa-cogs fa-3x"></i></span>
-                        <h3 class="title is-3">Echanger</h3>
-                        <p>La richesse et la diversité des échanges vous apporteront de nouvelles perspectives et des idées pour le futur</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  </main>
+    </main>
 </Layout>
