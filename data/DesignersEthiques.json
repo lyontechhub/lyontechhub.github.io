@@ -1,0 +1,27 @@
+{
+  "image": "Designers-ethiques.png",
+  "name": "Designers Ethiques Lyon",
+  "shortDescription": "Designers Éthiques est une association qui explore les pratiques de conception numérique. Nous travaillons à la capacitation des designers et des professionnels du numérique pour produire un numérique émancipateur, durable et désirable.",
+  "tags": [
+    "Design",
+    "Durabilité",
+    "Inclusivité",
+    "Ecoconception",
+    "Evénements",
+    "Meetup"
+  ],
+  "patternsGoogleCalendar": [
+    "Designers Ethiques Lyon"
+  ],
+  "socialLinks": [
+    {
+      "url": "https://designersethiques.org/fr/"
+    },
+    {
+      "url": "https://mattermost.designersethiques.org/"
+    },
+    {
+      "url": "https://peertube.designersethiques.org/"
+    }
+  ]
+}
