@@ -1,0 +1,35 @@
+{
+  "image": "theDesignSociety.png",
+  "name": "The Design Society",
+  "shortDescription": "Une société secrète si mal gardée qu’on est même sur les réseaux. On s’y retrouve entre pro et passionnés du Design dans différents formats : talks, apéros, et bien plus !",
+  "tags": [
+    "Design",
+    "UX/UI Design",
+    "Product Design",
+    "User Research",
+    "Design System",
+    "DesignOps",
+    "DA",
+    "Motion Design"
+  ],
+  "patternsGoogleCalendar": [
+    "TheDesignSociety"
+  ],
+  "socialLinks": [
+    {
+      "url": "https://www.thedesignsociety.fr/"
+    },
+    {
+      "url": "https://www.eventbrite.fr/o/the-design-society-110792418841"
+    },
+    {
+      "url": "https://www.linkedin.com/company/the-design-society-lyon/"
+    },
+    {
+      "url": "https://www.instagram.com/thedesignsociety_lyon/"
+    }
+  ],
+  "slackChannels": [
+    "#thedesignsociety"
+  ]
+}
