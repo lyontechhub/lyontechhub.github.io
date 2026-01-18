@@ -1,0 +1,34 @@
+{
+  "image": "TupperVim.svg",
+  "name": "TupperVim",
+  "shortDescription": "Les TupperVim sont des évènements où l’on partage des connaissances et des astuces à propos de Vim. Les TupperVim s’inspirent autant des agapes maçonniques du troisième millénaire que des soirées tupperware™ des années 60. Tout un concept.",
+  "tags": [
+    "vim",
+    "Neovim",
+    "TupperVim",
+    "TupperLibre",
+    "OpenSource",
+    "Developpement",
+    "Code",
+    "terminal"
+  ],
+  "socialLinks": [
+    {
+      "url": "https://tuppervim.org/"
+    },
+    {
+      "url": "https://discord.gg/rRuq3GwqfZ"
+    },
+    {
+      "name": "Canal IRC",
+      "url": "irc://irc.libera.chat/vim-fr"
+    },
+    {
+      "name": "Liste de diffusion",
+      "url": "https://framalistes.org/sympa/info/tuppervim"
+    },
+    {
+      "url": "https://www.meetup.com/fr-FR/TupperLibre/"
+    }
+  ]
+}
