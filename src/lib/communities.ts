@@ -30,19 +30,20 @@ export function getList(): Community[] {
     const files: Record<string, FileCommunity> =
         import.meta.glob(['../../data/*.json', '!**/conferences.json'], { eager: true });
     return Object.keys(files)
-            .map((path: string) => {
-                const community = files[path]
-                const key = (path.match(keyPattern) ?? [path, path])[1]
-                return {
-                    key: key,
-                    ...community,
-                    patternsGoogleCalendar: [key, ...(community.patternsGoogleCalendar || [])]
-                };
-            });
+        .map((path: string) => {
+            const community = files[path]
+            const key = (path.match(keyPattern) ?? [path, path])[1]
+            return {
+                key: key,
+                ...community,
+                patternsGoogleCalendar: [key, ...(community.patternsGoogleCalendar || [])]
+            };
+        });
 }
 
 type SocialDisplayData = { icon: string, tooltip: string }
 const knownSocialHosts: Record<string, SocialDisplayData> = {
+    'discord.gg': { icon: "fab fa-discord", tooltip: "Discord" },
     'twitter.com': { icon: "fab fa-twitter", tooltip: "Twitter" },
     'meetup.com': { icon: "fas fa-calendar", tooltip: "Groupe Meetup" },
     'github.com': { icon: "fab fa-github", tooltip: "Github" },
@@ -68,8 +69,8 @@ export function getSocialDisplayData(socialLink: SocialLink): SocialDisplayData 
 
 export function extractCalendars(community: Community) {
     function isLocale(segment: string) {
-        if(segment.length < 3) return true;
-        if(segment.length !== 5) return false;
+        if (segment.length < 3) return true;
+        if (segment.length !== 5) return false;
 
         return segment[2] === '-'
     }
@@ -77,7 +78,7 @@ export function extractCalendars(community: Community) {
     return community.socialLinks.flatMap(socialLink => {
         const hostname = extractMainDomain(socialLink.url);
 
-        if(hostname === 'meetup.com') {
+        if (hostname === 'meetup.com') {
             const path = new URL(socialLink.url).pathname.split('/');
             const meetupKey = isLocale(path[1]) ? path[2] : path[1];
             return [
