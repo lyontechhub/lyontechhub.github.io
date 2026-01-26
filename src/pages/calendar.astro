@@ -16,7 +16,6 @@ import Layout from '../layouts/Layout.astro';
                 <a href="https://www.lyontechhub.org/Lyon-Tech-Hub-Calendar/calendar.ics">au format ical</a>.</p>
 
             <nav class="navbar is-justify-content-center calendar-header">
-                <span id="calendarDate"></span>
                 <button type="button" class="button is-default nav-item" id="calendarToday">Today</button>
                 <button type="button" class="button is-default nav-item" id="calendarPrevious">
                 <span class="icon is-medium">
@@ -28,6 +27,7 @@ import Layout from '../layouts/Layout.astro';
                   <i class="fa fa-chevron-right fa-lg"></i>
                 </span>
                 </button>
+                <span id="calendarDate"></span>
             </nav>
 
             <div id="calendar"></div>
