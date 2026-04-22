@@ -168,9 +168,19 @@ const loadCalendar = async () => {
         })
     ;
 
-    document.querySelector('#calendarToday').onclick = () => { calendar.today(); };
-    document.querySelector('#calendarNext').onclick = () => { calendar.next(); };
-    document.querySelector('#calendarPrevious').onclick = () => { calendar.prev(); };
+    const monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    const updateMonthDisplay = () => {
+        const date = calendar.getDate();
+        const monthElement = document.querySelector('#calendarMonth');
+        if (monthElement) {
+            monthElement.textContent = monthNames[date.getMonth()] + ' ' + date.getFullYear();
+        }
+    };
+    updateMonthDisplay();
+
+    document.querySelector('#calendarToday').onclick = () => { calendar.today(); updateMonthDisplay(); };
+    document.querySelector('#calendarNext').onclick = () => { calendar.next(); updateMonthDisplay(); };
+    document.querySelector('#calendarPrevious').onclick = () => { calendar.prev(); updateMonthDisplay(); };
 
 };
 

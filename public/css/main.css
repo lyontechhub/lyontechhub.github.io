@@ -10,3 +10,11 @@
 #calendar {
   height: 800px;
 }
+
+#calendarMonth {
+  min-width: 150px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 2.5;
+}
