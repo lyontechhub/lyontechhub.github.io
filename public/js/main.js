@@ -38,14 +38,14 @@ const toEvent = (component, index) => {
     const format = (d) => d.toString().padStart(2, '0');
     const formatHour = (d) => format(d.getHours()) + 'H' + format(d.getMinutes());
     const months = ['Jan', 'Fev', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Aout', 'Sept', 'Oct', 'Nov', 'Dec'];
-    const url = meetupUrlFor(description);
+    const url = component.getFirstPropertyValue('url') || meetupUrlFor(description);
     return {
         id: component.getFirstPropertyValue('uid'),
         title: component.getFirstPropertyValue('summary'),
         description: description,
         hasDescription: description && description.length > 0,
         url,
-        hasUrl: url !== undefined,
+        hasUrl: url !== undefined && url !== null,
         startDate,
         endDate,
         location: component.getFirstPropertyValue('location'),
