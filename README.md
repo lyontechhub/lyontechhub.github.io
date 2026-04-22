@@ -31,39 +31,34 @@ Contact us on [Slack](https://slack.lyontechhub.org), at contact@lyontechhub.org
 
 Developers
 ----------
-This web site is done with plain HTML/CSS3/Javascript.
+This website is done with [Astro](https://astro.build/) framework, using TypeScript and plain HTML/CSS/JavaScript.
 
-The website is hosted through GitHub pages at lyontechhub.github.io as Organization pages (cf. https://help.github.com/articles/user-organization-and-project-pages).  
-Note that GitHub uses master branch to deploy, that's why we have 'dev' branch as the default one, which contains source code, that is compiled through Gulp and pushed to master for deployment (see below).
+The website is hosted through GitHub pages at lyontechhub.github.io.
+The branch `gh-pages` hosts the website.
 
 ### Source code
 
-It is built upon Bootstrap, with LESS files for theme customisation (see Dev & build environment).
+It is built upon [Astro](https://astro.build/) with TypeScript. Styles are written in plain CSS.
 
 ### JSON data & images
 
-The following JSON files are used to provide content to dynamic views in 'data' directory:
+The following JSON files are used to provide content to dynamic views :
 
-* communities/[one per community].json
+* data/[one per community].json
 
-Images like community icons are in 'imgs' directory.
+Images like community icons are in 'public/imgs/communities' directory.
+
+* public/imgs/communities/[one per community].json
 
 ### Dev & build environment
 
-After cloning, just type the following commands to have a  :
+After cloning, just type the following commands:
 
 ```
 npm install
-npm start
+npm run dev
 ```
-
-Nb : npm start is configured to start a local Node web server
-
-Gulp is used to build assets (CSS & JS) and copy other assets (data & images) used by the site.
-
-* 'build' task is used to build JS, CSS (from LESS) and HTML to 'public' directory ('npm start' launch 'build' task before running the local Node web server)
-* 'watch' task is used to watch changes on source JS, LESS, HTML & assets files to trigger a build dynamically (never ending task)
 
 ### Deployment
 
-Automatically deployed via github action
+Automatically deployed via GitHub Actions
