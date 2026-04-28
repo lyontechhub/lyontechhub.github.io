@@ -158,15 +158,23 @@ const loadCalendar = async () => {
 
                     const truncate = (text, max) =>
                         text && text.length > max ? text.slice(0, max).trimEnd() + '…' : text;
+                    const truncated = truncate(item.description, 200);
+                    const linkHtml = item.url
+                        ? `<div class="calendar-popup-link-wrap"><a class="calendar-popup-link" href="${item.url}" target="_blank" rel="noopener">En savoir plus <i class="fa fa-external-link-alt"></i></a></div>`
+                        : '';
+                    const body = truncated && linkHtml
+                        ? `${truncated}${linkHtml}`
+                        : (truncated || linkHtml);
 
                     return {
                         calendarId: calendarId,
                         id: item.id,
                         title: formatWithLink(title, item.url),
-                        body: truncate(item.description, 200),
+                        body,
                         start: item.startDate,
                         end: item.endDate,
                         location: item.location,
+                        state: '',
                         raw: { url: item.url },
                         isReadOnly: true,
                     }
