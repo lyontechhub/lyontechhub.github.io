@@ -156,11 +156,14 @@ const loadCalendar = async () => {
                         return url ? "<a class='calendar-popup-text' href='" + url + "'>" + text + "</a>" : text;
                     }
 
+                    const truncate = (text, max) =>
+                        text && text.length > max ? text.slice(0, max).trimEnd() + '…' : text;
+
                     return {
                         calendarId: calendarId,
                         id: item.id,
                         title: formatWithLink(title, item.url),
-                        body: formatWithLink(item.description + " " + (item.url ?? ""), item.url),
+                        body: truncate(item.description, 200),
                         start: item.startDate,
                         end: item.endDate,
                         location: item.location,
