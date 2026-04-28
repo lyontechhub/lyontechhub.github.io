@@ -208,6 +208,27 @@ main {
     color: #2e333d;
 }
 
+.calendar-popup-link-wrap {
+    margin-top: 8px;
+}
+
+.calendar-popup-link {
+    color: #eb0f0f;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.calendar-popup-link:hover {
+    text-decoration: underline;
+}
+
+.toastui-calendar-popup-container .toastui-calendar-ic-state-b {
+    display: none;
+}
+
 .lth-card {
     display: flex;
     flex-direction: column;

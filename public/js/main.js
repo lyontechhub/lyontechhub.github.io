@@ -101,6 +101,16 @@ const loadCalendar = async () => {
             });
 
     const Calendar = tui.Calendar;
+    const capitalize = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+    const dateFmt = new Intl.DateTimeFormat('fr-FR', {
+        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+    });
+    const timeFmt = new Intl.DateTimeFormat('fr-FR', {
+        hour: '2-digit', minute: '2-digit', hour12: false
+    });
+    const formatFrTime = (d) => timeFmt.format(d).replace(':', 'h');
+    const toJsDate = (d) => (d && typeof d.toDate === 'function') ? d.toDate() : new Date(d);
+
     const calendar = new Calendar('#calendar', {
         usageStatistics: false,
         defaultView: 'month',
@@ -116,6 +126,15 @@ const loadCalendar = async () => {
                     timezoneName: 'Europe/Paris',
                 },
             ],
+        },
+        template: {
+            popupDetailDate({ start, end, isAllday }) {
+                const startDate = toJsDate(start);
+                const endDate = toJsDate(end);
+                const datePart = capitalize(dateFmt.format(startDate));
+                if (isAllday) return datePart;
+                return `${datePart}, ${formatFrTime(startDate)} - ${formatFrTime(endDate)}`;
+            },
         },
         calendars: [
           {
