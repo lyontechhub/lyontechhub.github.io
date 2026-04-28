@@ -146,6 +146,40 @@ const loadCalendar = async () => {
         ],
     });
 
+    // Workaround Toast UI Calendar 2.1.3 popup offset bug: the lib writes
+    // document-relative top/left on a popup whose CSS containing block is
+    // whatever the closest positioned ancestor happens to be (here Bulma's
+    // .container, since the popup is portalled into a floating-layer that is
+    // a sibling of the calendar layout, not a descendant). We re-anchor by
+    // subtracting the popup's actual offsetParent's document offset.
+    const calendarRoot = document.querySelector('#calendar');
+    if (calendarRoot) {
+        const fixPopupPosition = () => {
+            const popup = calendarRoot.querySelector('.toastui-calendar-popup-container');
+            if (!popup || !popup.style.top || !popup.style.left) return;
+            const op = popup.offsetParent;
+            if (!op) return;
+            const r = op.getBoundingClientRect();
+            const dy = r.top + window.scrollY;
+            const dx = r.left + window.scrollX;
+            const key = popup.style.top + '|' + popup.style.left;
+            if (popup.dataset.lthPosKey === key) return;
+            const t = parseFloat(popup.style.top);
+            const l = parseFloat(popup.style.left);
+            if (Number.isNaN(t) || Number.isNaN(l)) return;
+            popup.style.top = (t - dy) + 'px';
+            popup.style.left = (l - dx) + 'px';
+            popup.dataset.lthPosKey = popup.style.top + '|' + popup.style.left;
+        };
+        const observer = new MutationObserver(fixPopupPosition);
+        observer.observe(calendarRoot, {
+            childList: true,
+            subtree: true,
+            attributes: true,
+            attributeFilter: ['style'],
+        });
+    }
+
     refreshCurrentMonth(calendar);
     fetch(calendarICSUrl)
         .then((response) => response.text())
