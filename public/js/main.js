@@ -57,6 +57,17 @@ const filterForPeriod = (minDate, maxDate) => event => event.startDate >= minDat
 
 const listVEventComponents = raw => new ICAL.Component(ICAL.parse(raw)).getAllSubcomponents('vevent');
 
+const escapeHtml = (s) => String(s ?? '').replace(/[&<>"']/g, (c) =>
+    ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+
+const safeUrl = (url) => {
+    if (!url) return '';
+    let parsed;
+    try { parsed = new URL(url, document.baseURI); } catch { return ''; }
+    if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return '';
+    return parsed.href;
+};
+
 const calendarICSUrl = 'https://www.lyontechhub.org/Lyon-Tech-Hub-Calendar/calendar.ics';
 
 const fetchEvents = (patterns, minDate, maxDate) => fetch(calendarICSUrl).then((response) => response.text()).then((raw) =>
@@ -206,27 +217,33 @@ const loadCalendar = async () => {
                     }
 
                     function formatWithLink(text, url) {
-                        return url ? "<a class='calendar-popup-text' href='" + url + "'>" + text + "</a>" : text;
+                        const safeText = escapeHtml(text);
+                        const href = safeUrl(url);
+                        return href
+                            ? `<a class="calendar-popup-text" href="${escapeHtml(href)}">${safeText}</a>`
+                            : safeText;
                     }
 
+                    const safeItemUrl = safeUrl(item.url);
                     const truncated = truncate(item.description, 200);
-                    const linkHtml = item.url
-                        ? `<div class="calendar-popup-link-wrap"><a class="calendar-popup-link" href="${item.url}" target="_blank" rel="noopener">En savoir plus <i class="fa fa-external-link-alt"></i></a></div>`
+                    const truncatedHtml = escapeHtml(truncated || '');
+                    const linkHtml = safeItemUrl
+                        ? `<div class="calendar-popup-link-wrap"><a class="calendar-popup-link" href="${escapeHtml(safeItemUrl)}" target="_blank" rel="noopener">En savoir plus <i class="fa fa-external-link-alt"></i></a></div>`
                         : '';
-                    const body = truncated && linkHtml
-                        ? `${truncated}${linkHtml}`
-                        : (truncated || linkHtml);
+                    const body = truncatedHtml && linkHtml
+                        ? `${truncatedHtml}${linkHtml}`
+                        : (truncatedHtml || linkHtml);
 
                     return {
                         calendarId: calendarId,
                         id: item.id,
-                        title: formatWithLink(title, item.url),
+                        title: formatWithLink(title, safeItemUrl),
                         body,
                         start: item.startDate,
                         end: item.endDate,
                         location: item.location,
                         state: '',
-                        raw: { url: item.url },
+                        raw: { url: safeItemUrl },
                         isReadOnly: true,
                     }
                 })
@@ -289,11 +306,16 @@ const loadCalendarMobileList = async () => {
         if (rangeEl) rangeEl.textContent = formatRange(windowStart, windowEnd);
         const events = (await fetchAllEvents(windowStart, windowEnd))
             .toSorted((a, b) => a.startDate - b.startDate)
-            .map((ev, i) => ({
-                ...ev,
-                description: truncate(ev.description, 200),
-                isNotFirst: i > 0,
-            }));
+            .map((ev, i) => {
+                const url = safeUrl(ev.url);
+                return {
+                    ...ev,
+                    url,
+                    hasUrl: Boolean(url),
+                    description: truncate(ev.description, 200),
+                    isNotFirst: i > 0,
+                };
+            });
         displayEvents(template, el, events);
     };
 
@@ -334,15 +356,19 @@ window.onload = () => {
                     fourMonthAgo,
                     fourMonthLater
                 ).then((items) => {
+                    const sanitized = items.map((item) => {
+                        const url = safeUrl(item.url);
+                        return { ...item, url, hasUrl: Boolean(url) };
+                    });
                     displayEvents(
                         compiledTemplate,
                         pastEventsElement,
-                        items.filter((item) => item.startDate < now).toSorted((a, b) => b.startDate - a.startDate)
+                        sanitized.filter((item) => item.startDate < now).toSorted((a, b) => b.startDate - a.startDate)
                     );
                     displayEvents(
                         compiledTemplate,
                         upcomingEventsElement,
-                        items.filter((item) => item.startDate >= now).toSorted((a, b) => a.startDate - b.startDate)
+                        sanitized.filter((item) => item.startDate >= now).toSorted((a, b) => a.startDate - b.startDate)
                     );
                 });
             });
