@@ -228,7 +228,7 @@ const loadCalendar = async () => {
                             if (patterns) {
                                 for (var j = 0; j < patterns.length; j++) {
                                     if (match[1].localeCompare(patterns[j], 'en', { sensitivity: 'base' }) === 0) {
-                                        title = '[' +  match[1] + '] ' + match[2];
+                                        title = '[' + patterns[j] + '] ' + match[2];
                                         calendarId = communities[i].key;
                                         break;
                                     }
