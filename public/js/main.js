@@ -249,7 +249,7 @@ const loadCalendar = async () => {
                     const truncated = truncate(item.description, 200);
                     const truncatedHtml = escapeHtml(truncated || '');
                     const linkHtml = safeItemUrl
-                        ? `<div class="calendar-popup-link-wrap"><a class="calendar-popup-link" href="${escapeHtml(safeItemUrl)}" target="_blank" rel="noopener">En savoir plus <i class="fa fa-external-link-alt"></i></a></div>`
+                        ? `<div class="calendar-popup-link-wrap"><a class="calendar-popup-link" href="${escapeHtml(safeItemUrl)}" target="_blank" rel="noopener noreferrer">En savoir plus <i class="fa fa-external-link-alt"></i></a></div>`
                         : '';
                     const body = truncatedHtml && linkHtml
                         ? `${truncatedHtml}${linkHtml}`
