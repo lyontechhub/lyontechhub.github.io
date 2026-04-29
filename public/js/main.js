@@ -289,8 +289,12 @@ const loadCalendar = async () => {
 
 const startOfDay = (d) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
 
-const truncate = (text, max) =>
-    text && text.length > max ? text.slice(0, max).trimEnd() + '…' : text;
+const truncate = (text, max) => {
+    if (!text) return text;
+    const chars = [...text];
+    if (chars.length <= max) return text;
+    return chars.slice(0, max).join('').replace(/[.\s…]+$/, '') + '…';
+};
 
 const fetchAllEvents = (minDate, maxDate) =>
     fetchAllRawEvents().then((events) => events.filter(filterForPeriod(minDate, maxDate)));
