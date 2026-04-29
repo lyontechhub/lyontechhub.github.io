@@ -70,9 +70,18 @@ const safeUrl = (url) => {
 
 const calendarICSUrl = 'https://www.lyontechhub.org/Lyon-Tech-Hub-Calendar/calendar.ics';
 
-const fetchEvents = (patterns, minDate, maxDate) => fetch(calendarICSUrl).then((response) => response.text()).then((raw) =>
-    listVEventComponents(raw)
-        .map(toEvent)
+let _icsEventsP;
+const fetchAllRawEvents = () => {
+    if (!_icsEventsP) {
+        _icsEventsP = fetch(calendarICSUrl)
+            .then((response) => response.text())
+            .then((raw) => listVEventComponents(raw).map(toEvent));
+    }
+    return _icsEventsP;
+};
+
+const fetchEvents = (patterns, minDate, maxDate) => fetchAllRawEvents().then((events) =>
+    events
         .filter(filterForPeriod(minDate, maxDate))
         .filter(matchForPatterns(patterns)));
 
@@ -192,9 +201,7 @@ const loadCalendar = async () => {
     }
 
     refreshCurrentMonth(calendar);
-    fetch(calendarICSUrl)
-        .then((response) => response.text())
-        .then((raw) => listVEventComponents(raw).map(toEvent))
+    fetchAllRawEvents()
         .then((items) => {
             calendar.createEvents(
                 items.map((item) => {
@@ -272,10 +279,7 @@ const truncate = (text, max) =>
     text && text.length > max ? text.slice(0, max).trimEnd() + '…' : text;
 
 const fetchAllEvents = (minDate, maxDate) =>
-    fetch(calendarICSUrl).then((response) => response.text()).then((raw) =>
-        listVEventComponents(raw)
-            .map(toEvent)
-            .filter(filterForPeriod(minDate, maxDate)));
+    fetchAllRawEvents().then((events) => events.filter(filterForPeriod(minDate, maxDate)));
 
 const loadCalendarMobileList = async () => {
     const el = document.getElementById('calendarMobileList');
