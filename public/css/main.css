@@ -204,6 +204,27 @@ main {
     font-size: 20px;
 }
 
+#calendarMobileList,
+.calendar-mobile-header {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #calendar,
+    .calendar-header:not(.calendar-mobile-header) {
+        display: none;
+    }
+    #calendarMobileList {
+        display: block;
+    }
+    .calendar-mobile-header {
+        display: flex;
+    }
+    #calendarMobileList .lth-card {
+        padding: 16px 18px;
+    }
+}
+
 .calendar-popup-text {
     color: #2e333d;
 }

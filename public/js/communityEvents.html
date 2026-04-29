@@ -1,6 +1,5 @@
 <div class="lth-card">
   <div class="card-content">
-    <p class="lth-card-title">{{ paneTitle }}</p>
     {{#if noEvent}}
       <p class="lth-card-title is-6">
         {{ noEventCaption }}
@@ -21,7 +20,7 @@
           {{ title }}
         {{/if}}
       </p>
-      <p class="subtitle is-5">De {{ startDateHour }} à {{ endDateHour }} - {{ location }}</p>
+      <p class="subtitle is-5">De {{ startDateHour }} à {{ endDateHour }}{{#if location}} - {{ location }}{{/if}}</p>
       {{#if hasDescription}}
       <p class="description">{{ description }}</p>
       {{/if}}

@@ -209,8 +209,6 @@ const loadCalendar = async () => {
                         return url ? "<a class='calendar-popup-text' href='" + url + "'>" + text + "</a>" : text;
                     }
 
-                    const truncate = (text, max) =>
-                        text && text.length > max ? text.slice(0, max).trimEnd() + '…' : text;
                     const truncated = truncate(item.description, 200);
                     const linkHtml = item.url
                         ? `<div class="calendar-popup-link-wrap"><a class="calendar-popup-link" href="${item.url}" target="_blank" rel="noopener">En savoir plus <i class="fa fa-external-link-alt"></i></a></div>`
@@ -249,6 +247,70 @@ const loadCalendar = async () => {
         refreshCurrentMonth(calendar);
     };
 
+};
+
+const startOfDay = (d) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+
+const truncate = (text, max) =>
+    text && text.length > max ? text.slice(0, max).trimEnd() + '…' : text;
+
+const fetchAllEvents = (minDate, maxDate) =>
+    fetch(calendarICSUrl).then((response) => response.text()).then((raw) =>
+        listVEventComponents(raw)
+            .map(toEvent)
+            .filter(filterForPeriod(minDate, maxDate)));
+
+const loadCalendarMobileList = async () => {
+    const el = document.getElementById('calendarMobileList');
+    if (!el) return;
+    const rangeEl = document.getElementById('calendarMobileRange');
+    const prevEl = document.getElementById('calendarMobilePrevious');
+    const nextEl = document.getElementById('calendarMobileNext');
+    const todayEl = document.getElementById('calendarMobileToday');
+
+    const template = Handlebars.compile(
+        await fetch('/js/communityEvents.html').then((r) => r.text())
+    );
+
+    const WINDOW_DAYS = 14;
+    const monthLabels = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+        'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+    const formatRange = (start, endExclusive) => {
+        const last = new Date(endExclusive);
+        last.setDate(last.getDate() - 1);
+        return `${start.getDate()} ${monthLabels[start.getMonth()]}`;
+    };
+
+    let windowStart = startOfDay(new Date());
+
+    const render = async () => {
+        const windowEnd = new Date(windowStart);
+        windowEnd.setDate(windowEnd.getDate() + WINDOW_DAYS);
+        if (rangeEl) rangeEl.textContent = formatRange(windowStart, windowEnd);
+        const events = (await fetchAllEvents(windowStart, windowEnd))
+            .toSorted((a, b) => a.startDate - b.startDate)
+            .map((ev, i) => ({
+                ...ev,
+                description: truncate(ev.description, 200),
+                isNotFirst: i > 0,
+            }));
+        displayEvents(template, el, events);
+    };
+
+    if (prevEl) prevEl.onclick = () => {
+        windowStart.setDate(windowStart.getDate() - 1);
+        render();
+    };
+    if (nextEl) nextEl.onclick = () => {
+        windowStart.setDate(windowStart.getDate() + 1);
+        render();
+    };
+    if (todayEl) todayEl.onclick = () => {
+        windowStart = startOfDay(new Date());
+        render();
+    };
+
+    render();
 };
 
 window.onload = () => {
@@ -290,4 +352,5 @@ window.onload = () => {
     if (calendarElement) {
         loadCalendar();
     }
+    loadCalendarMobileList();
 }
