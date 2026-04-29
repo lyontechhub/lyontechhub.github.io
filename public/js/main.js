@@ -153,9 +153,14 @@ const loadCalendar = async () => {
             popupDetailDate({ start, end, isAllday }) {
                 const startDate = toJsDate(start);
                 const endDate = toJsDate(end);
-                const datePart = capitalize(dateFmt.format(startDate));
-                if (isAllday) return datePart;
-                return `${datePart}, ${formatFrTime(startDate)} - ${formatFrTime(endDate)}`;
+                const startStr = capitalize(dateFmt.format(startDate));
+                if (isAllday) return startStr;
+                const sameDay = dateFmt.format(startDate) === dateFmt.format(endDate);
+                if (sameDay) {
+                    return `${startStr}, ${formatFrTime(startDate)} - ${formatFrTime(endDate)}`;
+                }
+                const endStr = capitalize(dateFmt.format(endDate));
+                return `${startStr}, ${formatFrTime(startDate)} → ${endStr}, ${formatFrTime(endDate)}`;
             },
         },
         calendars: [
