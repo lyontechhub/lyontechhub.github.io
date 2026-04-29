@@ -53,7 +53,7 @@ const matchPatternForEvent = event => pattern => event.title.toLowerCase().inclu
 
 const matchForPatterns = patterns => event => patterns.some(matchPatternForEvent(event));
 
-const filterForPeriod = (minDate, maxDate) => event => event.startDate >= minDate && event.endDate <= maxDate;
+const filterForPeriod = (minDate, maxDate) => event => event.startDate < maxDate && event.endDate > minDate;
 
 const listVEventComponents = raw => new ICAL.Component(ICAL.parse(raw)).getAllSubcomponents('vevent');
 
