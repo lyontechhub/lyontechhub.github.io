@@ -191,13 +191,20 @@ const loadCalendar = async () => {
             popup.style.left = (l - dx) + 'px';
             popup.dataset.lthPosKey = popup.style.top + '|' + popup.style.left;
         };
-        const observer = new MutationObserver(fixPopupPosition);
-        observer.observe(calendarRoot, {
-            childList: true,
-            subtree: true,
-            attributes: true,
-            attributeFilter: ['style'],
-        });
+        const attachObserver = () => {
+            const layer = calendarRoot.querySelector('.toastui-calendar-floating-layer');
+            if (!layer) {
+                setTimeout(attachObserver, 50);
+                return;
+            }
+            new MutationObserver(fixPopupPosition).observe(layer, {
+                childList: true,
+                subtree: true,
+                attributes: true,
+                attributeFilter: ['style'],
+            });
+        };
+        attachObserver();
     }
 
     refreshCurrentMonth(calendar);
