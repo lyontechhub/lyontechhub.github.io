@@ -123,10 +123,12 @@ const loadCalendar = async () => {
     const Calendar = tui.Calendar;
     const capitalize = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
     const dateFmt = new Intl.DateTimeFormat('fr-FR', {
-        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
+        timeZone: 'Europe/Paris',
     });
     const timeFmt = new Intl.DateTimeFormat('fr-FR', {
-        hour: '2-digit', minute: '2-digit', hour12: false
+        hour: '2-digit', minute: '2-digit', hour12: false,
+        timeZone: 'Europe/Paris',
     });
     const formatFrTime = (d) => timeFmt.format(d).replace(':', 'h');
     const toJsDate = (d) => (d && typeof d.toDate === 'function') ? d.toDate() : new Date(d);
