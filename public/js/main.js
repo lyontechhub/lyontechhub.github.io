@@ -272,18 +272,18 @@ const loadCalendar = async () => {
         })
     ;
 
-    document.querySelector('#calendarToday').onclick = () => {
+    document.querySelector('#calendarToday').addEventListener('click', () => {
         calendar.today();
         refreshCurrentMonth(calendar);
-    };
-    document.querySelector('#calendarNext').onclick = () => {
+    });
+    document.querySelector('#calendarNext').addEventListener('click', () => {
         calendar.next();
         refreshCurrentMonth(calendar);
-    };
-    document.querySelector('#calendarPrevious').onclick = () => {
+    });
+    document.querySelector('#calendarPrevious').addEventListener('click', () => {
         calendar.prev();
         refreshCurrentMonth(calendar);
-    };
+    });
 
 };
 
