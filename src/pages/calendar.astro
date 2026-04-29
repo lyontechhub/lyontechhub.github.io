@@ -16,33 +16,33 @@ import Layout from '../layouts/Layout.astro';
                 <a href="https://www.lyontechhub.org/Lyon-Tech-Hub-Calendar/calendar.ics">au format ical</a>.</p>
 
             <nav class="navbar is-justify-content-center calendar-header">
-                <button type="button" class="button is-default nav-item" id="calendarToday">Today</button>
-                <button type="button" class="button is-default nav-item" id="calendarPrevious">
+                <button type="button" class="button is-default nav-item" id="calendarToday">Aujourd'hui</button>
+                <button type="button" class="button is-default nav-item" id="calendarPrevious" aria-label="Mois précédent">
                 <span class="icon is-medium">
-                  <i class="fa fa-chevron-left fa-lg"></i>
+                  <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
                 </span>
                 </button>
-                <button type="button" class="button is-default nav-item" id="calendarNext">
+                <button type="button" class="button is-default nav-item" id="calendarNext" aria-label="Mois suivant">
                 <span class="icon is-medium">
-                  <i class="fa fa-chevron-right fa-lg"></i>
+                  <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </span>
                 </button>
-                <span id="calendarDate"></span>
+                <span id="calendarDate" aria-live="polite" aria-atomic="true"></span>
             </nav>
 
             <nav class="navbar is-justify-content-center calendar-header calendar-mobile-header">
                 <button type="button" class="button is-default nav-item" id="calendarMobileToday">Aujourd'hui</button>
-                <button type="button" class="button is-default nav-item" id="calendarMobilePrevious">
+                <button type="button" class="button is-default nav-item" id="calendarMobilePrevious" aria-label="Période précédente">
                 <span class="icon is-medium">
-                  <i class="fa fa-chevron-left fa-lg"></i>
+                  <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
                 </span>
                 </button>
-                <button type="button" class="button is-default nav-item" id="calendarMobileNext">
+                <button type="button" class="button is-default nav-item" id="calendarMobileNext" aria-label="Période suivante">
                 <span class="icon is-medium">
-                  <i class="fa fa-chevron-right fa-lg"></i>
+                  <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </span>
                 </button>
-                <span id="calendarMobileRange"></span>
+                <span id="calendarMobileRange" aria-live="polite" aria-atomic="true"></span>
             </nav>
 
             <div id="calendar"></div>
