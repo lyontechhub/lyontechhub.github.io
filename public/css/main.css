@@ -219,6 +219,7 @@ main {
     }
     .calendar-mobile-header {
         display: flex;
+        font-size: 16px;
     }
     #calendarMobileList .lth-card {
         padding: 16px 18px;
