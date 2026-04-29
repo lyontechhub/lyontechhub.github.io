@@ -303,12 +303,14 @@ const loadCalendarMobileList = async () => {
     };
 
     let windowStart = startOfDay(new Date());
+    let renderToken = 0;
 
-    const render = async () => {
-        const windowEnd = new Date(windowStart);
+    const render = async (start) => {
+        const myToken = ++renderToken;
+        const windowEnd = new Date(start);
         windowEnd.setDate(windowEnd.getDate() + WINDOW_DAYS);
-        if (rangeEl) rangeEl.textContent = formatRange(windowStart, windowEnd);
-        const events = (await fetchAllEvents(windowStart, windowEnd))
+        if (rangeEl) rangeEl.textContent = formatRange(start, windowEnd);
+        const events = (await fetchAllEvents(start, windowEnd))
             .toSorted((a, b) => a.startDate - b.startDate)
             .map((ev, i) => {
                 const url = safeUrl(ev.url);
@@ -320,23 +322,25 @@ const loadCalendarMobileList = async () => {
                     isNotFirst: i > 0,
                 };
             });
+        if (myToken !== renderToken) return;
         displayEvents(template, el, events);
     };
 
-    if (prevEl) prevEl.onclick = () => {
-        windowStart.setDate(windowStart.getDate() - 1);
-        render();
-    };
-    if (nextEl) nextEl.onclick = () => {
-        windowStart.setDate(windowStart.getDate() + 1);
-        render();
-    };
-    if (todayEl) todayEl.onclick = () => {
-        windowStart = startOfDay(new Date());
-        render();
+    const shiftBy = (days) => {
+        const next = new Date(windowStart);
+        next.setDate(next.getDate() + days);
+        windowStart = next;
+        render(windowStart);
     };
 
-    render();
+    prevEl?.addEventListener('click', () => shiftBy(-1));
+    nextEl?.addEventListener('click', () => shiftBy(1));
+    todayEl?.addEventListener('click', () => {
+        windowStart = startOfDay(new Date());
+        render(windowStart);
+    });
+
+    render(windowStart);
 };
 
 window.onload = () => {
