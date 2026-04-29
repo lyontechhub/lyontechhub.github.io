@@ -246,10 +246,6 @@ main {
     text-decoration: underline;
 }
 
-.toastui-calendar-popup-container .toastui-calendar-ic-state-b {
-    display: none;
-}
-
 .lth-card {
     display: flex;
     flex-direction: column;
