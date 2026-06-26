@@ -1,0 +1,26 @@
+{
+  "image": "LyonCafeViePrivee.png",
+  "name": "Lyon Café Vie Privée",
+  "shortDescription": "Collectif qui anime des ateliers et d'autres événements pour aider tout un chacun à reprendre le contrôle de sa vie privée sur Internet",
+  "tags": [
+    "Libre",
+    "Opensource",
+    "Vie privée",
+    "flash-parties",
+    "smartphones"
+  ],
+  "patternsGoogleCalendar": [
+    "LCVP"
+  ],
+  "socialLinks": [
+    {
+      "url": "https://cryptoparty.in/lyon"
+    },
+    {
+      "url": "https://mamot.fr/@lyonchiffrofete"
+    }
+  ],
+  "calendars": [
+    { "url": "TODO" }
+  ]
+}
