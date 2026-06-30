@@ -1,0 +1,18 @@
+{
+  "image": "MakersLyon.png",
+  "name": "MakersLyon",
+  "shortDescription": "Les Apéros makers ont lieu tous les deux mois et visent à faire se rencontrer toute la communauté autour du faire, de la bidouille, les makers, etc. Le format est très informel, et vous pouvez venir présenter vos propres projets.",
+  "tags": [
+    "bidouille",
+    "maker",
+    "hack",
+	"materiel",
+	"impression3d"
+  ],
+  "socialLinks": [
+    {
+	  "name": "Discord",
+      "url": "https://discord.gg/8cNzPerQx"
+    }
+  ]
+}
