@@ -37,6 +37,18 @@ function isActive(href: string): boolean {
         });
 
     });</script>
+    <script is:inline>
+        // Fallback image for any <img data-fallback="..."> that fails to load.
+        // Inline in <head> so it registers before the body images load; capture
+        // phase because error events don't bubble.
+        window.addEventListener('error', (event) => {
+            const target = event.target;
+            if (target instanceof HTMLImageElement && target.dataset.fallback) {
+                target.src = target.dataset.fallback;
+                delete target.dataset.fallback;
+            }
+        }, true);
+    </script>
 </head>
 <body class="has-navbar-fixed-top has-navbar-fixed-bottom">
 <div id="wrap">

@@ -29,7 +29,7 @@ const communities = getList();
                                     <p class="lth-card-title">{community.name}</p>
                                     <img src={`/imgs/communities/` + community.image}
                                          alt={community.name}
-                                         onerror="this.onerror=null;this.src='/imgs/noLogo.png';"
+                                         data-fallback="/imgs/noLogo.png"
                                     /><span class="learn-more">En savoir plus</span>
                                 </a>
                             )
