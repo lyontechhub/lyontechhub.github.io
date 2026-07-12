@@ -17,24 +17,17 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v6
-      - name: Setup Python
-        uses: actions/setup-python@v6
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+      - name: Setup Node
+        uses: actions/setup-node@v6
         with:
-          python-version: "3.x"
-      - name: Install check-jsonschema
-        run: pip install check-jsonschema
-      - name: Validate Guide only Custom Formats
-        run: |
-          EXIT=0
-          for f in data/*; do
-            if [[ "$f" == "data/conferences.json" ]]; then
-              check-jsonschema -v --schemafile schema/conferences.json "data/conferences.json" || EXIT=1
-            else
-              check-jsonschema -v --schemafile schema/community.json "$f" || EXIT=1
-            fi
-          done
-
-          exit $EXIT
+          node-version: 24
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Validate data files against JSON schema
+        run: pnpm test
 
   build:
     runs-on: ubuntu-latest
