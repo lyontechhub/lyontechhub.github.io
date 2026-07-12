@@ -14,13 +14,19 @@
   ],
   "socialLinks": [
     {
-      "url": "https://cryptoparty.in/lyon"
+      "name": "Site web",
+      "url": "https://lyon-cvp.fr"
     },
     {
+      "name": "Mastodon",
       "url": "https://mamot.fr/@lyonchiffrofete"
+    },
+    {
+      "name": "Bluesky",
+      "url": "https://bsky.app/profile/lyonchiffrofete.mamot.fr.ap.brid.gy"
     }
   ],
   "calendars": [
-    { "url": "TODO" }
+    { "url": "https://sync.infomaniak.com/calendars/BM04396/a473af33-7790-4622-9d34-b663e9ce2e3d?export" }
   ]
 }
