@@ -24,7 +24,6 @@ const communities = getList();
                     {communities
                         .map(
                             (community) => (
-                                <!--<div class="cell">-->
                                 <a class="lth-card lth-card-reference filterable" href={`/community/` + community.key}
                                    data-key={community.name}>
                                     <p class="lth-card-title">{community.name}</p>
@@ -33,7 +32,6 @@ const communities = getList();
                                          onerror="this.onerror=null;this.src='/imgs/noLogo.png';"
                                     /><span class="learn-more">En savoir plus</span>
                                 </a>
-                                <!--</div>-->
                             )
                         )
                     }
