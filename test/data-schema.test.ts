@@ -14,7 +14,7 @@ const dataDir = dir('../data')
 const files = readdirSync(dataDir).filter((f) => f.endsWith('.json'))
 
 describe('data files match their JSON schema', () => {
-    test.each(files)('%s is valid', (file) => {
+    test.each<string>(files)('%s is valid', (file: string) => {
         const validate = file === 'conferences.json' ? validateConferences : validateCommunity
         const valid = validate(read(`${dataDir}/${file}`))
 
