@@ -1,4 +1,4 @@
-import { expect, test, describe, beforeEach } from 'vitest'
+import { expect, test, describe } from 'vitest'
 import { extractCalendars, getSocialDisplayData, type Community } from './communities'
 
 describe('communities', () => {
