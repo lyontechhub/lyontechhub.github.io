@@ -33,8 +33,8 @@ Developers
 ----------
 This website is done with [Astro](https://astro.build/) framework, using TypeScript and plain HTML/CSS/JavaScript.
 
-The website is hosted through GitHub pages at lyontechhub.github.io.
-The branch `gh-pages` hosts the website.
+The website is hosted through GitHub Pages at lyontechhub.github.io, built and
+deployed automatically by GitHub Actions (`actions/deploy-pages`) from the `dev` branch.
 
 ### Source code
 
@@ -55,8 +55,8 @@ Images like community icons are in 'public/imgs/communities' directory.
 After cloning, just type the following commands:
 
 ```
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 ### Deployment
