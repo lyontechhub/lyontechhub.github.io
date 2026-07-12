@@ -42,7 +42,7 @@ const { community } = Astro.props;
                             const displayData = getSocialDisplayData(socialLink)
 
                             return (
-                                <a class="" href={socialLink.url} target="_blank" title={displayData.tooltip}>
+                                <a href={socialLink.url} target="_blank" title={displayData.tooltip}>
                                     <span class="icon is-large">
                                         <i class={"fa-2x " + displayData.icon}></i>
                                     </span>
