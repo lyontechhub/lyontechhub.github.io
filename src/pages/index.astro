@@ -3,72 +3,60 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <main>
-    <div class="section">
-        <div class="container">
+    <main>
+        <div class="section">
             <div class="container">
-              <p class="title">Lyon Tech Hub</p>
-              <p class="subtitle">Le hub des communautés IT/techniques lyonnaises</p>
-            </div>
-            <div class="grid mt-4">
-                <div class="cell">
-                    <a href="/communities">
-                        <div class="card">
-                            <div class="card-content has-text-centered">
-                                <span class="icon is-large has-text-link"><i class="fa fa-comments fa-5x"></i></span>
-                                <p class="title is-3 mt-3">Des communautés diverses et variées</p>
-                                <p>Des technos, des pratiques, des outils...à découvrir</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cell">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <span class="icon is-large"><i class="fas fa-users fa-5x"></i></span>
-                            <p class="title is-3 mt-3">Des experts passionnés</p>
-                            <p>Les participants et les organisateurs font de leur métier une passion</p>
+                <p class="title">Le hub des communautés IT/techniques lyonnaises</p>
+                <div class="grid mt-4">
+                    <div class="cell">
+                        <a href="/communities" class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-comments"></i></span>
+                            <p class="lth-card-title">Des communautés diverses et variées</p>
+                            <p class="lth-card-text">Des technos, des pratiques, des outils...à découvrir</p>
+                            <span class="learn-more">En savoir plus</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <div class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-users"></i></span>
+                            <p class="lth-card-title">Des experts passionnés</p>
+                            <p class="lth-card-text">Les participants et les organisateurs font de leur métier une
+                                passion</p>
                         </div>
                     </div>
-                </div>
-                <div class="cell">
-                    <a href="/calendar">
-                        <div class="card">
-                            <div class="card-content has-text-centered">
-                                <span class="icon is-large has-text-link"><i class="fa fa-calendar fa-5x"></i></span>
-                                <p class="title is-3 mt-3">Un calendrier de tous les événements</p>
-                                <p>Plus aucune raison de manquer un des événements !</p>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="cell">
+                        <a href="/calendar" class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-calendar"></i></span>
+                            <p class="lth-card-title">Un calendrier de tous les événements</p>
+                            <p class="lth-card-text">Plus aucune raison de manquer un des événements !</p>
+                            <span class="learn-more">En savoir plus</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="container">
-              <p class="title">Bien plus qu'un calendrier ! Vous êtes...</p>
-            </div>
-            <div class="grid mt-4">
-                <div class="cell">
-                    <a href="/member">
-                        <div class="card">
-                            <div class="card-content has-text-centered">
-                                <span class="icon is-medium has-text-link"><i class="fa fa-street-view fa-5x"></i></span>
-                                <p class="title is-3 mt-3">Membre d'une communauté</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="cell">
-                    <a href="/orga">
-                        <div class="card">
-                            <div class="card-content has-text-centered">
-                                <span class="icon is-medium has-text-link"><i class="fa fa-bullhorn fa-5x"></i></span>
-                                <p class="title is-3 mt-3">Orga d'une communauté</p>
-                            </div>
-                        </div>
-                    </a>
+                <p class="title">Bien plus qu'un calendrier ! Vous êtes...</p>
+                <div class="grid mt-4">
+                    <div class="cell">
+                        <a href="/member" class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-street-view"></i></span>
+                            <p class="lth-card-title">Membre d'une communauté</p>
+                            <p class="lth-card-text">Bénéficiez de plus d'échanges entre votre communauté et les autres
+                                communautés Lyon Tech Hub</p>
+                            <span class="learn-more">En savoir plus</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="/orga" class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-bullhorn"></i></span>
+                            <p class="lth-card-title">Orga d'une communauté</p>
+                            <p class="lth-card-text">Vous avez besoin d'un espace de stockage, vous souhaitez assurer
+                                vos évènements ?</p>
+                            <span class="learn-more">En savoir plus</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-  </main>
+    </main>
 </Layout>

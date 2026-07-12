@@ -23,14 +23,6 @@ const toDescription = component => {
     return description;
 };
 
-const meetupUrlFor = description => {
-    const matching = description.match(/(https:\/\/www.meetup.com\/[a-zA-Z0-9-]+\/events\/[0-9]+)/g);
-    if (matching && matching.length > 0) {
-        return matching[matching.length - 1];
-    }
-    return undefined;
-};
-
 const toEvent = (component, index) => {
     const description = toDescription(component);
     const startDate = component.getFirstPropertyValue('dtstart').toJSDate();
@@ -38,14 +30,14 @@ const toEvent = (component, index) => {
     const format = (d) => d.toString().padStart(2, '0');
     const formatHour = (d) => format(d.getHours()) + 'H' + format(d.getMinutes());
     const months = ['Jan', 'Fev', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Aout', 'Sept', 'Oct', 'Nov', 'Dec'];
-    const url = component.getFirstPropertyValue('url') || meetupUrlFor(description);
+    const url = component.getFirstPropertyValue('url');
     return {
         id: component.getFirstPropertyValue('uid'),
         title: component.getFirstPropertyValue('summary'),
         description: description,
         hasDescription: description && description.length > 0,
         url,
-        hasUrl: url !== undefined && url !== null,
+        hasUrl: url !== undefined,
         startDate,
         endDate,
         location: component.getFirstPropertyValue('location'),
@@ -61,15 +53,35 @@ const matchPatternForEvent = event => pattern => event.title.toLowerCase().inclu
 
 const matchForPatterns = patterns => event => patterns.some(matchPatternForEvent(event));
 
-const filterForPeriod = (minDate, maxDate) => event => event.startDate >= minDate && event.endDate <= maxDate;
+const filterForPeriod = (minDate, maxDate) => event => event.startDate < maxDate && event.endDate > minDate;
 
 const listVEventComponents = raw => new ICAL.Component(ICAL.parse(raw)).getAllSubcomponents('vevent');
 
+const escapeHtml = (s) => String(s ?? '').replace(/[&<>"']/g, (c) =>
+    ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+
+const safeUrl = (url) => {
+    if (!url) return '';
+    let parsed;
+    try { parsed = new URL(url, document.baseURI); } catch { return ''; }
+    if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return '';
+    return parsed.href;
+};
+
 const calendarICSUrl = 'https://www.lyontechhub.org/Lyon-Tech-Hub-Calendar/calendar.ics';
 
-const fetchEvents = (patterns, minDate, maxDate) => fetch(calendarICSUrl).then((response) => response.text()).then((raw) =>
-    listVEventComponents(raw)
-        .map(toEvent)
+let _icsEventsP;
+const fetchAllRawEvents = () => {
+    if (!_icsEventsP) {
+        _icsEventsP = fetch(calendarICSUrl)
+            .then((response) => response.text())
+            .then((raw) => listVEventComponents(raw).map(toEvent));
+    }
+    return _icsEventsP;
+};
+
+const fetchEvents = (patterns, minDate, maxDate) => fetchAllRawEvents().then((events) =>
+    events
         .filter(filterForPeriod(minDate, maxDate))
         .filter(matchForPatterns(patterns)));
 
@@ -90,6 +102,12 @@ const loadCommunities = () =>
         .then((response) => response.text())
         .then((body) => JSON.parse(body));
 
+const refreshCurrentMonth = (calendar) =>{
+    let dateRangeStart = calendar.getDate();
+    const monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    document.querySelector('#calendarDate').textContent = monthNames[dateRangeStart.getMonth()] + ' ' + dateRangeStart.getFullYear();
+}
+
 const loadCalendar = async () => {
     const communities = await loadCommunities();
     const communitiesCalendars =
@@ -103,6 +121,18 @@ const loadCalendar = async () => {
             });
 
     const Calendar = tui.Calendar;
+    const capitalize = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+    const dateFmt = new Intl.DateTimeFormat('fr-FR', {
+        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
+        timeZone: 'Europe/Paris',
+    });
+    const timeFmt = new Intl.DateTimeFormat('fr-FR', {
+        hour: '2-digit', minute: '2-digit', hour12: false,
+        timeZone: 'Europe/Paris',
+    });
+    const formatFrTime = (d) => timeFmt.format(d).replace(':', 'h');
+    const toJsDate = (d) => (d && typeof d.toDate === 'function') ? d.toDate() : new Date(d);
+
     const calendar = new Calendar('#calendar', {
         usageStatistics: false,
         defaultView: 'month',
@@ -119,6 +149,20 @@ const loadCalendar = async () => {
                 },
             ],
         },
+        template: {
+            popupDetailDate({ start, end, isAllday }) {
+                const startDate = toJsDate(start);
+                const endDate = toJsDate(end);
+                const startStr = capitalize(dateFmt.format(startDate));
+                if (isAllday) return startStr;
+                const sameDay = dateFmt.format(startDate) === dateFmt.format(endDate);
+                if (sameDay) {
+                    return `${startStr}, ${formatFrTime(startDate)} - ${formatFrTime(endDate)}`;
+                }
+                const endStr = capitalize(dateFmt.format(endDate));
+                return `${startStr}, ${formatFrTime(startDate)} → ${endStr}, ${formatFrTime(endDate)}`;
+            },
+        },
         calendars: [
           {
             id: 'default',
@@ -129,9 +173,49 @@ const loadCalendar = async () => {
         ],
     });
 
-    fetch(calendarICSUrl)
-        .then((response) => response.text())
-        .then((raw) => listVEventComponents(raw).map(toEvent))
+    // Workaround Toast UI Calendar 2.1.3 popup offset bug: the lib writes
+    // document-relative top/left on a popup whose CSS containing block is
+    // whatever the closest positioned ancestor happens to be (here Bulma's
+    // .container, since the popup is portalled into a floating-layer that is
+    // a sibling of the calendar layout, not a descendant). We re-anchor by
+    // subtracting the popup's actual offsetParent's document offset.
+    const calendarRoot = document.querySelector('#calendar');
+    if (calendarRoot) {
+        const fixPopupPosition = () => {
+            const popup = calendarRoot.querySelector('.toastui-calendar-popup-container');
+            if (!popup || !popup.style.top || !popup.style.left) return;
+            const op = popup.offsetParent;
+            if (!op) return;
+            const r = op.getBoundingClientRect();
+            const dy = r.top + window.scrollY;
+            const dx = r.left + window.scrollX;
+            const key = popup.style.top + '|' + popup.style.left;
+            if (popup.dataset.lthPosKey === key) return;
+            const t = parseFloat(popup.style.top);
+            const l = parseFloat(popup.style.left);
+            if (Number.isNaN(t) || Number.isNaN(l)) return;
+            popup.style.top = (t - dy) + 'px';
+            popup.style.left = (l - dx) + 'px';
+            popup.dataset.lthPosKey = popup.style.top + '|' + popup.style.left;
+        };
+        const attachObserver = () => {
+            const layer = calendarRoot.querySelector('.toastui-calendar-floating-layer');
+            if (!layer) {
+                setTimeout(attachObserver, 50);
+                return;
+            }
+            new MutationObserver(fixPopupPosition).observe(layer, {
+                childList: true,
+                subtree: true,
+                attributes: true,
+                attributeFilter: ['style'],
+            });
+        };
+        attachObserver();
+    }
+
+    refreshCurrentMonth(calendar);
+    fetchAllRawEvents()
         .then((items) => {
             calendar.createEvents(
                 items.map((item) => {
@@ -144,7 +228,7 @@ const loadCalendar = async () => {
                             if (patterns) {
                                 for (var j = 0; j < patterns.length; j++) {
                                     if (match[1].localeCompare(patterns[j], 'en', { sensitivity: 'base' }) === 0) {
-                                        title = '[' +  match[1] + '] ' + match[2];
+                                        title = '[' + patterns[j] + '] ' + match[2];
                                         calendarId = communities[i].key;
                                         break;
                                     }
@@ -153,35 +237,128 @@ const loadCalendar = async () => {
                         }
                     }
 
+                    function formatWithLink(text, url) {
+                        const safeText = escapeHtml(text);
+                        const href = safeUrl(url);
+                        return href
+                            ? `<a class="calendar-popup-text" href="${escapeHtml(href)}">${safeText}</a>`
+                            : safeText;
+                    }
+
+                    const safeItemUrl = safeUrl(item.url);
+                    const truncated = truncate(item.description, 200);
+                    const truncatedHtml = escapeHtml(truncated || '');
+                    const linkHtml = safeItemUrl
+                        ? `<div class="calendar-popup-link-wrap"><a class="calendar-popup-link" href="${escapeHtml(safeItemUrl)}" target="_blank" rel="noopener noreferrer">En savoir plus <i class="fa fa-external-link-alt"></i></a></div>`
+                        : '';
+                    const body = truncatedHtml && linkHtml
+                        ? `${truncatedHtml}${linkHtml}`
+                        : (truncatedHtml || linkHtml);
+
                     return {
                         calendarId: calendarId,
                         id: item.id,
-                        title: title,
-                        body: item.description,
+                        title: formatWithLink(title, safeItemUrl),
+                        body,
                         start: item.startDate,
                         end: item.endDate,
                         location: item.location,
-                        raw: { url: item.url },
+                        state: '',
+                        raw: { url: safeItemUrl },
+                        isReadOnly: true,
                     }
                 })
             );
         })
     ;
 
-    const monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
-    const updateMonthDisplay = () => {
-        const date = calendar.getDate();
-        const monthElement = document.querySelector('#calendarMonth');
-        if (monthElement) {
-            monthElement.textContent = monthNames[date.getMonth()] + ' ' + date.getFullYear();
-        }
+    document.querySelector('#calendarToday').addEventListener('click', () => {
+        calendar.today();
+        refreshCurrentMonth(calendar);
+    });
+    document.querySelector('#calendarNext').addEventListener('click', () => {
+        calendar.next();
+        refreshCurrentMonth(calendar);
+    });
+    document.querySelector('#calendarPrevious').addEventListener('click', () => {
+        calendar.prev();
+        refreshCurrentMonth(calendar);
+    });
+
+};
+
+const startOfDay = (d) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+
+const truncate = (text, max) => {
+    if (!text) return text;
+    const chars = [...text];
+    if (chars.length <= max) return text;
+    return chars.slice(0, max).join('').replace(/[.\s…]+$/, '') + '…';
+};
+
+const fetchAllEvents = (minDate, maxDate) =>
+    fetchAllRawEvents().then((events) => events.filter(filterForPeriod(minDate, maxDate)));
+
+const loadCalendarMobileList = async () => {
+    const el = document.getElementById('calendarMobileList');
+    if (!el) return;
+    const rangeEl = document.getElementById('calendarMobileRange');
+    const prevEl = document.getElementById('calendarMobilePrevious');
+    const nextEl = document.getElementById('calendarMobileNext');
+    const todayEl = document.getElementById('calendarMobileToday');
+
+    const template = Handlebars.compile(
+        await fetch('/js/communityEvents.html').then((r) => r.text())
+    );
+
+    const WINDOW_DAYS = 14;
+    const monthLabels = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+        'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+    const formatRange = (start, endExclusive) => {
+        const last = new Date(endExclusive);
+        last.setDate(last.getDate() - 1);
+        return `${start.getDate()} ${monthLabels[start.getMonth()]}`;
     };
-    updateMonthDisplay();
 
-    document.querySelector('#calendarToday').onclick = () => { calendar.today(); updateMonthDisplay(); };
-    document.querySelector('#calendarNext').onclick = () => { calendar.next(); updateMonthDisplay(); };
-    document.querySelector('#calendarPrevious').onclick = () => { calendar.prev(); updateMonthDisplay(); };
+    let windowStart = startOfDay(new Date());
+    let renderToken = 0;
 
+    const render = async (start) => {
+        const myToken = ++renderToken;
+        const windowEnd = new Date(start);
+        windowEnd.setDate(windowEnd.getDate() + WINDOW_DAYS);
+        if (rangeEl) rangeEl.textContent = formatRange(start, windowEnd);
+        const events = (await fetchAllEvents(start, windowEnd))
+            .toSorted((a, b) => a.startDate - b.startDate)
+            .map((ev, i) => {
+                const url = safeUrl(ev.url);
+                return {
+                    ...ev,
+                    url,
+                    hasUrl: Boolean(url),
+                    description: truncate(ev.description, 200),
+                    isNotFirst: i > 0,
+                };
+            });
+        if (myToken !== renderToken) return;
+        displayEvents(template, el, events);
+    };
+
+    const shiftBy = (days) => {
+        const next = new Date(windowStart);
+        next.setDate(next.getDate() + days);
+        windowStart = next;
+        render(windowStart);
+    };
+
+    prevEl?.addEventListener('click', () => shiftBy(-1));
+    nextEl?.addEventListener('click', () => shiftBy(1));
+    todayEl?.addEventListener('click', () => {
+        windowStart = startOfDay(new Date());
+        render(windowStart);
+    });
+
+    render(windowStart);
 };
 
 window.onload = () => {
@@ -205,15 +382,19 @@ window.onload = () => {
                     fourMonthAgo,
                     fourMonthLater
                 ).then((items) => {
+                    const sanitized = items.map((item) => {
+                        const url = safeUrl(item.url);
+                        return { ...item, url, hasUrl: Boolean(url) };
+                    });
                     displayEvents(
                         compiledTemplate,
                         pastEventsElement,
-                        items.filter((item) => item.startDate < now).toSorted((a, b) => b.startDate - a.startDate)
+                        sanitized.filter((item) => item.startDate < now).toSorted((a, b) => b.startDate - a.startDate)
                     );
                     displayEvents(
                         compiledTemplate,
                         upcomingEventsElement,
-                        items.filter((item) => item.startDate >= now).toSorted((a, b) => a.startDate - b.startDate)
+                        sanitized.filter((item) => item.startDate >= now).toSorted((a, b) => a.startDate - b.startDate)
                     );
                 });
             });
@@ -223,4 +404,5 @@ window.onload = () => {
     if (calendarElement) {
         loadCalendar();
     }
+    loadCalendarMobileList();
 }

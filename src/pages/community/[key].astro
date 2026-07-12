@@ -20,14 +20,11 @@ const { community } = Astro.props;
     <div class="section">
       <div class="container">
         <div class="columns is-centered">
-          <div class="colum is-half">
-            <p class="title">
+          <div class="colum is-half community-image">
               <img src={"/imgs/communities/" + community.image}
                    onerror="this.onerror=null;this.src='/imgs/noLogo.png';"
-                   class="image"
                    style="max-height: 10em;"
               />
-            </p>
             <p class="subtitle">{community.name}</p>
           </div>
         </div>
@@ -35,7 +32,7 @@ const { community } = Astro.props;
              id="communityDetails"
              data-patterns-google-calendar={JSON.stringify(community.patternsGoogleCalendar)}>
           <div class="cell">
-            <div class="card">
+            <div class="lth-card">
               <div class="card-content">
                 <p class="title">En bref...</p>
                 <p>{community.shortDescription}</p>

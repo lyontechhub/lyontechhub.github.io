@@ -1,8 +1,7 @@
-<div class="card">
+<div class="lth-card">
   <div class="card-content">
-    <p class="title">{{ paneTitle }}</p>
     {{#if noEvent}}
-      <p class="title is-6">
+      <p class="lth-card-title is-6">
         {{ noEventCaption }}
       </p>
     {{/if}}
@@ -16,12 +15,12 @@
       </p>
       <p class="title is-5">
         {{#if hasUrl}}
-          <a href="{{url}}" target="_blank" title="Lien vers l'événement">{{ title }} <span class="icon is-medium"><i class="fa fa-external-link fa-lg"></i></span></a>
+          <a href="{{url}}" target="_blank" rel="noopener noreferrer" title="Lien vers l'événement">{{ title }} <span class="icon is-medium"><i class="fa fa-external-link fa-lg"></i></span></a>
         {{else}}
           {{ title }}
         {{/if}}
       </p>
-      <p class="subtitle is-5">De {{ startDateHour }} à {{ endDateHour }} - {{ location }}</p>
+      <p class="subtitle is-5">De {{ startDateHour }} à {{ endDateHour }}{{#if location}} - {{ location }}{{/if}}</p>
       {{#if hasDescription}}
       <p class="description">{{ description }}</p>
       {{/if}}

@@ -1,53 +1,44 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getList } from '../lib/communities.ts';
+import {getList} from '../lib/communities.ts';
 
 const communities = getList();
-
 ---
 
 <Layout>
-  <main>
-    <div class="container is-fluid">
-        <p class="title">
-          {communities.length} communautés diverses et variées regroupées dans Lyon Tech Hub
-        </p>
-        <p class="subtitle">
-          <a href="/about">Par ici pour référencer la votre !</a>
-        </p>
-        <div class="field">
-          <label class="label" for="filterCommunities">Rechercher</label>
-          <div class="control">
-            <input type="text" id="filterCommunities" onkeyup="dynamicFilter('filterCommunities')" />
-          </div>
+    <main>
+        <div class="section">
+            <div class="container">
+                <p class="title">
+                    {communities.length} communautés variées regroupées dans Lyon Tech Hub
+                </p>
+                <div class="search-header">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input class="search-input" type="text" id="filterCommunities"
+                               onkeyup="dynamicFilter('filterCommunities')" placeholder="Rechercher"/>
+                    </div>
+                    <a href="/about" class="search-header-link">Par ici pour référencer la votre !</a>
+                </div>
+                <div class="grid is-col-min-10">
+                    {communities
+                        .map(
+                            (community) => (
+                                <!--<div class="cell">-->
+                                <a class="lth-card lth-card-reference filterable" href={`/community/` + community.key}
+                                   data-key={community.name}>
+                                    <p class="lth-card-title">{community.name}</p>
+                                    <img src={`/imgs/communities/` + community.image}
+                                         alt={community.name}
+                                         onerror="this.onerror=null;this.src='/imgs/noLogo.png';"
+                                    /><span class="learn-more">En savoir plus</span>
+                                </a>
+                                <!--</div>-->
+                            )
+                        )
+                    }
+                </div>
+            </div>
         </div>
-        <div class="grid is-col-min-12">
-            {communities
-                .map(
-                    (community) => (
-                        <div class="cell filterable" data-key={community.name}>
-                            <div class="card">
-                                <header class="card-header">
-                                  <a href={`/community/` + community.key}>
-                                    <p class="card-header-title">{community.name}</p>
-                                  </a>
-                                </header>
-                                <div class="card-image has-text-centered">
-                                    <a href={`/community/` + community.key}>
-                                      <figure class="image is-128x128 is-inline-block">
-                                        <img src={`/imgs/communities/` + community.image}
-                                             alt={community.name}
-                                             onerror="this.onerror=null;this.src='/imgs/noLogo.png';"
-                                        />
-                                      </figure>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                )
-            }
-        </div>
-    </div>
-  </main>
+    </main>
 </Layout>

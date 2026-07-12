@@ -3,83 +3,87 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
     <main>
-      <div class="section">
-        <div class="container">
+        <div class="section">
             <div class="container">
-              <p class="title">Vous organisez une communauté</p>
-            </div>
-            <div class="grid mt-4">
-                <div class="cell">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <span class="icon is-large"><i class="fas fa-user-shield fa-3x"></i></span>
-                            <p class="title is-3">Assurance Événementielle</p>
-                            <p>Organisez vos événements en toute tranquillité grâce à notre assurance couvrant une gamme de risques. Sont notamment couverts : responsabilité civile de l'occupant, reponsabilité civile "produits" (y compris risque d'intoxication alimentaire), dommage aux biens, etc.</p>
-                            <p>Comment en bénéficier ? Il suffit qu'un participant à votre évènement ait payé la cotisation de 1€ à Lyon Tech Hub <a href="https://lyontechhub.assoconnect.com/collect/description/415076-s-adhesion-annuelle">par assoconnect</a>.</p>
-                        </div>
+                <p class="title">Vous organisez une communauté</p>
+                <div class="grid mt-4">
+                    <div class="cell">
+                        <a href="https://lyontechhub.assoconnect.com/collect/description/415076-s-adhesion-annuelle"
+                           class="lth-card">
+                            <span class="lth-card-icon"><i class="fas fa-user-shield"></i></span>
+                            <p class="lth-card-title">Assurance Événementielle</p>
+                            <p class="lth-card-text">Organisez vos événements en toute tranquillité grâce à notre
+                                assurance couvrant une gamme de risques. Sont notamment couverts : les dommages
+                                matériels et aux personnes, etc.</p>
+                            <p class="lth-card-text">Comment en bénéficier ? Il suffit que votre évènement soit
+                                explicitement organisé en collaboration avec un organisateur Lyon Tech Hub ayant payé la
+                                cotisation de 1€ par assoconnect.</p>
+                            <span class="learn-more">En savoir plus</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a title="contact@lyontechhub.org" href="mailto:contact@lyontechhub.org" class="lth-card">
+                            <span class="lth-card-icon"><i class="fas fa-hdd"></i></span>
+                            <p class="lth-card-title">Espace de Stockage Nextcloud</p>
+                            <p class="lth-card-text">Simplifiez le partage de fichiers et la collaboration dans
+                                votre communauté grâce à un espace de stockage Nextcloud dédié à votre communauté.
+                            </p>
+                            <span class="learn-more">Contactez-nous pour en bénéficier</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="https://www.meetup.com/find/?keywords=lyon+tech+hub&location=fr--Lyon&source=EVENTS"
+                           class="lth-card">
+                            <span class="lth-card-icon"><i class="fas fa-handshake"></i></span>
+                            <p class="lth-card-title">Soirée des Communautés</p>
+                            <p class="lth-card-text">Ne manquez pas notre événement annuel en juin, la Soirée des
+                                Communautés, où vous pourrez rencontrer d'autres organisateurs, échanger des
+                                conseils et résoudre des problèmes ensemble. C'est l'occasion idéale pour découvrir
+                                de nouvelles astuces et partager vos expériences.</p>
+                            <span class="learn-more">En savoir plus</span>
+                        </a>
                     </div>
                 </div>
-                <div class="cell">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <span class="icon is-large"><i class="fas fa-hdd fa-3x"></i></span>
-                            <p class="title is-3">Espace de Stockage Nextcloud</p>
-                            <p>Simplifiez le partage de fichiers et la collaboration dans votre communauté grâce à un espace de stockage Nextcloud dédié à votre communauté. Contactez-nous pour en bénéficier via <b><a title="@lyontechhub" href="https://x.com/LyonTechHub">X (Twitter)</a></b> ou <b><a title="contact@lyontechhub.org" href="mailto:contact@lyontechhub.org">contact@lyontechhub.org</a></b>.</p>
+                <div class="container">
+                    <p class="title">Pour plus d'opportunités de...</p>
+                </div>
+                <div class="grid mt-4">
+                    <div class="cell">
+                        <div class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-beer"></i></span>
+                            <h3 class="lth-card-title">Rencontrer</h3>
+                            <p class="lth-card-text">Les événements sont une très bonne occasion pour rencontrer
+                                des experts pour vous aider dans vos projets, de potentiels clients, de futurs ou
+                                anciens collègues, ou pour le plaisir !</p>
                         </div>
                     </div>
-                </div>
-                <div class="cell">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <span class="icon is-large"><i class="fas fa-handshake fa-3x"></i></span>
-                            <p class="title is-3">Soirée des Communautés</p>
-                            <p>Ne manquez pas notre événement annuel en juin, la Soirée des Communautés, où vous pourrez rencontrer d'autres organisateurs, échanger des conseils et résoudre des problèmes ensemble. C'est l'occasion idéale pour découvrir de nouvelles astuces et partager vos expériences.</p>
+                    <div class="cell">
+                        <div class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-flask"></i></span>
+                            <h3 class="lth-card-title">Découvrir</h3>
+                            <p class="lth-card-text">Vous trouverez toujours un sujet à découvrir pour en faire une
+                                opportunité de faire mieux ou tout simplement autrement.</p>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="container">
-              <p class="title">Pour plus d'opportunités de...</p>
-            </div>
-            <div class="grid mt-4">
-                <div class="cell">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <span class="icon is-large"><i class="fa fa-beer fa-3x"></i></span>
-                            <h3 class="title is-3">Rencontrer</h3>
-                            <p>Les événements sont une très bonne occasion pour rencontrer des experts pour vous aider dans vos projets, de potentiels clients, de futurs ou anciens collègues, ou pour le plaisir !</p>
+                    <div class="cell">
+                        <div class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-cogs"></i></span>
+                            <h3 class="lth-card-title">Apprendre</h3>
+                            <p class="lth-card-text">Vous apprendrez des expériences des autres, vous serez motivé
+                                pour aller plus loin suite à la découverte d'un sujet, vous rencontrerez des
+                                formateurs reconnus...</p>
                         </div>
                     </div>
-                </div>
-                <div class="cell">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <span class="icon is-large"><i class="fa fa-flask fa-3x"></i></span>
-                            <h3 class="title is-3">Découvrir</h3>
-                            <p>Vous trouverez toujours un sujet à découvrir pour en faire une opportunité de faire mieux ou tout simplement autrement.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cell">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <span class="icon is-large"><i class="fa fa-rocket fa-3x"></i></span>
-                            <h3 class="title is-3">Apprendre</h3>
-                            <p>Vous apprendrez des expériences des autres, vous serez motivé pour aller plus loin suite à la découverte d'un sujet, vous rencontrerez des formateurs reconnus...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cell">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <span class="icon is-large"><i class="fas fa-cogs fa-3x"></i></span>
-                            <h3 class="title is-3">Échanger</h3>
-                            <p>La richesse et la diversité des échanges vous apporteront de nouvelles perspectives et des idées pour le futur.</p>
+                    <div class="cell">
+                        <div class="lth-card">
+                            <span class="lth-card-icon"><i class="fa fa-rocket"></i></span>
+                            <h3 class="lth-card-title">Échanger</h3>
+                            <p class="lth-card-text">La richesse et la diversité des échanges vous apporteront de
+                                nouvelles perspectives et des idées pour le futur.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-  </main>
+    </main>
 </Layout>
