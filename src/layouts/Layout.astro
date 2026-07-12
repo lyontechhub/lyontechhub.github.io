@@ -1,4 +1,9 @@
 ---
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@toast-ui/calendar/dist/toastui-calendar.min.css';
+import 'bulma/css/versions/bulma-no-dark-mode.min.css';
+import '../styles/main.css';
+
 interface Props {
 }
 
@@ -19,18 +24,7 @@ function isActive(href: string): boolean {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lyon Tech Hub</title>
     <link rel="icon" type="image/png" href="/imgs/logo/LyonTechHub-32-red.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
-          integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link href="/css/toastui-calendar.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"
-            integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" is:inline></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css">
-    <link href="/css/main.css" rel="stylesheet">
-    <script src="/js/ical.es5.min.cjs" is:inline></script>
-    <script src="/js/toastui-calendar.min.js" is:inline></script>
-    <script src="/js/main.js" is:inline></script>
+    <script>import '../scripts/main.js';</script>
     <script>document.addEventListener('DOMContentLoaded', () => {
         const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
         $navbarBurgers.forEach(el => {
@@ -43,6 +37,18 @@ function isActive(href: string): boolean {
         });
 
     });</script>
+    <script is:inline>
+        // Fallback image for any <img data-fallback="..."> that fails to load.
+        // Inline in <head> so it registers before the body images load; capture
+        // phase because error events don't bubble.
+        window.addEventListener('error', (event) => {
+            const target = event.target;
+            if (target instanceof HTMLImageElement && target.dataset.fallback) {
+                target.src = target.dataset.fallback;
+                delete target.dataset.fallback;
+            }
+        }, true);
+    </script>
 </head>
 <body class="has-navbar-fixed-top has-navbar-fixed-bottom">
 <div id="wrap">

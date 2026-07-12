@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
     "image": { "type": "string" },
@@ -7,57 +7,47 @@
     "shortDescription": { "type": "string" },
     "tags": {
       "type": "array",
-      "items": [
-        { "type": "string" }
-      ],
+      "items": { "type": "string" },
       "uniqueItems": true
     },
     "patternsGoogleCalendar": {
       "type": "array",
-      "items": [
-        { "type": "string" }
-      ],
+      "items": { "type": "string" },
       "minItems": 1,
       "uniqueItems": true
     },
     "socialLinks": {
       "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "icon": { "type": "string" },
-            "name": { "type": "string" },
-            "url": { "type": "string" }
-          },
-          "required": [
-            "url"
-          ]
-        }
-      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "icon": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string" }
+        },
+        "required": [
+          "url"
+        ]
+      },
       "uniqueItems": true
     },
     "slackChannels": {
       "type": "array",
-      "items": [
-        { "type": "string" }
-      ],
+      "items": { "type": "string" },
       "uniqueItems": true
     },
     "calendars": {
       "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "prefixTag": { "type": "string" },
-            "url": { "type": "string" }
-          },
-          "required": [
-            "url"
-          ]
-        }
-      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "prefixTag": { "type": "string" },
+          "url": { "type": "string" }
+        },
+        "required": [
+          "url"
+        ]
+      },
       "uniqueItems": true
     }
   },

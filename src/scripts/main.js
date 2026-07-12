@@ -1,3 +1,7 @@
+import ICAL from 'ical.js';
+import Calendar from '@toast-ui/calendar';
+import Handlebars from 'handlebars/dist/handlebars.js';
+
 const dynamicFilter = inputId => {
     // Declare variables
     var input, filter, items, i, txtValue;
@@ -120,7 +124,6 @@ const loadCalendar = async () => {
                 return { id: community.key, name: community.name, backgroundColor: color };
             });
 
-    const Calendar = tui.Calendar;
     const capitalize = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
     const dateFmt = new Intl.DateTimeFormat('fr-FR', {
         weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
@@ -362,6 +365,10 @@ const loadCalendarMobileList = async () => {
 };
 
 window.onload = () => {
+    document.querySelectorAll('.search-input').forEach((input) => {
+        input.addEventListener('keyup', () => dynamicFilter(input.id));
+    });
+
     var communityDetailsEventsElement = document.getElementById('communityDetails');
     var pastEventsElement = document.getElementById('pastEvents');
     var upcomingEventsElement = document.getElementById('upcomingEvents');

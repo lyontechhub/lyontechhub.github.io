@@ -25,7 +25,7 @@ const conferences: Conference[] = globFiles['../../data/conferences.json'].defau
                 <div class="search-box">
                     <i class="fas fa-search search-icon"></i>
                     <input class="search-input" type="text" id="filterConferences"
-                           onkeyup="dynamicFilter('filterConferences')" placeholder="Rechercher"/>
+                           placeholder="Rechercher"/>
                 </div>
                 <a href="/about" class="search-header-link">Par ici pour référencer la votre !</a>
             </div>
@@ -38,7 +38,7 @@ const conferences: Conference[] = globFiles['../../data/conferences.json'].defau
                                 <p class="lth-card-title">{conference.name}</p>
                                 <img src={"/imgs/conferences/" + conference.image}
                                      alt={conference.name}
-                                     onerror="this.onerror=null;this.src='/imgs/noLogo.png';"
+                                     data-fallback="/imgs/noLogo.png"
                                 />
                                 <p class="lth-card-text">{conference.shortDescription}</p>
                                 <span class="learn-more">En savoir plus</span>

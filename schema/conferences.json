@@ -1,165 +1,26 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "array",
-  "items": [
-    {
-      "type": "object",
-      "properties": {
-        "image": {
-          "type": "string"
-        },
-        "key": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string"
-        },
-        "shortDescription": {
-          "type": "string"
-        },
-        "tags": {
-          "type": "array",
-          "items": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            }
-          ]
-        }
-      },
-      "required": [
-        "image",
-        "key",
-        "name",
-        "url",
-        "shortDescription",
-        "tags"
-      ]
+  "items": {
+    "type": "object",
+    "properties": {
+      "image": { "type": "string" },
+      "key": { "type": "string" },
+      "name": { "type": "string" },
+      "url": { "type": "string" },
+      "shortDescription": { "type": "string" },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
     },
-    {
-      "type": "object",
-      "properties": {
-        "image": {
-          "type": "string"
-        },
-        "key": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string"
-        },
-        "shortDescription": {
-          "type": "string"
-        },
-        "tags": {
-          "type": "array",
-          "items": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            }
-          ]
-        }
-      },
-      "required": [
-        "image",
-        "key",
-        "name",
-        "url",
-        "shortDescription",
-        "tags"
-      ]
-    },
-    {
-      "type": "object",
-      "properties": {
-        "image": {
-          "type": "string"
-        },
-        "key": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string"
-        },
-        "shortDescription": {
-          "type": "string"
-        },
-        "tags": {
-          "type": "array",
-          "items": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            },
-            {
-              "type": "string"
-            }
-          ]
-        }
-      },
-      "required": [
-        "image",
-        "key",
-        "name",
-        "url",
-        "shortDescription",
-        "tags"
-      ]
-    }
-  ]
+    "required": [
+      "image",
+      "key",
+      "name",
+      "url",
+      "shortDescription",
+      "tags"
+    ]
+  }
 }

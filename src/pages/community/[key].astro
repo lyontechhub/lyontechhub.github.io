@@ -22,7 +22,7 @@ const { community } = Astro.props;
         <div class="columns is-centered">
           <div class="colum is-half community-image">
               <img src={"/imgs/communities/" + community.image}
-                   onerror="this.onerror=null;this.src='/imgs/noLogo.png';"
+                   data-fallback="/imgs/noLogo.png"
                    style="max-height: 10em;"
               />
             <p class="subtitle">{community.name}</p>
