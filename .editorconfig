@@ -15,7 +15,7 @@ indent_size = 4
 [{*.json,*.yml,*.less}]
 indent_size = 2
 
-[*.md]
+[*.md,.astro]
 trim_trailing_whitespace = false
 
 [makefile]
