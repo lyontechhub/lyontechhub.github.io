@@ -6,8 +6,12 @@
     "Libre",
     "Opensource",
     "Vie privée",
-    "flash-parties",
-    "smartphones"
+    "Flash-parties",
+    "Smartphones",
+    "Souveraineté",
+    "Android",
+    "/e/OS",
+    "LineageOS"
   ],
   "patternsGoogleCalendar": [
     "LCVP"
@@ -15,10 +19,12 @@
   "socialLinks": [
     {
       "name": "Site web",
+      "icon": "fas fa-home",
       "url": "https://lyon-cvp.fr"
     },
     {
       "name": "Mastodon",
+      "icon": "fab fa-mastodon",
       "url": "https://mamot.fr/@lyonchiffrofete"
     },
     {
