@@ -30,5 +30,8 @@
     {
       "url": "https://www.meetup.com/fr-FR/TupperLibre/"
     }
+  ],
+  "calendars": [
+    { "url": "https://www.agendadulibre.org/events.ics?tag=vim&city=Lyon" }
   ]
 }
