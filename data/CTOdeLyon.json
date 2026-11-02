@@ -1,0 +1,23 @@
+{
+  "image": "CTOdeLyon.png",
+  "name": "CTO de Lyon",
+  "shortDescription": "Une communauté indépendante pour CTO et leaders tech lyonnais, pensée pour les échanges purement techniques et sans compromis.",
+  "tags": [
+    "CTO",
+    "Leadership",
+    "Management",
+    "Architecture",
+    "Tech"
+  ],
+  "socialLinks": [
+    {
+      "url": "https://luma.com/cto-de-lyon"
+    },
+    {
+      "url": "https://www.linkedin.com/groups/12921552"
+    }
+  ],
+  "calendars": [
+    { "url": "https://api.luma.com/ics/get?entity=calendar&id=cal-kZVcuAvB6h8seC2" }
+  ]
+}
