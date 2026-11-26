@@ -120,13 +120,10 @@ const loadCalendar = async () => {
     ];
     const communitiesCalendars =
         communities
-            .map((community, index) => ({
-                id: community.key,
-                name: community.name,
-                backgroundColor: communityColors[index % communityColors.length],
-                borderColor: communityColors[index % communityColors.length],
-                color: '#ffffff',
-            }));
+            .map((community, index) => {
+                const communityColor = communityColors[index % communityColors.length];
+                return { id: community.key, name: community.name, backgroundColor: communityColor, borderColor: communityColor, color: '#ffffff' };
+            });
 
     const capitalize = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
     const dateFmt = new Intl.DateTimeFormat('fr-FR', {
