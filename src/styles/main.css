@@ -196,6 +196,66 @@ main {
     display: none !important;
 }
 
+#calendar .toastui-calendar-weekday-event,
+#calendar .toastui-calendar-weekday-event-title,
+#calendar .toastui-calendar-template-time {
+    font-size: 13px;
+}
+
+#calendar .toastui-calendar-weekday-event-title {
+    font-weight: 600;
+}
+
+#calendar .toastui-calendar-template-monthDayName,
+#calendar .toastui-calendar-weekday-grid-date,
+#calendar .toastui-calendar-weekday-exceed-in-month {
+    font-size: 14px;
+}
+
+#calendar .toastui-calendar-popup-container .toastui-calendar-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1f2937;
+}
+
+#calendar .toastui-calendar-popup-container .toastui-calendar-event-title {
+    font-size: 17px;
+}
+
+.calendar-subscribe {
+    max-width: 760px;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+}
+
+.calendar-subscribe summary {
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-subscribe[open] summary {
+    margin-bottom: 0.75rem;
+}
+
+.calendar-subscribe p,
+.calendar-subscribe ul {
+    margin-bottom: 0.75rem;
+}
+
+.calendar-subscribe ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.calendar-subscribe-url {
+    display: block;
+    overflow-wrap: anywhere;
+    user-select: all;
+}
+
 .calendar-header {
     display: flex;
     flex-direction: row;

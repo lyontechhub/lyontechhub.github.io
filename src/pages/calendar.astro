@@ -1,5 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const calendarIcsUrl = 'https://www.lyontechhub.org/Lyon-Tech-Hub-Calendar/calendar.ics';
+const webcalUrl = calendarIcsUrl.replace(/^https:/, 'webcal:');
+const googleCalendarSubscribeUrl = `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(webcalUrl)}`;
 ---
 
 <Layout>
@@ -10,9 +14,19 @@ import Layout from '../layouts/Layout.astro';
               Le calendrier partagé par toutes les communautés lyonnaises
             </p>
             <p class="subtitle">
-              Venez rencontrer toutes ces communautés et leurs participants !
+              Venez rencontrer toutes ces communautés et les personnes qui les font vivre !
             </p>
-            <p><span class="icon is-medium"><i class="fa fa-calendar"></i></span>Ajouter le calendrier des nouveaux événements à vos calendriers <a href="https://www.lyontechhub.org/Lyon-Tech-Hub-Calendar/calendar.ics">au format ical</a>.</p>
+            <details class="calendar-subscribe">
+                <summary><span class="icon is-medium"><i class="fa fa-calendar-plus"></i></span>S'abonner au calendrier dans votre agenda</summary>
+                <p>Les nouveaux événements apparaîtront automatiquement dans votre agenda. Adresse du calendrier :</p>
+                <p><code class="calendar-subscribe-url">{calendarIcsUrl}</code></p>
+                <ul>
+                    <li><strong>Google Agenda</strong> : <a href={googleCalendarSubscribeUrl} target="_blank" rel="noopener noreferrer">ajouter en un clic</a>, ou dans Google Agenda : « Autres agendas » &gt; « + » &gt; « À partir de l'URL », puis collez l'adresse.</li>
+                    <li><strong>Apple Calendrier, Thunderbird, Outlook (bureau)</strong> : <a href={webcalUrl}>ouvrir dans votre application d'agenda</a>.</li>
+                    <li><strong>Outlook.com / Microsoft 365</strong> : « Ajouter un calendrier » &gt; « S'abonner à partir du web », puis collez l'adresse.</li>
+                    <li><strong>Autre</strong> : <a href={calendarIcsUrl}>télécharger le fichier iCal</a> (sans mise à jour automatique).</li>
+                </ul>
+            </details>
 
             <nav class="navbar is-justify-content-center calendar-header">
                 <button type="button" class="button is-default nav-item" id="calendarToday">Aujourd'hui</button>
