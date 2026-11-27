@@ -114,14 +114,15 @@ const refreshCurrentMonth = (calendar) =>{
 
 const loadCalendar = async () => {
     const communities = await loadCommunities();
+    const communityColors = [
+        '#e0161b', '#2563eb', '#059669', '#d97706', '#7c3aed', '#db2777',
+        '#0891b2', '#65a30d', '#ea580c', '#4f46e5', '#0d9488', '#c026d3',
+    ];
     const communitiesCalendars =
         communities
-            .map((community) => {
-                var color = '#';
-                for (var i = 0; i < 6; i++) {
-                    color += (Math.floor(Math.random() * 100) % 16).toString(16);
-                }
-                return { id: community.key, name: community.name, backgroundColor: color };
+            .map((community, index) => {
+                const communityColor = communityColors[index % communityColors.length];
+                return { id: community.key, name: community.name, backgroundColor: communityColor, borderColor: communityColor, color: '#ffffff' };
             });
 
     const capitalize = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
