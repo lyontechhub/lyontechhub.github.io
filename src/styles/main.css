@@ -196,6 +196,50 @@ main {
     display: none !important;
 }
 
+#calendar .toastui-calendar-weekday-event-title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#calendar .toastui-calendar-template-monthDayName,
+#calendar .toastui-calendar-weekday-grid-date {
+    font-size: 14px;
+}
+
+#calendar .toastui-calendar-popup-container .toastui-calendar-content {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#calendar .toastui-calendar-popup-container .toastui-calendar-event-title {
+    font-size: 17px;
+}
+
+.calendar-subscribe {
+    max-width: 760px;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+}
+
+.calendar-subscribe > * {
+    margin-bottom: 0.75rem;
+}
+
+.calendar-subscribe summary {
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+}
+
+.calendar-subscribe ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.calendar-subscribe-url {
+    overflow-wrap: anywhere;
+}
+
 .calendar-header {
     display: flex;
     flex-direction: row;
